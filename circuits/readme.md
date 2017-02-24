@@ -1,0 +1,1 @@
+Carpeta para documentar el diseño de los circuitos
