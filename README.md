@@ -1,6 +1,13 @@
 # actor-re-actor
 
-This repository contains all relevant assets and information for building the **actor-re-actor** unit, a modular device designed for the Athens exhibit of Amereida, entitled **amereida phalène latin america**. There are 9 of these units.
+This repository contains all relevant assets and information for building the **actor-re-actor** unit, a modular device designed for the Athens exhibit of Amereida, entitled 
+
+			**amereida 
+			phalène 
+			latin (south)
+			america**. 
+
+There are 9 of these units.
 
 This work was comissioned as part of the **documenta14** project and realized by the [http://amereida.cl](Open City Group) and [http://ead.pucv.cl](The Shcool of Architecture and Design e[ad], ) [http://www.pucv.cl](Pontificia Universidad Católica de Valparaíso).
 
@@ -10,24 +17,36 @@ This work was comissioned as part of the **documenta14** project and realized by
 
 ### Components
 
-1. Actuator Box
+1. Actuator Box (inventor files)
+	motor-coil (inventor files)
+	dimmer (plaques and schematics)
+	power & cables (grid)
 2. Sensor Box
+	Control unit
+	Input sensor
 
 ### Artistic Statement
 
      //////////////////////////////////////////////////
      //              //              //              //
+     //              //              //              //
      //      1       //       2      //       3      //
      //              //              //              //
+     //              //              //              //
      //////////////////////////////////////////////////
+     //              //              //              //
      //              //              //              //
      //      4       //       5      //       6      //
      //              //              //              //
+     //              //              //              // 
      //////////////////////////////////////////////////
+     //              //              //              //
      //              //              //              //
      //      7       //       8      //       9      //
      //              //              //              //
-                   //              //              //
+     //              //              //              //     
+     //              //              //              //
+     //              //              //
      //              //              //
 
 #### 9 Origins, 9 Principles
