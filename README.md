@@ -15,6 +15,21 @@ This work was comissioned as part of the **documenta14** project and realized by
 
 ### Artistic Statement
 
+     //////////////////////////////////////////////////
+     //              //              //              //
+     //      1       //       2      //       3      //
+     //              //              //              //
+     //////////////////////////////////////////////////
+     //              //              //              //
+     //      4       //       5      //       6      //
+     //              //              //              //
+     //////////////////////////////////////////////////
+     //              //              //              //
+     //      7       //       8      //       9      //
+     //              //              //              //
+                   //              //              //
+     //              //              //
+
 #### 9 Origins, 9 Principles
 
 In this exhibition we ask ourselves for our origin. That is the way of making our content (logos) accessible and open to others, and it is a gesture of hospitality in the first place. Hospitality is a crucial dimension present, from the beginning, in the Open City. Far from being a rhetorical question, we ask ourselves genuinely: what is the sign of our origin? But, at the same time, recognize the multiplicity of this layered, vailed and manifold nature of our inquiry, in the same sense Aristotle warned us: “to on legetai pollachos”, The being is said in many ways; the being is manifold, multiple; it reveals itself in a multiplicity of manners. We choose to beleive in 9.
