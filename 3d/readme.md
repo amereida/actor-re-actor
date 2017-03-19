@@ -1,1 +1,0 @@
-Carpeta para los modelos 3D y procesos de fabricación digital
