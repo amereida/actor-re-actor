@@ -1,0 +1,1086 @@
+<!DOCTYPE html>
+<html itemscope="itemscope" itemtype="http://schema.org/Article" xmlns="https://www.w3.org/1999/xhtml" prefix="og: http://ogp.me/ns#" class="csstransforms csstransforms3d csstransitions js no-touch cssanimations csstransitions Firefox Firefox51 js_active  vc_desktop  vc_transform  vc_transform  vc_transform" lang="en-US"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="format-detection" content="telephone=no">
+<title itemprop="name">
+Arduino Lamp Dimmer : The Best PWM Dimmer Tutorial </title>
+<link rel="shortcut icon" href="https://301o583r8shhildde3s0vcnh-wpengine.netdna-ssl.com/wp-content/uploads/2015/06/favicon512x5121-min.png">
+<link rel="apple-touch-icon-precomposed" href="Arduino%20Lamp%20Dimmer%20%20%20The%20Best%20PWM%20Dimmer%20Tutorial_files/DarkLogoNew.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="Arduino%20Lamp%20Dimmer%20%20%20The%20Best%20PWM%20Dimmer%20Tutorial_files/DarkLogoNew.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="Arduino%20Lamp%20Dimmer%20%20%20The%20Best%20PWM%20Dimmer%20Tutorial_files/DarkLogoNew.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="Arduino%20Lamp%20Dimmer%20%20%20The%20Best%20PWM%20Dimmer%20Tutorial_files/DarkLogoNew.png">
+<link rel="alternate" type="application/rss+xml" title="DIY Hacking RSS Feed" href="https://diyhacking.com/feed/">
+<link rel="alternate" type="application/atom+xml" title="DIY Hacking Atom Feed" href="https://diyhacking.com/feed/atom/">
+<link rel="pingback" href="https://diyhacking.com/xmlrpc.php">
+<!--[if lt IE 9]>
+         <script src="https://301o583r8shhildde3s0vcnh-wpengine.netdna-ssl.com/wp-content/themes/jupiter/js/html5shiv.js" type="text/javascript"></script>
+         <link rel='stylesheet' href='https://301o583r8shhildde3s0vcnh-wpengine.netdna-ssl.com/wp-content/themes/jupiter/stylesheet/css/ie.css' /> 
+         <![endif]-->
+<!--[if IE 7 ]>
+               <link href="https://301o583r8shhildde3s0vcnh-wpengine.netdna-ssl.com/wp-content/themes/jupiter/stylesheet/css/ie7.css" media="screen" rel="stylesheet" type="text/css" />
+               <![endif]-->
+<!--[if IE 8 ]>
+               <link href="https://301o583r8shhildde3s0vcnh-wpengine.netdna-ssl.com/wp-content/themes/jupiter/stylesheet/css/ie8.css" media="screen" rel="stylesheet" type="text/css" />
+         <![endif]-->
+<!--[if lte IE 8]>
+            <script type="text/javascript" src="https://301o583r8shhildde3s0vcnh-wpengine.netdna-ssl.com/wp-content/themes/jupiter/js/respond.js"></script>
+         <![endif]-->
+<script src="Arduino%20Lamp%20Dimmer%20%20%20The%20Best%20PWM%20Dimmer%20Tutorial_files/fbevents_002.js" async=""></script><script async="" src="Arduino%20Lamp%20Dimmer%20%20%20The%20Best%20PWM%20Dimmer%20Tutorial_files/fbevents.js"></script><script async="" src="Arduino%20Lamp%20Dimmer%20%20%20The%20Best%20PWM%20Dimmer%20Tutorial_files/analytics.js"></script><script type="text/javascript" async="" src="Arduino%20Lamp%20Dimmer%20%20%20The%20Best%20PWM%20Dimmer%20Tutorial_files/ga.js"></script><script type="text/javascript" id="www-widgetapi-script" src="Arduino%20Lamp%20Dimmer%20%20%20The%20Best%20PWM%20Dimmer%20Tutorial_files/www-widgetapi.js" async=""></script><script type="text/javascript" src="Arduino%20Lamp%20Dimmer%20%20%20The%20Best%20PWM%20Dimmer%20Tutorial_files/player_api"></script>
+<script type="text/javascript" src="Arduino%20Lamp%20Dimmer%20%20%20The%20Best%20PWM%20Dimmer%20Tutorial_files/froogaloop2.js"></script>
+<script type="text/javascript">
+          // Init aplication namespace 
+          var abb = {};
+          var php = {};
+          
+          var mk_header_parallax, mk_banner_parallax, mk_page_parallax, mk_footer_parallax, mk_body_parallax;
+          var mk_images_dir = "https://diyhacking.com/wp-content/themes/jupiter/images",
+          mk_theme_js_path = "https://diyhacking.com/wp-content/themes/jupiter/js",
+          mk_theme_dir = "https://diyhacking.com/wp-content/themes/jupiter",
+          mk_captcha_placeholder = "Enter Captcha",
+          mk_captcha_invalid_txt = "Invalid. Try again.",
+          mk_captcha_correct_txt = "Captcha correct.",
+          mk_responsive_nav_width = 1140,
+          mk_grid_width = 1140,
+          mk_ajax_search_option = "fullscreen_search",
+          mk_preloader_txt_color = "#444444",
+          mk_preloader_bg_color = "#ffffff",
+          mk_accent_color = "#f97352",
+          mk_preloader_bar_color = "#f97352",
+          mk_preloader_logo = "";
+                    var mk_header_parallax = false,
+          mk_banner_parallax = false,
+          mk_page_parallax = false,
+          mk_footer_parallax = false,
+          mk_body_parallax = false,
+          mk_no_more_posts = "No More Posts";
+                    
+          function is_touch_device() {
+              return ('ontouchstart' in document.documentElement);
+          }
+          
+         </script>
+<script type="text/javascript">var ajaxurl = "https://diyhacking.com/wp-admin/admin-ajax.php"</script>
+ 
+<title>Arduino Lamp Dimmer : The Best PWM Dimmer Tutorial</title>
+<meta name="description" content="With the help of this tutorial you can easily make an Arduino Lamp Dimmer at home and adjust the brightness of your lamp using PWM. Arduino code included.">
+<meta name="robots" content="noodp">
+<link rel="canonical" href="https://diyhacking.com/arduino-lamp-dimmer/">
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Arduino Lamp Dimmer : The Best PWM Dimmer Tutorial">
+<meta property="og:description" content="With the help of this tutorial you can easily make an Arduino Lamp Dimmer at home and adjust the brightness of your lamp using PWM. Arduino code included.">
+<meta property="og:url" content="https://diyhacking.com/arduino-lamp-dimmer/">
+<meta property="og:site_name" content="DIY Hacking">
+<meta property="article:publisher" content="https://www.facebook.com/diyhacking">
+<meta property="article:tag" content="AC control">
+<meta property="article:tag" content="Arduino">
+<meta property="article:tag" content="arduino projects">
+<meta property="article:tag" content="cool arduino projects">
+<meta property="article:tag" content="home automation">
+<meta property="article:tag" content="lamp dimmer">
+<meta property="article:tag" content="pwm">
+<meta property="article:tag" content="pwm dimmer">
+<meta property="article:section" content="Arduino projects">
+<meta property="article:published_time" content="2015-04-27T10:51:16+00:00">
+<meta property="article:modified_time" content="2015-07-22T17:31:22+00:00">
+<meta property="og:updated_time" content="2015-07-22T17:31:22+00:00">
+<meta property="og:image" content="https://diyhacking.com/wp-content/uploads/2015/04/cover1.jpg">
+ 
+<link rel="dns-prefetch" href="https://fonts.googleapis.com/">
+<link rel="dns-prefetch" href="https://s.w.org/">
+<link rel="alternate" type="application/rss+xml" title="DIY Hacking » Feed" href="https://diyhacking.com/feed/">
+<link rel="alternate" type="application/rss+xml" title="DIY Hacking » Comments Feed" href="https://diyhacking.com/comments/feed/">
+<link rel="alternate" type="application/rss+xml" title="DIY Hacking » Arduino Lamp Dimmer : The Best PWM Dimmer Tutorial Comments Feed" href="https://diyhacking.com/arduino-lamp-dimmer/feed/">
+<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/diyhacking.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.6.1"}};
+			!function(a,b,c){function d(a){var c,d,e,f,g,h=b.createElement("canvas"),i=h.getContext&&h.getContext("2d"),j=String.fromCharCode;if(!i||!i.fillText)return!1;switch(i.textBaseline="top",i.font="600 32px Arial",a){case"flag":return i.fillText(j(55356,56806,55356,56826),0,0),!(h.toDataURL().length<3e3)&&(i.clearRect(0,0,h.width,h.height),i.fillText(j(55356,57331,65039,8205,55356,57096),0,0),c=h.toDataURL(),i.clearRect(0,0,h.width,h.height),i.fillText(j(55356,57331,55356,57096),0,0),d=h.toDataURL(),c!==d);case"diversity":return i.fillText(j(55356,57221),0,0),e=i.getImageData(16,16,1,1).data,f=e[0]+","+e[1]+","+e[2]+","+e[3],i.fillText(j(55356,57221,55356,57343),0,0),e=i.getImageData(16,16,1,1).data,g=e[0]+","+e[1]+","+e[2]+","+e[3],f!==g;case"simple":return i.fillText(j(55357,56835),0,0),0!==i.getImageData(16,16,1,1).data[0];case"unicode8":return i.fillText(j(55356,57135),0,0),0!==i.getImageData(16,16,1,1).data[0];case"unicode9":return i.fillText(j(55358,56631),0,0),0!==i.getImageData(16,16,1,1).data[0]}return!1}function e(a){var c=b.createElement("script");c.src=a,c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g,h,i;for(i=Array("simple","flag","unicode8","diversity","unicode9"),c.supports={everything:!0,everythingExceptFlag:!0},h=0;h<i.length;h++)c.supports[i[h]]=d(i[h]),c.supports.everything=c.supports.everything&&c.supports[i[h]],"flag"!==i[h]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[i[h]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script><script src="Arduino%20Lamp%20Dimmer%20%20%20The%20Best%20PWM%20Dimmer%20Tutorial_files/wp-emoji-release.js" type="text/javascript"></script>
+<style type="text/css">img.wp-smiley,img.emoji{display:inline!important;border:none!important;box-shadow:none!important;height:1em!important;width:1em!important;margin:0 .07em!important;vertical-align:-0.1em!important;background:none!important;padding:0!important;}</style>
+<link rel="stylesheet" id="contact-form-7-css" href="Arduino%20Lamp%20Dimmer%20%20%20The%20Best%20PWM%20Dimmer%20Tutorial_files/styles.css" type="text/css" media="all">
+<link rel="stylesheet" id="math-captcha-frontend-css" href="Arduino%20Lamp%20Dimmer%20%20%20The%20Best%20PWM%20Dimmer%20Tutorial_files/frontend.css" type="text/css" media="all">
+<link rel="stylesheet" id="easy-facebook-likebox-plugin-styles-css" href="Arduino%20Lamp%20Dimmer%20%20%20The%20Best%20PWM%20Dimmer%20Tutorial_files/public.css" type="text/css" media="all">
+<link rel="stylesheet" id="easy-facebook-likebox-popup-styles-css" href="Arduino%20Lamp%20Dimmer%20%20%20The%20Best%20PWM%20Dimmer%20Tutorial_files/magnific-popup.css" type="text/css" media="all">
+<link rel="stylesheet" id="theme-styles-css" href="Arduino%20Lamp%20Dimmer%20%20%20The%20Best%20PWM%20Dimmer%20Tutorial_files/theme-styles.css" type="text/css" media="all">
+<link rel="stylesheet" id="pe-line-icon-css" href="Arduino%20Lamp%20Dimmer%20%20%20The%20Best%20PWM%20Dimmer%20Tutorial_files/pe-line-icons.css" type="text/css" media="all">
+<link rel="stylesheet" id="font-awesome-css" href="Arduino%20Lamp%20Dimmer%20%20%20The%20Best%20PWM%20Dimmer%20Tutorial_files/font-awesome.css" type="text/css" media="all">
+<link rel="stylesheet" id="icomoon-fonts-css" href="Arduino%20Lamp%20Dimmer%20%20%20The%20Best%20PWM%20Dimmer%20Tutorial_files/icomoon-fonts.css" type="text/css" media="all">
+<link rel="stylesheet" id="theme-icons-css" href="Arduino%20Lamp%20Dimmer%20%20%20The%20Best%20PWM%20Dimmer%20Tutorial_files/theme-icons.css" type="text/css" media="all">
+<link rel="stylesheet" id="google-font-api-special-1-css" href="Arduino%20Lamp%20Dimmer%20%20%20The%20Best%20PWM%20Dimmer%20Tutorial_files/css.css" type="text/css" media="all">
+<link rel="stylesheet" id="mk-style-css" href="Arduino%20Lamp%20Dimmer%20%20%20The%20Best%20PWM%20Dimmer%20Tutorial_files/style.css" type="text/css" media="all">
+<link rel="stylesheet" id="theme-dynamic-styles-css" href="Arduino%20Lamp%20Dimmer%20%20%20The%20Best%20PWM%20Dimmer%20Tutorial_files/custom.css" type="text/css" media="all">
+<style id="theme-dynamic-styles-inline-css" type="text/css">body{}body{font-family:Open Sans}body{background-color:#fff;}#mk-header{background-color:#f7f7f7;}.mk-header-bg{background-color:#fff;}.mk-header-toolbar{background-color:#ffffff;}#theme-page{background-color:#f0f0f0;}#mk-footer{background-color:#3d4045;}#mk-footer .footer-wrapper{padding:10px 0;}#mk-footer .widget{margin-bottom:10px;}#mk-footer [class*='mk-col-']{padding:0 2%;}#sub-footer{background-color:#43474d;}.mk-footer-copyright{font-size:11px;letter-spacing:1px;}#mk-boxed-layout{-webkit-box-shadow:0 0 0px rgba(0,0,0,0);-moz-box-shadow:0 0 0px rgba(0,0,0,0);box-shadow:0 0 0px rgba(0,0,0,0);}.mk-tabs-panes,.mk-news-tab .mk-tabs-tabs li.ui-tabs-active a,.mk-divider .divider-go-top,.ajax-container,.mk-fancy-title.pattern-style span,.mk-portfolio-view-all,.mk-woo-view-all,.mk-blog-view-all{background-color:#f0f0f0;}.mk-header-bg{-webkit-opacity:1;-moz-opacity:1;-o-opacity:1;opacity:1;}.header-sticky-ready .mk-header-bg{-webkit-opacity:1;-moz-opacity:1;-o-opacity:1;opacity:1;}.mk-header-inner,.header-sticky-ready .mk-header-inner,.header-style-2.header-sticky-ready .mk-classic-nav-bg{border-bottom:1px solid #ededed;}.header-style-4.header-align-left .mk-header-inner,.header-style-4.header-align-center .mk-header-inner{border-bottom:none;border-right:1px solid #ededed;}.header-style-4.header-align-right .mk-header-inner{border-bottom:none;border-left:1px solid #ededed;}.header-style-2 .mk-header-nav-container{border-top:1px solid #ededed;}body{font-size:14px;color:#777777;font-weight:normal;line-height:1.66em;}p,.mk-box-icon-2-content{font-size:16px;color:#777777;line-height:1.66em;}a{color:#f97352;}a:hover{color:#2e2e2e;}#theme-page strong{color:#444444;}#theme-page h1{font-size:36px;color:#444444;font-weight:bold;text-transform:uppercase;}#theme-page h2{font-size:30px;color:#444444;font-weight:bold;text-transform:uppercase;}#theme-page h3{font-size:24px;color:#f97352;font-weight:bold;text-transform:uppercase;}#theme-page h4{font-size:18px;color:#f97352;font-weight:bold;text-transform:none;}#theme-page h5{font-size:16px;color:#f97352;font-weight:bold;text-transform:uppercase;}#theme-page h6{font-size:14px;color:#f97352;font-weight:normal;text-transform:uppercase;}.page-introduce-title{font-size:20px;color:;text-transform:uppercase;font-weight:normal;letter-spacing:2px;}.page-introduce-subtitle{font-size:14px;line-height:100%;color:;font-size:14px;text-transform:none;}::-webkit-selection{background-color:#f97352;color:#fff;}::-moz-selection{background-color:#f97352;color:#fff;}::selection{background-color:#f97352;color:#fff;}#mk-sidebar,#mk-sidebar p{font-size:14px;color:#777777;font-weight:normal;}#mk-sidebar .widgettitle{text-transform:uppercase;font-size:14px;color:#333333;font-weight:bolder;}#mk-sidebar .widgettitle a{color:#333333;}#mk-sidebar .widget a{color:#777777;}#mk-footer,#mk-footer p{font-size:14px;color:#808080;font-weight:normal;}#mk-footer .widgettitle{text-transform:uppercase;font-size:14px;color:#ffffff;font-weight:800;}#mk-footer .widgettitle a{color:#ffffff;}#mk-footer .widget:not(.widget_social_networks) a{color:#999999;}.mk-side-dashboard{background-color:#444444;}.mk-side-dashboard,.mk-side-dashboard p{font-size:12px;color:#444444;font-weight:normal;}.mk-side-dashboard .widgettitle{text-transform:uppercase;font-size:14px;color:#ffffff;font-weight:800;}.mk-side-dashboard .widgettitle a{color:#ffffff;}.mk-side-dashboard .widget a{color:#fafafa;}.sidedash-navigation-ul li a,.sidedash-navigation-ul li .mk-nav-arrow{color:#ffffff;}.sidedash-navigation-ul li a:hover{color:#ffffff;background-color:;}.mk-fullscreen-nav{background-color:#444444;}.mk-fullscreen-nav .mk-fullscreen-nav-wrapper .mk-fullscreen-nav-logo{margin-bottom:125px;}.mk-fullscreen-nav .fullscreen-navigation-ul .menu-item a{color:#ffffff;text-transform:uppercase;font-size:16px;letter-spacing:0;font-weight:800;padding:25px 0;color:#ffffff;}.mk-fullscreen-nav .fullscreen-navigation-ul .menu-item a:hover{background-color:#ffffff;color:#444444;}#mk-sidebar .widget:not(.widget_social_networks) a:hover{color:#f97352;}#mk-footer .widget:not(.widget_social_networks) a:hover{color:#f97352;}.mk-side-dashboard .widget:not(.widget_social_networks) a:hover{color:#f97352;}.mk-grid{max-width:1140px;}.mk-header-nav-container,.mk-classic-menu-wrapper{width:1140px;}.theme-page-wrapper #mk-sidebar.mk-builtin{width:20%;}.theme-page-wrapper.right-layout .theme-content,.theme-page-wrapper.left-layout .theme-content{width:80%;}.mk-boxed-enabled #mk-boxed-layout,.mk-boxed-enabled #mk-boxed-layout .header-style-1 .mk-header-holder,.mk-boxed-enabled #mk-boxed-layout .header-style-3 .mk-header-holder{max-width:1200px;}.mk-boxed-enabled #mk-boxed-layout .header-style-1 .mk-header-holder,.mk-boxed-enabled #mk-boxed-layout .header-style-3 .mk-header-holder{width:100%!important;left:auto!important;}.mk-boxed-enabled #mk-boxed-layout .header-style-2.header-sticky-ready .mk-header-nav-container{width:1200px!important;left:auto!important;}.header-style-1 .mk-header-start-tour,.header-style-3 .mk-header-start-tour,.header-style-1 .mk-header-inner #mk-header-search,.header-style-1 .mk-header-inner,.header-style-1 .mk-search-trigger,.header-style-3 .mk-header-inner,.header-style-1 .header-logo,.header-style-3 .header-logo,.header-style-1 .shopping-cart-header,.header-style-3 .shopping-cart-header,.header-style-1 #mk-header-social.header-section a,.header-style-2 #mk-header-social.header-section a,.header-style-3 #mk-header-social.header-section a{height:92px;line-height:92px;}@media handheld, only screen and (max-width: 1140px){.header-grid.mk-grid .header-logo.left-logo{left:15px!important;}.header-grid.mk-grid .header-logo.right-logo,.mk-header-right{right:15px!important;}}#mk-theme-container:not(.mk-transparent-header) .header-style-1 .mk-header-padding-wrapper,#mk-theme-container:not(.mk-transparent-header) .header-style-3 .mk-header-padding-wrapper{padding-top:92px;}@media handheld, only screen and (max-width: 960px){.theme-page-wrapper .theme-content{width:100%!important;float:none!important;}.theme-page-wrapper{padding-right:15px!important;padding-left:15px!important;}.theme-page-wrapper .theme-content:not(.no-padding){padding:25px 0!important;}.theme-page-wrapper #mk-sidebar{width:100%!important;float:none!important;padding:0!important;}.theme-page-wrapper #mk-sidebar .sidebar-wrapper{padding:20px 0!important;}}@media handheld, only screen and (max-width: 1140px){.mk-go-top,.mk-quick-contact-wrapper{bottom:70px!important;}.mk-grid{width:100%;}.mk-padding-wrapper{padding:0 20px;}}#mk-toolbar-navigation ul li a,.mk-language-nav>a,.mk-header-login .mk-login-link,.mk-subscribe-link,.mk-checkout-btn,.mk-header-tagline a,.header-toolbar-contact a,#mk-toolbar-navigation ul li a:hover,.mk-language-nav>a:hover,.mk-header-login .mk-login-link:hover,.mk-subscribe-link:hover,.mk-checkout-btn:hover,.mk-header-tagline a:hover{color:#999999;}.mk-header-tagline,.header-toolbar-contact,.mk-header-date{color:#999999;}.mk-header-toolbar #mk-header-social a i{color:#999999;}.header-section#mk-header-social ul li a i{color:#999999;}.header-section#mk-header-social ul li a:hover i{color:#cccccc;}.header-style-2 .header-logo,.header-style-4 .header-logo{height:92px!important;}.header-style-4 .header-logo{margin:10px 0;}.header-style-2 .mk-header-inner{line-height:92px;}.mk-header-nav-container{background-color:;}.mk-header-start-tour{font-size:14px;color:#333333;}.mk-header-start-tour:hover{color:#333333;}.mk-classic-nav-bg{background-color:#fff;}.mk-search-trigger,.mk-shoping-cart-link i,.mk-header-cart-count,.mk-toolbar-resposnive-icon i{color:#444444;}.mk-css-icon-close div,.mk-css-icon-menu div{background-color:#444444;}#mk-header-searchform .text-input{background-color:!important;color:#c7c7c7;}#mk-header-searchform span i{color:#c7c7c7;}#mk-header-searchform .text-input::-webkit-input-placeholder{color:#c7c7c7;}#mk-header-searchform .text-input:-ms-input-placeholder{color:#c7c7c7;}#mk-header-searchform .text-input:-moz-placeholder{color:#c7c7c7;}.header-style-1.header-sticky-ready .menu-hover-style-1 .main-navigation-ul>li>a,.header-style-3.header-sticky-ready .menu-hover-style-1 .main-navigation-ul>li>a,.header-style-1.header-sticky-ready .menu-hover-style-5 .main-navigation-ul>li,.header-style-1.header-sticky-ready .menu-hover-style-2 .main-navigation-ul>li>a,.header-style-3.header-sticky-ready .menu-hover-style-2 .main-navigation-ul>li>a,.header-style-1.header-style-1.header-sticky-ready .menu-hover-style-4 .main-navigation-ul>li>a,.header-style-3.header-sticky-ready .menu-hover-style-4 .main-navigation-ul>li>a,.header-style-1.header-sticky-ready .menu-hover-style-3 .main-navigation-ul>li,.header-style-1.header-sticky-ready .mk-header-inner #mk-header-search,.header-style-3.header-sticky-ready .mk-header-holder #mk-header-search,.header-sticky-ready.header-style-3 .mk-header-start-tour,.header-sticky-ready.header-style-1 .mk-header-start-tour,.header-sticky-ready.header-style-1 .mk-header-inner,.header-sticky-ready.header-style-3 .mk-header-inner,.header-sticky-ready.header-style-3 .header-logo,.header-sticky-ready.header-style-1 .header-logo,.header-sticky-ready.header-style-1 .mk-search-trigger,.header-sticky-ready.header-style-1 .mk-search-trigger i,.header-sticky-ready.header-style-1 .shopping-cart-header,.header-sticky-ready.header-style-1 .shopping-cart-header i,.header-sticky-ready.header-style-3 .shopping-cart-header,.header-sticky-ready.header-style-1 #mk-header-social.header-section a,.header-sticky-ready.header-style-3 #mk-header-social.header-section a{height:50px!important;line-height:50px!important;}#mk-header-social.header-section a.small{margin-top:29px;}#mk-header-social.header-section a.medium{margin-top:21px;}#mk-header-social.header-section a.large{margin-top:13px;}.header-sticky-ready #mk-header-social.header-section a.small,.header-sticky-ready #mk-header-social.header-section a.medium,.header-sticky-ready #mk-header-social.header-section a.large{margin-top:8px;line-height:16px!important;height:16px!important;font-size:16px!important;width:16px!important;padding:8px!important;}.header-sticky-ready #mk-header-social.header-section a.small i:before,.header-sticky-ready #mk-header-social.header-section a.medium i:before,.header-sticky-ready #mk-header-social.header-section a.large i:before{line-height:16px!important;font-size:16px!important;}.main-navigation-ul>li.menu-item>a.menu-item-link{color:#444444;font-size:13px;font-weight:bold;padding-right:20px;padding-left:20px;text-transform:uppercase;letter-spacing:0px;}.mk-vm-menuwrapper ul li a{color:#444444;font-size:13px;font-weight:bold;text-transform:uppercase;}.mk-vm-menuwrapper li>a:after,.mk-vm-menuwrapper li.mk-vm-back:after{color:#444444;}.main-navigation-ul>li.no-mega-menu ul.sub-menu li.menu-item a.menu-item-link{width:210px;}.mk-header-3-menu-trigger{color:#444444;}.menu-hover-style-1 .main-navigation-ul li.menu-item>a.menu-item-link:hover,.menu-hover-style-1 .main-navigation-ul li.menu-item:hover>a.menu-item-link,.menu-hover-style-1 .main-navigation-ul li.current-menu-item>a.menu-item-link,.menu-hover-style-1 .main-navigation-ul li.current-menu-ancestor>a.menu-item-link,.menu-hover-style-2 .main-navigation-ul li.menu-item>a.menu-item-link:hover,.menu-hover-style-2 .main-navigation-ul li.menu-item:hover>a.menu-item-link,.menu-hover-style-2 .main-navigation-ul li.current-menu-item>a.menu-item-link,.menu-hover-style-2 .main-navigation-ul li.current-menu-ancestor>a.menu-item-link,.menu-hover-style-1.mk-vm-menuwrapper li.menu-item>a:hover,.menu-hover-style-1.mk-vm-menuwrapper li.menu-item:hover>a,.menu-hover-style-1.mk-vm-menuwrapper li.current-menu-item>a,.menu-hover-style-1.mk-vm-menuwrapper li.current-menu-ancestor>a,.menu-hover-style-2.mk-vm-menuwrapper li.menu-item>a:hover,.menu-hover-style-2.mk-vm-menuwrapper li.menu-item:hover>a,.menu-hover-style-2.mk-vm-menuwrapper li.current-menu-item>a,.menu-hover-style-2.mk-vm-menuwrapper li.current-menu-ancestor>a{color:#f97352!important;}.menu-hover-style-3 .main-navigation-ul>li.menu-item>a.menu-item-link:hover,.menu-hover-style-3 .main-navigation-ul>li.menu-item:hover>a.menu-item-link,.menu-hover-style-3.mk-vm-menuwrapper li>a:hover,.menu-hover-style-3.mk-vm-menuwrapper li:hover>a{border:2px solid #f97352;}.menu-hover-style-3 .main-navigation-ul>li.current-menu-item>a.menu-item-link,.menu-hover-style-3 .main-navigation-ul>li.current-menu-ancestor>a.menu-item-link,.menu-hover-style-3.mk-vm-menuwrapper li.current-menu-item>a,.menu-hover-style-3.mk-vm-menuwrapper li.current-menu-ancestor>a{border:2px solid #f97352;background-color:#f97352;color:#ffffff;}.menu-hover-style-3.mk-vm-menuwrapper li.current-menu-ancestor>a:after{color:#ffffff;}.menu-hover-style-4 .main-navigation-ul li.menu-item>a.menu-item-link:hover,.menu-hover-style-4 .main-navigation-ul li.menu-item:hover>a.menu-item-link,.menu-hover-style-4 .main-navigation-ul li.current-menu-item>a.menu-item-link,.menu-hover-style-4 .main-navigation-ul li.current-menu-ancestor>a.menu-item-link,.menu-hover-style-4.mk-vm-menuwrapper li a:hover,.menu-hover-style-4.mk-vm-menuwrapper li:hover>a,.menu-hover-style-4.mk-vm-menuwrapper li.current-menu-item>a,.menu-hover-style-4.mk-vm-menuwrapper li.current-menu-ancestor>a,.menu-hover-style-5 .main-navigation-ul>li.menu-item>a.menu-item-link:after{background-color:#f97352;color:#ffffff;}.menu-hover-style-4.mk-vm-menuwrapper li.current-menu-ancestor>a:after,.menu-hover-style-4.mk-vm-menuwrapper li.current-menu-item>a:after,.menu-hover-style-4.mk-vm-menuwrapper li:hover>a:after,.menu-hover-style-4.mk-vm-menuwrapper li a:hover::after{color:#ffffff;}.menu-hover-style-1 .main-navigation-ul>li.dropdownOpen>a.menu-item-link,.menu-hover-style-1 .main-navigation-ul>li.active>a.menu-item-link,.menu-hover-style-1 .main-navigation-ul>li.open>a.menu-item-link,.menu-hover-style-1 .main-navigation-ul>li.menu-item>a:hover,.menu-hover-style-1 .main-navigation-ul>li.current-menu-item>a.menu-item-link,.menu-hover-style-1 .main-navigation-ul>li.current-menu-ancestor>a.menu-item-link{border-top-color:#f97352;}.menu-hover-style-1.mk-vm-menuwrapper li>a:hover,.menu-hover-style-1.mk-vm-menuwrapper li.current-menu-item>a,.menu-hover-style-1.mk-vm-menuwrapper li.current-menu-ancestor>a{border-left-color:#f97352;}.header-style-1 .menu-hover-style-1 .main-navigation-ul>li>a,.header-style-1 .menu-hover-style-2 .main-navigation-ul>li>a,.header-style-1 .menu-hover-style-4 .main-navigation-ul>li>a,.header-style-1 .menu-hover-style-5 .main-navigation-ul>li{height:92px;line-height:92px;}.header-style-1 .menu-hover-style-3 .main-navigation-ul>li,.header-style-1 .menu-hover-style-5 .main-navigation-ul>li{height:92px;line-height:92px;}.header-style-1 .menu-hover-style-3 .main-navigation-ul>li>a{line-height:46px;}.header-style-1.header-sticky-ready .menu-hover-style-3 .main-navigation-ul>li>a{line-height:33.3333333333px;}.header-style-1 .menu-hover-style-5 .main-navigation-ul>li>a{line-height:20px;vertical-align:middle;}.main-navigation-ul>li.no-mega-menu ul.sub-menu:after,.main-navigation-ul>li.has-mega-menu>ul.sub-menu:after{background-color:#f97352;}.mk-shopping-cart-box{border-top:2px solid #f97352;}#mk-main-navigation li.no-mega-menu ul.sub-menu,#mk-main-navigation li.has-mega-menu>ul.sub-menu,.mk-shopping-cart-box{background-color:#333333;}#mk-main-navigation ul.sub-menu a.menu-item-link,#mk-main-navigation ul .megamenu-title,.megamenu-widgets-container a,.mk-shopping-cart-box .product_list_widget li a,.mk-shopping-cart-box .product_list_widget li.empty,.mk-shopping-cart-box .product_list_widget li span,.mk-shopping-cart-box .widget_shopping_cart .total{color:#b3b3b3;}.mk-shopping-cart-box .mk-button.cart-widget-btn{border-color:#b3b3b3;color:#b3b3b3;}.mk-shopping-cart-box .mk-button.cart-widget-btn:hover{background-color:#b3b3b3;color:#333333;}#mk-main-navigation ul .megamenu-title{color:#ffffff;}#mk-main-navigation ul .megamenu-title:after{background-color:#ffffff;}.megamenu-widgets-container{color:#b3b3b3;}.megamenu-widgets-container .widgettitle{text-transform:uppercase;font-size:14px;font-weight:bolder;}#mk-main-navigation ul.sub-menu li.menu-item ul.sub-menu li.menu-item a.menu-item-link i{color:#e0e0e0;}#mk-main-navigation ul.sub-menu a.menu-item-link:hover{color:#ffffff!important;}.megamenu-widgets-container a:hover{color:#ffffff;}.main-navigation-ul li.menu-item ul.sub-menu li.menu-item a.menu-item-link:hover,.main-navigation-ul li.menu-item ul.sub-menu li.menu-item:hover>a.menu-item-link,.main-navigation-ul ul.sub-menu li.menu-item a.menu-item-link:hover,.main-navigation-ul ul.sub-menu li.menu-item:hover>a.menu-item-link,.main-navigation-ul ul.sub-menu li.current-menu-item>a.menu-item-link{background-color:!important;}.mk-search-trigger:hover,.mk-header-start-tour:hover{color:#f97352;}.main-navigation-ul li.menu-item ul.sub-menu li.menu-item a.menu-item-link{font-size:12px;font-weight:normal;text-transform:uppercase;letter-spacing:1px;}.has-mega-menu .megamenu-title{letter-spacing:1px;}.header-style-4{text-align:left}.mk-vm-menuwrapper li>a{padding-right:45px;}@media handheld, only screen and (max-width: 1140px){.header-style-1 .mk-header-inner,.header-style-3 .mk-header-inner,.header-style-3 .header-logo,.header-style-1 .header-logo,.header-style-1 .shopping-cart-header,.header-style-3 .shopping-cart-header{height:90px;line-height:90px;}#mk-header:not(.header-style-4) .mk-header-holder{position:relative!important;top:0!important;}.mk-header-padding-wrapper{display:none!important;}.mk-header-nav-container{width:auto!important;display:none;}.header-style-1 .mk-header-right,.header-style-2 .mk-header-right,.header-style-3 .mk-header-right{right:55px!important;}.header-style-1 .mk-header-inner #mk-header-search,.header-style-2 .mk-header-inner #mk-header-search,.header-style-3 .mk-header-inner #mk-header-search{display:none!important;}.mk-fullscreen-search-overlay{display:none;}#mk-header-search{padding-bottom:10px!important;}#mk-header-searchform span .text-input{width:100%!important;}.header-style-2 .header-logo .center-logo{text-align:right!important;}.header-style-2 .header-logo .center-logo a{margin:0!important;}.header-logo,.header-style-4 .header-logo{height:90px!important;}.mk-header-inner{padding-top:0!important;}.header-logo{position:relative!important;right:auto!important;left:auto!important;float:left!important;text-align:left;}.shopping-cart-header{margin:0 20px 0 0!important;}#mk-responsive-nav{background-color:#ffffff!important;}.mk-header-nav-container #mk-responsive-nav{visibility:hidden;}#mk-responsive-nav li ul li .megamenu-title:hover,#mk-responsive-nav li ul li .megamenu-title,#mk-responsive-nav li a,#mk-responsive-nav li ul li a:hover,#mk-responsive-nav .mk-nav-arrow{color:#333333!important;}.mk-mega-icon{display:none!important;}.mk-header-bg{zoom:1!important;filter:alpha(opacity=100)!important;opacity:1!important;}.header-style-1 .mk-nav-responsive-link,.header-style-2 .mk-nav-responsive-link{display:block!important;}.mk-header-nav-container{height:100%;z-index:200;}#mk-main-navigation{position:relative;z-index:2;}.mk_megamenu_columns_2,.mk_megamenu_columns_3,.mk_megamenu_columns_4,.mk_megamenu_columns_5,.mk_megamenu_columns_6{width:100%!important;}.header-style-1.header-align-right .header-logo img,.header-style-3.header-align-right .header-logo img,.header-style-3.header-align-center .header-logo img{float:left!important;right:auto!important;}.header-style-4 .mk-header-inner{width:auto!important;position:relative!important;overflow:visible;padding-bottom:0;}.admin-bar .header-style-4 .mk-header-inner{top:0!important;}.header-style-4 .mk-header-right{display:none;}.header-style-4 .mk-nav-responsive-link{display:block!important;}.header-style-4 .mk-vm-menuwrapper,.header-style-4 #mk-header-search{display:none;}.header-style-4 .header-logo{width:auto!important;display:inline-block!important;text-align:left!important;margin:0!important;}.vertical-header-enabled .header-style-4 .header-logo img{max-width:100%!important;left:20px!important;top:50%!important;-webkit-transform:translate(0,-50%)!important;-moz-transform:translate(0,-50%)!important;-ms-transform:translate(0,-50%)!important;-o-transform:translate(0,-50%)!important;transform:translate(0,-50%)!important;position:relative!important;}.vertical-header-enabled.vertical-header-left #theme-page>.mk-main-wrapper-holder,.vertical-header-enabled.vertical-header-center #theme-page>.mk-main-wrapper-holder,.vertical-header-enabled.vertical-header-left #theme-page>.mk-page-section,.vertical-header-enabled.vertical-header-center #theme-page>.mk-page-section,.vertical-header-enabled.vertical-header-left #theme-page>.wpb_row,.vertical-header-enabled.vertical-header-center #theme-page>.wpb_row,.vertical-header-enabled.vertical-header-left #mk-theme-container:not(.mk-transparent-header),.vertical-header-enabled.vertical-header-center #mk-footer,.vertical-header-enabled.vertical-header-left #mk-footer,.vertical-header-enabled.vertical-header-center #mk-theme-container:not(.mk-transparent-header){padding-left:0!important;}.vertical-header-enabled.vertical-header-right #theme-page>.mk-main-wrapper-holder,.vertical-header-enabled.vertical-header-right #theme-page>.mk-page-section,.vertical-header-enabled.vertical-header-right #theme-page>.wpb_row,.vertical-header-enabled.vertical-header-right #mk-footer,.vertical-header-enabled.vertical-header-right #mk-theme-container:not(.mk-transparent-header){padding-right:0!important;}}@media handheld, only screen and (min-width: 1140px) {.mk-transparent-header .sticky-style-slide .mk-header-holder{position:absolute;}.mk-transparent-header .remove-header-bg-true:not(.header-sticky-ready) .mk-header-bg{opacity:0;}.mk-transparent-header .remove-header-bg-true#mk-header:not(.header-sticky-ready) .mk-header-inner{border:0;}.mk-transparent-header .remove-header-bg-true.light-header-skin:not(.header-sticky-ready) .mk-desktop-logo.light-logo{display:block!important;}.mk-transparent-header .remove-header-bg-true.light-header-skin:not(.header-sticky-ready) .mk-desktop-logo.dark-logo{display:none!important;}.mk-transparent-header .remove-header-bg-true.light-header-skin:not(.header-sticky-ready) .main-navigation-ul>li.menu-item>a.menu-item-link,.mk-transparent-header .remove-header-bg-true.light-header-skin:not(.header-sticky-ready) .mk-search-trigger,.mk-transparent-header .remove-header-bg-true.light-header-skin:not(.header-sticky-ready) .mk-shoping-cart-link i,.mk-transparent-header .remove-header-bg-true.light-header-skin:not(.header-sticky-ready) .mk-header-cart-count,.mk-transparent-header .remove-header-bg-true.light-header-skin:not(.header-sticky-ready) .mk-header-start-tour,.mk-transparent-header .remove-header-bg-true.light-header-skin:not(.header-sticky-ready) #mk-header-social a i,.mk-transparent-header .remove-header-bg-true.light-header-skin:not(.header-sticky-ready) .menu-hover-style-1 .main-navigation-ul>li.menu-item>a.menu-item-link:hover,.mk-transparent-header .remove-header-bg-true.light-header-skin:not(.header-sticky-ready) .menu-hover-style-1 .main-navigation-ul>li.menu-item:hover>a.menu-item-link,.mk-transparent-header .remove-header-bg-true.light-header-skin:not(.header-sticky-ready) .menu-hover-style-1 .main-navigation-ul>li.current-menu-item>a.menu-item-link,.mk-transparent-header .remove-header-bg-true.light-header-skin:not(.header-sticky-ready) .menu-hover-style-1 .main-navigation-ul>li.current-menu-ancestor>a.menu-item-link,.mk-transparent-header .remove-header-bg-true.light-header-skin:not(.header-sticky-ready) .menu-hover-style-2 .main-navigation-ul>li.menu-item>a.menu-item-link:hover,.mk-transparent-header .remove-header-bg-true.light-header-skin:not(.header-sticky-ready) .menu-hover-style-2 .main-navigation-ul>li.menu-item:hover>a.menu-item-link,.mk-transparent-header .remove-header-bg-true.light-header-skin:not(.header-sticky-ready) .menu-hover-style-2 .main-navigation-ul>li.current-menu-item>a.menu-item-link,.mk-transparent-header .remove-header-bg-true.light-header-skin:not(.header-sticky-ready) .mk-vm-menuwrapper li a,.mk-transparent-header .remove-header-bg-true.light-header-skin:not(.header-sticky-ready) .mk-vm-menuwrapper li>a:after,.mk-transparent-header .remove-header-bg-true.light-header-skin:not(.header-sticky-ready) .mk-vm-menuwrapper li.mk-vm-back:after{color:#fff!important;}.mk-transparent-header .remove-header-bg-true.light-header-skin:not(.header-sticky-ready) .mk-css-icon-menu div{background-color:#fff!important;}.mk-transparent-header .remove-header-bg-true.light-header-skin:not(.header-sticky-ready) .menu-hover-style-1 .main-navigation-ul>li.dropdownOpen>a.menu-item-link,.mk-transparent-header .remove-header-bg-true.light-header-skin:not(.header-sticky-ready) .menu-hover-style-1 .main-navigation-ul>li.active>a.menu-item-link,.mk-transparent-header .remove-header-bg-true.light-header-skin:not(.header-sticky-ready) .menu-hover-style-1 .main-navigation-ul>li.open>a.menu-item-link,.mk-transparent-header .remove-header-bg-true.light-header-skin:not(.header-sticky-ready) .menu-hover-style-1 .main-navigation-ul>li.menu-item>a:hover,.mk-transparent-header .remove-header-bg-true.light-header-skin:not(.header-sticky-ready) .menu-hover-style-1 .main-navigation-ul>li.current-menu-item>a.menu-item-link,.mk-transparent-header .remove-header-bg-true.light-header-skin:not(.header-sticky-ready) .menu-hover-style-1 .main-navigation-ul>li.current-menu-ancestor>a.menu-item-link{border-top-color:#fff;}.mk-transparent-header .remove-header-bg-true.light-header-skin:not(.header-sticky-ready) .menu-hover-style-3 .main-navigation-ul>li.current-menu-item>a.menu-item-link,.mk-transparent-header .remove-header-bg-true.light-header-skin:not(.header-sticky-ready) .menu-hover-style-3 .main-navigation-ul>li.current-menu-ancestor>a.menu-item-link,.mk-transparent-header .remove-header-bg-true.light-header-skin:not(.header-sticky-ready) .menu-hover-style-3.mk-vm-menuwrapper li.current-menu-item>a,.mk-transparent-header .remove-header-bg-true.light-header-skin:not(.header-sticky-ready) .menu-hover-style-3.mk-vm-menuwrapper li.current-menu-ancestor>a{border:2px solid #fff;background-color:#fff;color:#222!important;}.mk-transparent-header .remove-header-bg-true.light-header-skin:not(.header-sticky-ready) .menu-hover-style-3 .main-navigation-ul>li.menu-item>a.menu-item-link:hover,.mk-transparent-header .remove-header-bg-true.light-header-skin:not(.header-sticky-ready) .menu-hover-style-3 .main-navigation-ul>li.menu-item:hover>a.menu-item-link,.mk-transparent-header .remove-header-bg-true.light-header-skin:not(.header-sticky-ready) .menu-hover-style-3.mk-vm-menuwrapper li>a:hover,.mk-transparent-header .remove-header-bg-true.light-header-skin:not(.header-sticky-ready) .menu-hover-style-3.mk-vm-menuwrapper li:hover>a{border:2px solid #fff;}.mk-transparent-header .remove-header-bg-true.light-header-skin:not(.header-sticky-ready) .menu-hover-style-4 .main-navigation-ul li.menu-item>a.menu-item-link:hover,.mk-transparent-header .remove-header-bg-true.light-header-skin:not(.header-sticky-ready) .menu-hover-style-4 .main-navigation-ul li.menu-item:hover>a.menu-item-link,.mk-transparent-header .remove-header-bg-true.light-header-skin:not(.header-sticky-ready) .menu-hover-style-4 .main-navigation-ul li.current-menu-item>a.menu-item-link,.mk-transparent-header .remove-header-bg-true.light-header-skin:not(.header-sticky-ready) .menu-hover-style-5 .main-navigation-ul>li.menu-item>a.menu-item-link:after{background-color:#fff;color:#222!important;}.mk-transparent-header .remove-header-bg-true.dark-header-skin:not(.header-sticky-ready) .mk-desktop-logo.dark-logo{display:block!important;}.mk-transparent-header .remove-header-bg-true.dark-header-skin:not(.header-sticky-ready) .mk-desktop-logo.light-logo{display:none!important;}.mk-transparent-header .remove-header-bg-true.dark-header-skin:not(.header-sticky-ready) .main-navigation-ul>li.menu-item>a.menu-item-link,.mk-transparent-header .remove-header-bg-true.dark-header-skin:not(.header-sticky-ready) .mk-search-trigger,.mk-transparent-header .remove-header-bg-true.dark-header-skin:not(.header-sticky-ready) .mk-shoping-cart-link i,.mk-transparent-header .remove-header-bg-true.dark-header-skin:not(.header-sticky-ready) .mk-header-cart-count,.mk-transparent-header .remove-header-bg-true.dark-header-skin:not(.header-sticky-ready) .mk-header-start-tour,.mk-transparent-header .remove-header-bg-true.dark-header-skin:not(.header-sticky-ready) #mk-header-social a i,.mk-transparent-header .remove-header-bg-true.dark-header-skin:not(.header-sticky-ready) .menu-hover-style-1 .main-navigation-ul li.menu-item>a.menu-item-link:hover,.mk-transparent-header .remove-header-bg-true.dark-header-skin:not(.header-sticky-ready) .menu-hover-style-1 .main-navigation-ul li.menu-item:hover>a.menu-item-link,.mk-transparent-header .remove-header-bg-true.dark-header-skin:not(.header-sticky-ready) .menu-hover-style-1 .main-navigation-ul li.current-menu-item>a.menu-item-link,.mk-transparent-header .remove-header-bg-true.dark-header-skin:not(.header-sticky-ready) .menu-hover-style-1 .main-navigation-ul li.current-menu-ancestor>a.menu-item-link,.mk-transparent-header .remove-header-bg-true.dark-header-skin:not(.header-sticky-ready) .menu-hover-style-2 .main-navigation-ul li.menu-item>a.menu-item-link:hover,.mk-transparent-header .remove-header-bg-true.dark-header-skin:not(.header-sticky-ready) .menu-hover-style-2 .main-navigation-ul li.menu-item:hover>a.menu-item-link,.mk-transparent-header .remove-header-bg-true.dark-header-skin:not(.header-sticky-ready) .menu-hover-style-2 .main-navigation-ul li.current-menu-item>a.menu-item-link,.mk-transparent-header .remove-header-bg-true.dark-header-skin:not(.header-sticky-ready) .menu-hover-style-2 .main-navigation-ul li.current-menu-ancestor>a.menu-item-link,.mk-transparent-header .remove-header-bg-true.dark-header-skin:not(.header-sticky-ready) .mk-vm-menuwrapper li a,.mk-transparent-header .remove-header-bg-true.dark-header-skin:not(.header-sticky-ready) .mk-vm-menuwrapper li>a:after,.mk-transparent-header .remove-header-bg-true.dark-header-skin:not(.header-sticky-ready) .mk-vm-menuwrapper li.mk-vm-back:after{color:#222!important;}.mk-transparent-header .remove-header-bg-true.dark-header-skin:not(.header-sticky-ready) .menu-hover-style-1 .main-navigation-ul>li.dropdownOpen>a.menu-item-link,.mk-transparent-header .remove-header-bg-true.dark-header-skin:not(.header-sticky-ready) .menu-hover-style-1 .main-navigation-ul>li.active>a.menu-item-link,.mk-transparent-header .remove-header-bg-true.dark-header-skin:not(.header-sticky-ready) .menu-hover-style-1 .main-navigation-ul>li.open>a.menu-item-link,.mk-transparent-header .remove-header-bg-true.dark-header-skin:not(.header-sticky-ready) .menu-hover-style-1 .main-navigation-ul>li.menu-item>a:hover,.mk-transparent-header .remove-header-bg-true.dark-header-skin:not(.header-sticky-ready) .menu-hover-style-1 .main-navigation-ul>li.current-menu-item>a.menu-item-link,.mk-transparent-header .remove-header-bg-true.dark-header-skin:not(.header-sticky-ready) .menu-hover-style-1 .main-navigation-ul>li.current-menu-ancestor>a.menu-item-link{border-top-color:#222;}.mk-transparent-header .remove-header-bg-true.dark-header-skin:not(.header-sticky-ready) .mk-css-icon-menu div{background-color:#222!important;}.mk-transparent-header .remove-header-bg-true.dark-header-skin:not(.header-sticky-ready) .menu-hover-style-3 .main-navigation-ul>li.current-menu-item>a.menu-item-link,.mk-transparent-header .remove-header-bg-true.dark-header-skin:not(.header-sticky-ready) .menu-hover-style-3 .main-navigation-ul>li.current-menu-ancestor>a.menu-item-link,.mk-transparent-header .remove-header-bg-true.dark-header-skin:not(.header-sticky-ready) .menu-hover-style-3.mk-vm-menuwrapper li.current-menu-item>a,.mk-transparent-header .remove-header-bg-true.dark-header-skin:not(.header-sticky-ready) .menu-hover-style-3.mk-vm-menuwrapper li.current-menu-ancestor>a{border:2px solid #222;background-color:#222;color:#fff!important;}.mk-transparent-header .remove-header-bg-true.dark-header-skin:not(.header-sticky-ready) .menu-hover-style-3 .main-navigation-ul>li.menu-item>a.menu-item-link:hover,.mk-transparent-header .remove-header-bg-true.dark-header-skin:not(.header-sticky-ready) .menu-hover-style-3 .main-navigation-ul>li.menu-item:hover>a.menu-item-link,.mk-transparent-header .remove-header-bg-true.dark-header-skin:not(.header-sticky-ready) .menu-hover-style-3.mk-vm-menuwrapper li>a:hover,.mk-transparent-header .remove-header-bg-true.dark-header-skin:not(.header-sticky-ready) .menu-hover-style-3.mk-vm-menuwrapper li:hover>a{border:2px solid #222;}.mk-transparent-header .remove-header-bg-true.dark-header-skin:not(.header-sticky-ready) .menu-hover-style-4 .main-navigation-ul li.menu-item>a.menu-item-link:hover,.mk-transparent-header .remove-header-bg-true.dark-header-skin:not(.header-sticky-ready) .menu-hover-style-4 .main-navigation-ul li.menu-item:hover>a.menu-item-link,.mk-transparent-header .remove-header-bg-true.dark-header-skin:not(.header-sticky-ready) .menu-hover-style-4 .main-navigation-ul li.current-menu-item>a.menu-item-link,.mk-transparent-header .remove-header-bg-true.dark-header-skin:not(.header-sticky-ready) .menu-hover-style-4 .main-navigation-ul li.current-menu-ancestor>a.menu-item-link,.mk-transparent-header .remove-header-bg-true.dark-header-skin:not(.header-sticky-ready) .menu-hover-style-5 .main-navigation-ul>li.menu-item>a.menu-item-link:after{background-color:#222;color:#fff!important;}}.comment-reply a,.mk-toggle .mk-toggle-title.active-toggle:before,.mk-testimonial-author,.modern-style .mk-testimonial-company,#wp-calendar td#today,.news-full-without-image .news-categories span,.news-half-without-image .news-categories span,.news-fourth-without-image .news-categories span,.mk-read-more,.news-single-social li a,.portfolio-widget-cats,.portfolio-carousel-cats,.blog-showcase-more,.simple-style .mk-employee-item:hover .team-member-position,.mk-readmore,.about-author-name,.mk-portfolio-classic-item .portfolio-categories a,.register-login-links a:hover,.not-found-subtitle,.mk-mini-callout a,.search-loop-meta a,.new-tab-readmore,.mk-news-tab .mk-tabs-tabs li.ui-tabs-active a,.mk-tooltip a,.mk-accordion-single.current .mk-accordion-tab i,.monocolor.pricing-table .pricing-price span,.quantity .plus:hover,.quantity .minus:hover,.mk-woo-tabs .mk-tabs-tabs li.ui-state-active a,.product .add_to_cart_button i,.blog-modern-comment:hover,.blog-modern-share:hover,{color:#f97352;}.mk-tabs .mk-tabs-tabs li.ui-tabs-active a>i,.mk-accordion .mk-accordion-single.current .mk-accordion-tab:before,.mk-tweet-list a,.widget_testimonials .testimonial-slider .testimonial-author,#mk-filter-portfolio li a:hover,#mk-language-navigation ul li a:hover,#mk-language-navigation ul li.current-menu-item>a,.mk-quick-contact-wrapper h4,.divider-go-top:hover i,.widget-sub-navigation ul li a:hover,#mk-footer .widget_posts_lists ul li .post-list-meta time,.mk-footer-tweets .tweet-username,.product-category .item-holder:hover h4,{color:#f97352!important;}.image-hover-overlay,.newspaper-portfolio,.similar-posts-wrapper .post-thumbnail:hover>.overlay-pattern,.portfolio-logo-section,.post-list-document .post-type-thumb:hover,#cboxTitle,#cboxPrevious,#cboxNext,#cboxClose,.comment-form-button,.mk-dropcaps.fancy-style,.mk-image-overlay,.pinterest-item-overlay,.news-full-with-image .news-categories span,.news-half-with-image .news-categories span,.news-fourth-with-image .news-categories span,.widget-portfolio-overlay,.portfolio-carousel-overlay,.blog-carousel-overlay,.mk-classic-comments span,.mk-similiar-overlay,.mk-skin-button,.mk-flex-caption .flex-desc span,.mk-icon-box .mk-icon-wrapper i:hover,.mk-quick-contact-link:hover,.quick-contact-active.mk-quick-contact-link,.mk-fancy-table th,.ui-slider-handle,.widget_price_filter .ui-slider-range,.shop-skin-btn,#review_form_wrapper input[type=submit],#mk-nav-search-wrapper form .nav-side-search-icon:hover,form.ajax-search-complete i,.blog-modern-btn,.showcase-blog-overlay,.gform_button[type=submit],.button.alt,#respond #submit,.woocommerce .price_slider_amount .button.button,.mk-shopping-cart-box .mk-button.checkout,.widget_shopping_cart .mk-button.checkout,.widget_shopping_cart .mk-button.checkout{background-color:#f97352!important;}.mk-circle-image .item-holder{-webkit-box-shadow:0 0 0 1px #f97352;-moz-box-shadow:0 0 0 1px #f97352;box-shadow:0 0 0 1px #f97352;}.mk-blockquote.line-style,.bypostauthor .comment-content,.bypostauthor .comment-content:after,.mk-tabs.simple-style .mk-tabs-tabs li.ui-tabs-active a{border-color:#f97352!important;}.news-full-with-image .news-categories span,.news-half-with-image .news-categories span,.news-fourth-with-image .news-categories span,.mk-flex-caption .flex-desc span{box-shadow:8px 0 0 #f97352,-8px 0 0 #f97352;}.monocolor.pricing-table .pricing-cols .pricing-col.featured-plan{border:1px solid #f97352!important;}.mk-skin-button.three-dimension{box-shadow:0px 3px 0px 0px #c75c42;}.mk-skin-button.three-dimension:active{box-shadow:0px 1px 0px 0px #c75c42;}.mk-footer-copyright,#mk-footer-navigation li a{color:#8c8e91;}.mk-woocommerce-main-image img:hover,.mk-single-thumbnails img:hover{border:1px solid #f97352!important;}.product-loading-icon{background-color:rgba(249,115,82,0.6);}.bigger-font-size p,.bigger-font-size{font-size:16px;line-height:27px;color:#777;}.cmk-center-align{text-align:center;}.match-height .vc_grid-item-mini{background-color:#f9f9f9;height:100%;}.article-excerpt-tiles p{height:80px;overflow:hidden;margin-bottom:0px;word-break:break-all;}.article-excerpt-tiles::after{content:'[...]';position:absolute;bottom:30px;right:10px;padding-left:9px;background:#f9f9f9;}.article-excerpt-tiles p a{color:#777;}.home-all-project .vc_gitem-col{max-height:250px;}.get-ebook-container input[type="text"],.get-ebook-container input[type="email"],.get-ebook-container select{min-width:350px;font-size:15px;}.get-ebook-container input[type="email"]{min-width:326px;}.get-ebook-container select.occupation{width:350px;font-size:14px!important;line-height:14px!important;}.get-ebook-container input[type="checkbox"]{margin-right:10px;}.get-ebook-container .submit-btn{background-color:#f79468;color:#fff!important;-webkit-transition:all 0.5s;-o-transition:all 0.5s;transition:all 0.5s;border:transparent;box-shadow:none;padding:10px 16px;font-size:18px;line-height:1.33;border-radius:6px;}.get-ebook-container .submit-btn:hover{background-color:#f57f4b;}.get-ebook-container .product-interest label span,.get-ebook-container .industry-interest label span{cursor:pointer;}.get-ebook-container .product-interest .field-title,.get-ebook-container .industry-interest .field-title,.get-ebook-container .gender-container .field-title{font-size:18px;font-weight:bold;}.get-ebook-container .gender-container label{margin-right:10px;}.get-ebook-container .gender-container label span{cursor:pointer;}.get-ebook-container .product-interest .error-field,.get-ebook-container .industry-interest .error-field{color:#e85c41;}.mc4wp-response .mc4wp-alert.mc4wp-success p{color:#5cb85c;font-weight:bold;}.mc4wp-response .mc4wp-alert.mc4wp-error p,.mc4wp-response .mc4wp-alert.mc4wp-danger p{color:#e85c41;font-weight:bold;}.homepage-slider{display:none}.mk-dynamic-styles{display:none}</style>
+<link rel="stylesheet" id="js_composer_front-css" href="Arduino%20Lamp%20Dimmer%20%20%20The%20Best%20PWM%20Dimmer%20Tutorial_files/js_composer.css" type="text/css" media="all">
+<script type="text/javascript" src="Arduino%20Lamp%20Dimmer%20%20%20The%20Best%20PWM%20Dimmer%20Tutorial_files/jquery_005.js"></script>
+<script type="text/javascript" src="Arduino%20Lamp%20Dimmer%20%20%20The%20Best%20PWM%20Dimmer%20Tutorial_files/jquery-migrate.js"></script>
+<script type="text/javascript" src="Arduino%20Lamp%20Dimmer%20%20%20The%20Best%20PWM%20Dimmer%20Tutorial_files/jquery_003.js"></script>
+<script type="text/javascript" src="Arduino%20Lamp%20Dimmer%20%20%20The%20Best%20PWM%20Dimmer%20Tutorial_files/jquery_004.js"></script>
+<script type="text/javascript" src="Arduino%20Lamp%20Dimmer%20%20%20The%20Best%20PWM%20Dimmer%20Tutorial_files/public_002.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var pys_events = [{"type":"init","name":"779889472158467","params":[]},{"type":"track","name":"PageView","params":{"domain":"diyhacking.com"},"delay":0},{"type":"trackCustom","name":"GeneralEvent","params":{"post_type":"post","content_name":"Arduino Lamp Dimmer : The Best PWM Dimmer Tutorial","post_id":1109,"content_category":"Arduino projects, Intermediate","domain":"diyhacking.com"},"delay":0}];
+/* ]]> */
+</script>
+<script type="text/javascript" src="Arduino%20Lamp%20Dimmer%20%20%20The%20Best%20PWM%20Dimmer%20Tutorial_files/public.js"></script>
+<link rel="https://api.w.org/" href="https://diyhacking.com/wp-json/">
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://diyhacking.com/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://diyhacking.com/wp-includes/wlwmanifest.xml">
+<link rel="shortlink" href="https://diyhacking.com/?p=1109">
+<link rel="alternate" type="application/json+oembed" href="https://diyhacking.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fdiyhacking.com%2Farduino-lamp-dimmer%2F">
+<link rel="alternate" type="text/xml+oembed" href="https://diyhacking.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fdiyhacking.com%2Farduino-lamp-dimmer%2F&amp;format=xml">
+<script type="text/javascript">
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-57872254-1']);
+_gaq.push(['_trackPageview']);
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+ 
+<meta name="generator" content="Jupiter 4.0.9.2">
+<style type="text/css">.recentcomments a{display:inline!important;padding:0!important;margin:0!important;}</style>
+<meta name="generator" content="Powered by Visual Composer - drag and drop page builder for WordPress.">
+<!--[if IE 8]><link rel="stylesheet" type="text/css" href="https://301o583r8shhildde3s0vcnh-wpengine.netdna-ssl.com/wp-content/plugins/js_composer_theme/assets/css/vc-ie8.css" media="screen"><![endif]--><meta property="og:image" content="https://diyhacking.com/wp-content/uploads/2015/04/cover1.jpg">
+<meta property="og:url" content="https://diyhacking.com/arduino-lamp-dimmer/">
+<meta property="og:title" content="Arduino Lamp Dimmer : The Best PWM Dimmer Tutorial">
+<style type="text/css" data-type="vc_shortcodes-custom-css">.vc_custom_1434200116345{background-color:#ffffff!important;}</style> <style type="text/css"></style><style type="text/css" data-ajax=""></style><style type="text/css">.fancybox-margin{margin-right:17px;}</style></head>
+<body class="single single-post postid-1109 single-format-standard  wpb-js-composer js-comp-ver-4.4.2 vc_responsive navigation-initialised" data-backtext="Back" data-vm-anim="1">
+<div id="mk-boxed-layout">
+<div id="mk-theme-container">
+<header id="mk-header" data-height="92" data-hover-style="5" data-transparent-skin="light" data-header-style="1" data-sticky-height="50" data-sticky-style="slide" data-sticky-offset="header" class="header-style-1 header-align-left header-toolbar-false sticky-style-slide  mk-background-stretch boxed-header  header-sticky-prepare header-sticky-ready">
+<div class="mk-header-holder">
+<div class="mk-header-inner">
+<div class="mk-header-bg "></div>
+<div class="mk-grid header-grid">
+<div class="mk-header-nav-container one-row-style menu-hover-style-5"><nav id="mk-main-navigation" class="main_menu"><ul id="menu-diyhacking-main-menu" class="main-navigation-ul dropdownJavascript"><li id="menu-item-8469" class="menu-item menu-item-type-post_type menu-item-object-page has-mega-menu"><a class="menu-item-link" href="https://diyhacking.com/become-star-maker/">Submit Project</a></li>
+<li id="menu-item-7909" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children no-mega-menu"><a class="menu-item-link" href="https://diyhacking.com/">Projects</a>
+<ul style="" class="sub-menu ">
+<li id="menu-item-9015" class="menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item-link" href="https://diyhacking.com/diy-projects/raspberry-pi-projects/">Raspberry Pi</a></li>
+<li id="menu-item-9014" class="menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item-link" href="https://diyhacking.com/diy-projects/arduino-projects/">Arduino</a></li>
+<li id="menu-item-9010" class="menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item-link" href="https://diyhacking.com/diy-drones/">Drones</a></li>
+<li id="menu-item-9009" class="menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item-link" href="https://diyhacking.com/3d-designing/">3D Design</a></li>
+<li id="menu-item-9011" class="menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item-link" href="https://diyhacking.com/cyber-security-tutorials/">Cyber Security</a></li>
+<li id="menu-item-9012" class="menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item-link" href="https://diyhacking.com/diy-robotics/">Robotics</a></li>
+<li id="menu-item-9013" class="menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item-link" href="https://diyhacking.com/augmented-reality-virtual-reality/">Virtual and Augmented Reality</a></li>
+<li id="menu-item-9016" class="menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item-link" href="https://diyhacking.com/diy-projects/other-diy-projects/">Other Projects</a></li>
+</ul>
+</li>
+<li id="menu-item-6967" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children no-mega-menu"><a class="menu-item-link" href="https://diyhacking.com/tutorials/">How To</a>
+<ul style="" class="sub-menu ">
+<li id="menu-item-9192" class="menu-item menu-item-type-custom menu-item-object-custom"><a class="menu-item-link" href="https://diyhacking.com/tutorials/">All Articles</a></li>
+<li id="menu-item-9088" class="menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item-link" href="https://diyhacking.com/get-the-ebook/">Get The eBook</a></li>
+</ul>
+</li>
+<li id="menu-item-6973" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children no-mega-menu"><a class="menu-item-link" href="https://diyhacking.com/star-makers/">Community</a>
+<ul style="" class="sub-menu ">
+<li id="menu-item-9001" class="menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item-link" href="https://diyhacking.com/get-started/">Get Started</a></li>
+<li id="menu-item-8350" class="menu-item menu-item-type-custom menu-item-object-custom"><a class="menu-item-link" href="http://diy-makers.herokuapp.com/">Live Chat on Slack</a></li>
+<li id="menu-item-6972" class="menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item-link" href="https://diyhacking.com/hardware-and-iot-startups/">Startups we support</a></li>
+<li id="menu-item-6623" class="menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item-link" href="https://diyhacking.com/makerspaces/">Makerspaces Abroad</a></li>
+<li id="menu-item-6968" class="menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item-link" href="https://diyhacking.com/workshops/">Host a workshop</a></li>
+<li id="menu-item-7927" class="menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item-link" href="https://diyhacking.com/research-and-development/">Research and Development</a></li>
+</ul>
+</li>
+<li id="menu-item-7967" class="menu-item menu-item-type-post_type menu-item-object-page no-mega-menu"><a class="menu-item-link" href="https://diyhacking.com/blog/">Blog</a></li>
+</ul></nav><div class="main-nav-side-search">
+<a class="mk-search-trigger mk-fullscreen-trigger" href="#"><i class="mk-icon-search"></i></a>
+</div></div>
+<div class=" mk-nav-responsive-link">
+<div class="mk-css-icon-menu">
+<div class="mk-css-icon-menu-line-1"></div>
+<div class="mk-css-icon-menu-line-2"></div>
+<div class="mk-css-icon-menu-line-3"></div>
+</div>
+</div>
+<div class="header-logo logo-is-responsive logo-has-sticky">
+<a href="https://diyhacking.com/" title="DIY Hacking">
+<img class="mk-desktop-logo dark-logo" alt="DIY Hacking" src="Arduino%20Lamp%20Dimmer%20%20%20The%20Best%20PWM%20Dimmer%20Tutorial_files/DarkLogoNew.png">
+<img class="mk-desktop-logo light-logo" alt="DIY Hacking" src="Arduino%20Lamp%20Dimmer%20%20%20The%20Best%20PWM%20Dimmer%20Tutorial_files/DarkLogoNew.png">
+<img class="mk-resposnive-logo" alt="DIY Hacking" src="Arduino%20Lamp%20Dimmer%20%20%20The%20Best%20PWM%20Dimmer%20Tutorial_files/DarkLogoNew.png">
+<img class="mk-sticky-logo" alt="DIY Hacking" src="Arduino%20Lamp%20Dimmer%20%20%20The%20Best%20PWM%20Dimmer%20Tutorial_files/Sticky-min.png">
+</a>
+</div>
+<div class="clearboth"></div>
+</div>
+<div class="mk-header-right">
+</div>
+</div>
+</div>
+<div class="clearboth"></div>
+<div class="mk-header-padding-wrapper enable-padding"></div>
+<div class="clearboth"></div>
+<div class="mk-zindex-fix">
+</div>
+<div class="clearboth"></div>
+<form class="responsive-searchform" method="get" style="display:none;" action="https://diyhacking.com">
+<input class="text-input" name="s" id="s" placeholder="Search.." type="text">
+<i class="mk-icon-search"><input value="" type="submit"></i>
+</form>
+</header>
+<div id="theme-page">
+<div class="mk-main-wrapper-holder">
+<div class="theme-page-wrapper mk-blog-single full-layout vc_row-fluid mk-grid ">
+<div class="theme-content ">
+<article id="1109" class="post-1109 post type-post status-publish format-standard has-post-thumbnail hentry category-arduino-projects category-intermediate tag-ac-control tag-arduino tag-arduino-projects tag-cool-arduino-projects tag-home-automation tag-lamp-dimmer tag-pwm tag-pwm-dimmer">
+<h1 class="blog-single-title">Arduino Lamp Dimmer : The Best PWM Dimmer Tutorial</h1>
+<div class="single-social-section">
+<div class="mk-love-holder"><a href="#" class="mk-love-this " id="mk-love-1109"><i class="mk-icon-heart"><span>&nbsp;</span></i> <span class="mk-love-count">6</span></a></div>
+<a href="https://diyhacking.com/arduino-lamp-dimmer/#comments" class="blog-modern-comment"><i class="mk-moon-bubble-9"></i><span> 23</span></a>
+<a class="mk-blog-print" onclick="window.print()" href="#" title="Print"><i class="mk-moon-print-3"></i></a>
+<div class="clearboth"></div>
+</div>
+<div class="clearboth"></div>
+<div class="mk-single-content" itemprop="mainContentOfPage">
+<div class="wpb_row vc_row  vc_row-fluid  mk-fullwidth-false  attched-false vc_row-fluid">
+<div style="" class="vc_col-sm-12 wpb_column column_container vc_custom_1434200116345 ">
+<div style="text-align: left;" class="mk-text-block  "><p><strong><span style="color: #ff0000;">From : Nibodha Technologies</span></strong></p>
+<div id="attachment_1159" style="width: 609px" class="wp-caption aligncenter"><a href="https://301o583r8shhildde3s0vcnh-wpengine.netdna-ssl.com/wp-content/uploads/2015/04/cover1.jpg"><img class="size-full wp-image-1159" src="Arduino%20Lamp%20Dimmer%20%20%20The%20Best%20PWM%20Dimmer%20Tutorial_files/cover1.jpg" alt="Arduino lamp dimmer - The best PWM dimmer tutorial" srcset="https://301o583r8shhildde3s0vcnh-wpengine.netdna-ssl.com/wp-content/uploads/2015/04/cover1.jpg 599w, https://301o583r8shhildde3s0vcnh-wpengine.netdna-ssl.com/wp-content/uploads/2015/04/cover1-300x199.jpg 300w" sizes="(max-width: 599px) 100vw, 599px" height="397" width="599"></a><p class="wp-caption-text">Arduino lamp dimmer – The best PWM dimmer tutorial</p></div>
+<p>Ever wondered about how exciting the use of an Arduino board can be 
+in your daily life? We present to you a very basic and a wonderful 
+experiment. We often adjust the display brightness of our mobile phones 
+to suit to our need. Haven’t you felt the same need for your bedside 
+lamps or any other lighting at home? Here we are going to teach you how 
+to make an Arduino lamp dimmer. Using this project, you can control the 
+brightness of your table lamp according to your need. And start building
+ one of the best arduino projects.</p>
+<p><strong>What are the stuff required to do this?</strong></p>
+<ol>
+<li>Arduino</li>
+<li>Resistors: 330ohm(1No.s), 33k(2no.s), 22k(1No.s), 220ohm(1No.s)</li>
+<li>Optocoupler: 4N35(1No.s)</li>
+<li>Diode: 1N4508(4No.s), 1N4007(1No.s), Zener 10V.4W(1No.s)</li>
+<li>Capacitor 2.2uF/63V(1No.s), 220nF/275V(1No.s)</li>
+<li>MOSFET: IRF830A</li>
+<li>Lamp: 100W</li>
+<li>230V Supply</li>
+<li>Socket</li>
+<li>Solder dot board and Soldering kit</li>
+</ol>
+<p><strong>How does it work?</strong></p>
+<p>In this project, we are going to adjust the brightness of the lamp 
+connected to the circuit by serial port. The brightness can be changed 
+according to the commands we are providing to the serial port. We will 
+be using these particular commands in this arduino project :</p>
+<ul>
+<li>‘0’ to TURN OFF.</li>
+<li>‘1’ for 25% brightness.</li>
+<li>‘2’ for 50% brightness.</li>
+<li>‘3’ for 75% brightness.</li>
+<li>‘4’ for 100% brightness.</li>
+</ul>
+<p>We will design a Pulse Wave Modulated (PWM) dimmer circuit which will
+ use IRF830A in a diode bridge which is used to control the voltage 
+across the bulb with pulse wave modulation (PWM). The power supply 
+voltage for driving the gate is supplied by the voltage across the Metal
+ Oxide Semiconductor Field-Effect Transistor (MOSFET).</p>
+<p>To know more about MOSFET – click here.</p>
+<h4><strong><span style="color: #ff0000;">Step 1: Circuit for Arduino Lamp Dimmer</span></strong></h4>
+<div id="attachment_1149" style="width: 650px" class="wp-caption aligncenter"><a href="https://301o583r8shhildde3s0vcnh-wpengine.netdna-ssl.com/wp-content/uploads/2015/04/Lamp-Dimmer-Circuit-compressed.jpg"><img class="wp-image-1149 size-large" src="Arduino%20Lamp%20Dimmer%20%20%20The%20Best%20PWM%20Dimmer%20Tutorial_files/Lamp-Dimmer-Circuit-compressed-1024x420.jpg" alt="Arduino lamp dimmer - The best pwm dimmer tutorial" srcset="https://301o583r8shhildde3s0vcnh-wpengine.netdna-ssl.com/wp-content/uploads/2015/04/Lamp-Dimmer-Circuit-compressed-1024x420.jpg 1024w, https://301o583r8shhildde3s0vcnh-wpengine.netdna-ssl.com/wp-content/uploads/2015/04/Lamp-Dimmer-Circuit-compressed-300x123.jpg 300w, https://301o583r8shhildde3s0vcnh-wpengine.netdna-ssl.com/wp-content/uploads/2015/04/Lamp-Dimmer-Circuit-compressed.jpg 1141w" sizes="(max-width: 640px) 100vw, 640px" height="263" width="640"></a><p class="wp-caption-text">Lamp Dimmer Circuit</p></div>
+<p>The figure clearly explains the positioning of the different 
+electrical components in the circuit. Follow the circuit diagram to 
+solder your dot board.</p>
+<div id="attachment_1150" style="width: 616px" class="wp-caption aligncenter"><a href="https://301o583r8shhildde3s0vcnh-wpengine.netdna-ssl.com/wp-content/uploads/2015/04/Arduino-Lamp-Dimmer-Soldering-compressed.jpg"><img class="wp-image-1150 size-full" src="Arduino%20Lamp%20Dimmer%20%20%20The%20Best%20PWM%20Dimmer%20Tutorial_files/Arduino-Lamp-Dimmer-Soldering-compressed.jpg" alt="Arduino Lamp Dimmer Soldering best pwm dimmer tutorial" srcset="https://301o583r8shhildde3s0vcnh-wpengine.netdna-ssl.com/wp-content/uploads/2015/04/Arduino-Lamp-Dimmer-Soldering-compressed.jpg 606w, https://301o583r8shhildde3s0vcnh-wpengine.netdna-ssl.com/wp-content/uploads/2015/04/Arduino-Lamp-Dimmer-Soldering-compressed-300x121.jpg 300w" sizes="(max-width: 606px) 100vw, 606px" height="244" width="606"></a><p class="wp-caption-text">Arduino Lamp Dimmer Soldering</p></div>
+<p>You can use this picture as reference when you solder your board.</p>
+<p>To start with, we have the diode D6, the load resistor R5 and the 
+capacitor C2 connected. This forms our rectifier. Also, in the circuit 
+the positioning of the resistor R5 is such that it limits the current 
+pulses through D6 to about 1.5A. This shows that the rectifier is not a 
+pure peak rectifier.</p>
+<p>Talking about the capacitor C2, the voltage across it is regulated to
+ a maximum value of 10V by the resistors R3 and R4, capacitor C1 and 
+diode D1.</p>
+<p><strong>Optocoupler</strong> – <a href="https://en.wikipedia.org/wiki/Opto-isolator" target="_blank">http://en.wikipedia.org/wiki/Opto-isolator</a></p>
+<p>The optocoupler and the remaining resistor R2 are used for driving the gate.</p>
+<p>The function of R1 is to protect the LED in the optocoupler. Like R5,
+ R1 also limits the current, so that a ‘hard’ voltage can be applied 
+safely. Optocoupler, the CNY65, provides class-II isolation. (Class-II 
+or double insulated electrical appliance is the one which has been 
+designed in such a way that it does not require a safety connection to 
+electrical earth).&nbsp; This is good enough to ensure safety to the 
+regulator.</p>
+<p>Now we need the conduction in the MOSFET as quickly as possible. For 
+this, we connect the transistor in the optocoupler to the positive power
+ supply. We have to make a compromise between the switching loss and the
+ inductive voltages as we keep the rating of R2 a bit high, i.e., 22 
+K-ohm. This is done so as to reduce the switching spikes as a 
+consequence of parasitic inductances.</p>
+<p>One additional advantage of the MOSFET is that it helps in the 
+conduction. It conducts for a longer duration than a PWM would do single
+ headedly. Now some interesting information is that when the voltage 
+across the MOSFET reduces, the voltage across D1 remains equal to 10V 
+upon a duty cycle of 88%.</p>
+<p>A duty cycle is the percentage of one period up to which a signal is 
+active. A period is the time it takes to complete an on-and-off cycle. 
+The expression for the duty cycle is:</p>
+<p><strong>D = (T/P)*100%</strong></p>
+<p>Where, D is the duty cycle</p>
+<p>T is the time the signal is active</p>
+<p>P is the total period of the signal.</p>
+<p>A higher duty cycle results in lowering of the voltage. For an 
+instance, at 94% duty cycle, the voltage of 4.8A proved to be just 
+enough to cause the MOSFET to conduct sufficiently. This value is 
+therefore considered as the maximum duty cycle. Also, at this value, the
+ transistor conducts just about cent percent. Measuring with a 100W 
+bulb, the voltage across a 230V mains supply is just 2.5V lower.</p>
+<p>Note: We should note that this circuit should not be used to control 
+inductive loads. MOSFET is switched asynchronously and this can cause 
+the DC current to flow.</p>
+<p>Now some tips regarding the whole arduino project. Starting off with,
+ we must know that the electronic lamps, such as the PL types, cannot be
+ dimmed with this circuit. This is because these lamps use a rectifier 
+and internally they operate off DC. A few remarks about the value of R3 
+and R4. This is a compromise between the lowest possible current we 
+consume (when the lamp is off) and the highest possible duty cycle that 
+is allowed. Now as mentioned earlier, the more the duty cycle the less 
+is the voltage. So, we look at a case where the duty cycle is 0%. This 
+results in maximum voltage across the resistors, around 128V across a 
+supply of 230V. Because (depending on the actual resistor) the voltage 
+rating of the resistor may be less than 300 V, two resistors are 
+connected in series. The power that each resistor dissipates amounts to a
+ maximum of 0.5 W. With an eye on the life expectancy, it would be wise 
+to use two 1-W rated resistors here.</p>
+<h4><strong><span style="color: #ff0000;">Step 2 : Uploading the code to Arduino</span></strong></h4>
+<p>Here you can see a few more pictures of the finished product.</p>
+<div id="attachment_7429" style="width: 606px" class="wp-caption aligncenter"><a href="https://301o583r8shhildde3s0vcnh-wpengine.netdna-ssl.com/wp-content/uploads/2015/04/Arduino-Lamp-Dimmer-Finished-Product11.jpg"><img class="wp-image-7429 size-full" src="Arduino%20Lamp%20Dimmer%20%20%20The%20Best%20PWM%20Dimmer%20Tutorial_files/Arduino-Lamp-Dimmer-Finished-Product11.jpg" alt="Arduino lamp dimmer - The best pwm dimmer tutorial" srcset="https://301o583r8shhildde3s0vcnh-wpengine.netdna-ssl.com/wp-content/uploads/2015/04/Arduino-Lamp-Dimmer-Finished-Product11.jpg 596w, https://301o583r8shhildde3s0vcnh-wpengine.netdna-ssl.com/wp-content/uploads/2015/04/Arduino-Lamp-Dimmer-Finished-Product11-300x100.jpg 300w" sizes="(max-width: 596px) 100vw, 596px" height="198" width="596"></a><p class="wp-caption-text">Arduino lamp dimmer</p></div>
+<p><strong>Arduino Script</strong></p>
+<p>You can now upload this code to program your Arduino lamp dimmer and start building one of the coolest arduino projects:</p>
+<pre><code>
+intledPin = 3;
+void setup()
+{
+Serial.begin(9600);
+Serial.println(“Serial connection started, waiting for instructions…n0 = Offn1 = 25%n2 =50%n3 = 75%n4 = 100%”);
+}
+
+void loop ()
+{
+if (Serial.available()) {
+char ser = Serial.read();&nbsp;//read serial as a character
+
+//NOTE because the serial is read as “char” and not “int”, the read value must be compared to character numbers
+//hence the quotes around the numbers in the case statement
+
+switch (ser)
+{
+case ‘0’:
+analogWrite(ledPin, 0);
+break;
+
+case ‘1’:
+analogWrite(ledPin, 64);
+break;
+
+case ‘2’:
+analogWrite(ledPin, 128);
+break;
+
+case ‘3’:
+analogWrite(ledPin, 192);
+break;
+
+case ‘4’:
+analogWrite(ledPin, 255);
+break;
+default:
+Serial.println(“Invalid entry”);
+
+}
+}
+}
+</code></pre>
+<p>And now check out the working video for one of the best&nbsp;arduino projects:</p>
+<p></p><center> <iframe src="Arduino%20Lamp%20Dimmer%20%20%20The%20Best%20PWM%20Dimmer%20Tutorial_files/2ysbZBCLxNw.htm" allowfullscreen="" height="360" frameborder="0" width="640"></iframe></center><p></p>
+<p>Go ahead and make your own Arduino lamp dimmer and&nbsp;get started at domestic electronics :)</p>
+<div id="attachment_7431" style="width: 421px" class="wp-caption alignleft"><a href="https://301o583r8shhildde3s0vcnh-wpengine.netdna-ssl.com/wp-content/uploads/2015/04/Nibodha-Technologies-1024x6832.jpg"><img class="  wp-image-7431 size-full" src="Arduino%20Lamp%20Dimmer%20%20%20The%20Best%20PWM%20Dimmer%20Tutorial_files/Nibodha-Technologies-1024x6832.jpg" alt="Arduino lamp dimmer - The best pwm dimmer tutorial" srcset="https://301o583r8shhildde3s0vcnh-wpengine.netdna-ssl.com/wp-content/uploads/2015/04/Nibodha-Technologies-1024x6832.jpg 411w, https://301o583r8shhildde3s0vcnh-wpengine.netdna-ssl.com/wp-content/uploads/2015/04/Nibodha-Technologies-1024x6832-300x200.jpg 300w" sizes="(max-width: 411px) 100vw, 411px" height="274" width="411"></a><p class="wp-caption-text">Nibodha Technologies</p></div>
+<p>&nbsp;</p>
+<p><strong>– Nibodha Technologies</strong></p>
+<p>Nibodha is a&nbsp;<em>Preferred Vacation Rentals Technology Partner</em>. At Nibodha labs, we are actively involved in R&amp;D to solve some of the challenges in Vacation Rental industry using IoT.</p>
+<p>We are also the organizers of the Kochi IoT Meetup which is India’s 7th largest IoT meetup group</p>
+<p>&nbsp;</p>
+<div class="clearboth"></div></div>
+</div></div>
+</div>
+<div class="single-post-tags">
+Tags: <a href="https://diyhacking.com/tag/ac-control/" rel="tag">AC control</a>, <a href="https://diyhacking.com/tag/arduino/" rel="tag">Arduino</a>, <a href="https://diyhacking.com/tag/arduino-projects/" rel="tag">arduino projects</a>, <a href="https://diyhacking.com/tag/cool-arduino-projects/" rel="tag">cool arduino projects</a>, <a href="https://diyhacking.com/tag/home-automation/" rel="tag">home automation</a>, <a href="https://diyhacking.com/tag/lamp-dimmer/" rel="tag">lamp dimmer</a>, <a href="https://diyhacking.com/tag/pwm/" rel="tag">pwm</a>, <a href="https://diyhacking.com/tag/pwm-dimmer/" rel="tag">pwm dimmer</a> </div>
+<section class="blog-similar-posts"><div class="similar-post-title">Recommended Posts</div><ul class="four-cols"><li><div class="similar-post-holder"><a class="mk-similiar-thumbnail" href="https://diyhacking.com/christmas-light-show-with-arduino/" title="Christmas Light Show with Arduino"><img src="Arduino%20Lamp%20Dimmer%20%20%20The%20Best%20PWM%20Dimmer%20Tutorial_files/cov-n4g55abi5mfihomw39fadresd0vlg1qecl6v22ibpe.jpg" alt="Christmas Light Show with Arduino"><div class="image-hover-overlay"></div></a><a href="https://diyhacking.com/christmas-light-show-with-arduino/" class="mk-similiar-title">Christmas Light Show with Arduino</a></div></li><li><div class="similar-post-holder"><a class="mk-similiar-thumbnail" href="https://diyhacking.com/arduino-security-camera/" title="Arduino Security Camera with Motion Tracking: Project Tutorial"><img src="Arduino%20Lamp%20Dimmer%20%20%20The%20Best%20PWM%20Dimmer%20Tutorial_files/feat1-n0c6p1ugny2r4lgfgswtn9q1bh8lbxnf7544d9gjwi.gif" alt="Arduino Security Camera with Motion Tracking: Project Tutorial"><div class="image-hover-overlay"></div></a><a href="https://diyhacking.com/arduino-security-camera/" class="mk-similiar-title">Arduino Security Camera with Motion Tracking: Project Tutorial</a></div></li><li><div class="similar-post-holder"><a class="mk-similiar-thumbnail" href="https://diyhacking.com/arduino-curtain-automation/" title="Arduino Curtain Automation: DIY Home Automation Tutorial!"><img src="Arduino%20Lamp%20Dimmer%20%20%20The%20Best%20PWM%20Dimmer%20Tutorial_files/featureFF-my0jgjicqyh4cb1ynuvda9qgyr9m169gmmy3u3wmo2.gif" alt="Arduino Curtain Automation: DIY Home Automation Tutorial!"><div class="image-hover-overlay"></div></a><a href="https://diyhacking.com/arduino-curtain-automation/" class="mk-similiar-title">Arduino Curtain Automation: DIY Home Automation Tutorial!</a></div></li><li><div class="similar-post-holder"><a class="mk-similiar-thumbnail" href="https://diyhacking.com/diy-arduino-lamp/" title="DIY Arduino Lamp for Ceremonial Inauguration: Maker Style"><img src="Arduino%20Lamp%20Dimmer%20%20%20The%20Best%20PWM%20Dimmer%20Tutorial_files/coverF2-mxysuerr9wqm4tb17hvrt3c4ltleztildpzcdu4o8y.jpg" alt="DIY Arduino Lamp for Ceremonial Inauguration: Maker Style"><div class="image-hover-overlay"></div></a><a href="https://diyhacking.com/diy-arduino-lamp/" class="mk-similiar-title">DIY Arduino Lamp for Ceremonial Inauguration: Maker Style</a></div></li></ul><div class="clearboth"></div></section>
+<section id="comments">
+<div class="blog-comment-title">Showing 23 comments</div>
+<ul class="mk-commentlist">
+<li class="comment even thread-even depth-1" id="li-comment-4511">
+<div class="mk-single-comment" id="comment-4511">
+<div class="gravatar"><img alt="" src="Arduino%20Lamp%20Dimmer%20%20%20The%20Best%20PWM%20Dimmer%20Tutorial_files/092a09cc771775ff00a7219f30a1171f.jpg" srcset="https://secure.gravatar.com/avatar/092a09cc771775ff00a7219f30a1171f?s=90&amp;d=mm&amp;r=g 2x" class="avatar avatar-45 photo" height="45" width="45"></div>
+<div class="comment-meta">
+<span class="comment-author"><a href="http://iotgruop.site/" rel="external nofollow" class="url">Rafael</a></span>
+<time class="comment-time">December 26, 2016</time>
+</div>
+<span class="comment-reply">
+<a rel="nofollow" class="comment-reply-link" href="https://diyhacking.com/arduino-lamp-dimmer/?replytocom=4511#respond" onclick='return addComment.moveForm( "comment-4511", "4511", "respond", "1109" )' aria-label="Reply to Rafael">Reply</a> </span>
+<div class="clearboth"></div>
+<div class="comment-content">
+<p>can i use it on 60hz 120v?</p>
+<div class="clearboth"></div>
+</div>
+</div>
+</li> 
+<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-4269">
+<div class="mk-single-comment" id="comment-4269">
+<div class="gravatar"><img alt="" src="Arduino%20Lamp%20Dimmer%20%20%20The%20Best%20PWM%20Dimmer%20Tutorial_files/84efa8681de2a0dc525d456c674a881e.jpg" srcset="https://secure.gravatar.com/avatar/84efa8681de2a0dc525d456c674a881e?s=90&amp;d=mm&amp;r=g 2x" class="avatar avatar-45 photo" height="45" width="45"></div>
+<div class="comment-meta">
+<span class="comment-author">diyarduino</span>
+<time class="comment-time">November 21, 2016</time>
+</div>
+<span class="comment-reply">
+<a rel="nofollow" class="comment-reply-link" href="https://diyhacking.com/arduino-lamp-dimmer/?replytocom=4269#respond" onclick='return addComment.moveForm( "comment-4269", "4269", "respond", "1109" )' aria-label="Reply to diyarduino">Reply</a> </span>
+<div class="clearboth"></div>
+<div class="comment-content">
+<p>it teach how to fishing. There are some ready circuits online. if you
+ go amazon and search “ac dimmer arduino” you will find great devices. I
+ used one of them in work.</p>
+<div class="clearboth"></div>
+</div>
+</div>
+</li> 
+<li class="comment even thread-even depth-1" id="li-comment-4203">
+<div class="mk-single-comment" id="comment-4203">
+<div class="gravatar"><img alt="" src="Arduino%20Lamp%20Dimmer%20%20%20The%20Best%20PWM%20Dimmer%20Tutorial_files/e3aa304df2bdfc836306f34a178983e3.jpg" srcset="https://secure.gravatar.com/avatar/e3aa304df2bdfc836306f34a178983e3?s=90&amp;d=mm&amp;r=g 2x" class="avatar avatar-45 photo" height="45" width="45"></div>
+<div class="comment-meta">
+<span class="comment-author"><a href="http://www.denisgottardello.it/" rel="external nofollow" class="url">Denis</a></span>
+<time class="comment-time">November 12, 2016</time>
+</div>
+<span class="comment-reply">
+<a rel="nofollow" class="comment-reply-link" href="https://diyhacking.com/arduino-lamp-dimmer/?replytocom=4203#respond" onclick='return addComment.moveForm( "comment-4203", "4203", "respond", "1109" )' aria-label="Reply to Denis">Reply</a> </span>
+<div class="clearboth"></div>
+<div class="comment-content">
+<p>Hi. I have built the board but I have a problem. The lamp is always 
+at 100%. Maybe there is a mistake. Does someone suggest me where could 
+be the problem?</p>
+<div class="clearboth"></div>
+</div>
+</div>
+</li> 
+<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-4024">
+<div class="mk-single-comment" id="comment-4024">
+<div class="gravatar"><img alt="" src="Arduino%20Lamp%20Dimmer%20%20%20The%20Best%20PWM%20Dimmer%20Tutorial_files/77d62f01cedd2e02ed7501ba4c681dfd.jpg" srcset="https://secure.gravatar.com/avatar/77d62f01cedd2e02ed7501ba4c681dfd?s=90&amp;d=mm&amp;r=g 2x" class="avatar avatar-45 photo" height="45" width="45"></div>
+<div class="comment-meta">
+<span class="comment-author">John</span>
+<time class="comment-time">October 19, 2016</time>
+</div>
+<span class="comment-reply">
+<a rel="nofollow" class="comment-reply-link" href="https://diyhacking.com/arduino-lamp-dimmer/?replytocom=4024#respond" onclick='return addComment.moveForm( "comment-4024", "4024", "respond", "1109" )' aria-label="Reply to John">Reply</a> </span>
+<div class="clearboth"></div>
+<div class="comment-content">
+<p>Hi colleagues, </p>
+<p>Thanks for the log. It is quite interesting. As the upper part seems 
+to be a ac/dc converter, may I connect the 4N35’s pin 5 directly to my 
+DC pin of the arduino and remove the rest of the upper-part components? </p>
+<p>Thanks in advance,<br>
+John</p>
+<div class="clearboth"></div>
+</div>
+</div>
+</li> 
+<li class="comment even thread-even depth-1" id="li-comment-4003">
+<div class="mk-single-comment" id="comment-4003">
+<div class="gravatar"><img alt="" src="Arduino%20Lamp%20Dimmer%20%20%20The%20Best%20PWM%20Dimmer%20Tutorial_files/fc9309852359ed4cd6787dd960f14652.jpg" srcset="https://secure.gravatar.com/avatar/fc9309852359ed4cd6787dd960f14652?s=90&amp;d=mm&amp;r=g 2x" class="avatar avatar-45 photo" height="45" width="45"></div>
+<div class="comment-meta">
+<span class="comment-author">Vikas Ambav</span>
+<time class="comment-time">October 16, 2016</time>
+</div>
+<span class="comment-reply">
+<a rel="nofollow" class="comment-reply-link" href="https://diyhacking.com/arduino-lamp-dimmer/?replytocom=4003#respond" onclick='return addComment.moveForm( "comment-4003", "4003", "respond", "1109" )' aria-label="Reply to Vikas Ambav">Reply</a> </span>
+<div class="clearboth"></div>
+<div class="comment-content">
+<p>Where is LDR in the circuit? :/</p>
+<div class="clearboth"></div>
+</div>
+</div>
+</li> 
+<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-3954">
+<div class="mk-single-comment" id="comment-3954">
+<div class="gravatar"><img alt="" src="Arduino%20Lamp%20Dimmer%20%20%20The%20Best%20PWM%20Dimmer%20Tutorial_files/42daf2c18f154ed256123a09c230f696.jpg" srcset="https://secure.gravatar.com/avatar/42daf2c18f154ed256123a09c230f696?s=90&amp;d=mm&amp;r=g 2x" class="avatar avatar-45 photo" height="45" width="45"></div>
+<div class="comment-meta">
+<span class="comment-author">Prashant Kartikeya</span>
+<time class="comment-time">October 10, 2016</time>
+</div>
+<span class="comment-reply">
+<a rel="nofollow" class="comment-reply-link" href="https://diyhacking.com/arduino-lamp-dimmer/?replytocom=3954#respond" onclick='return addComment.moveForm( "comment-3954", "3954", "respond", "1109" )' aria-label="Reply to Prashant Kartikeya">Reply</a> </span>
+<div class="clearboth"></div>
+<div class="comment-content">
+<p>The circuit works fine for incandescent Bulbs, but CFL bulbs flicker 
+even when the DC side of Opto-coupler is open. Can you please tell me 
+why and how to correct it?</p>
+<div class="clearboth"></div>
+</div>
+</div>
+</li> 
+<li class="comment even thread-even depth-1" id="li-comment-3788">
+<div class="mk-single-comment" id="comment-3788">
+<div class="gravatar"><img alt="" src="Arduino%20Lamp%20Dimmer%20%20%20The%20Best%20PWM%20Dimmer%20Tutorial_files/879250b95ce1050ad34ee94f3fe9f3eb.jpg" srcset="https://secure.gravatar.com/avatar/879250b95ce1050ad34ee94f3fe9f3eb?s=90&amp;d=mm&amp;r=g 2x" class="avatar avatar-45 photo" height="45" width="45"></div>
+<div class="comment-meta">
+<span class="comment-author">Abhi</span>
+<time class="comment-time">September 12, 2016</time>
+</div>
+<span class="comment-reply">
+<a rel="nofollow" class="comment-reply-link" href="https://diyhacking.com/arduino-lamp-dimmer/?replytocom=3788#respond" onclick='return addComment.moveForm( "comment-3788", "3788", "respond", "1109" )' aria-label="Reply to Abhi">Reply</a> </span>
+<div class="clearboth"></div>
+<div class="comment-content">
+<p>Please put reference or a link to the source of this circuit. I think this circuit first appeared in elektor.</p>
+<p>There are some drawbacks and there are some methods to overcome those drawbacks. Please include them also.</p>
+<div class="clearboth"></div>
+</div>
+</div>
+</li> 
+<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-3733">
+<div class="mk-single-comment" id="comment-3733">
+<div class="gravatar"><img alt="" src="Arduino%20Lamp%20Dimmer%20%20%20The%20Best%20PWM%20Dimmer%20Tutorial_files/3119b8566d23a5090497c218a4eccf97.jpg" srcset="https://secure.gravatar.com/avatar/3119b8566d23a5090497c218a4eccf97?s=90&amp;d=mm&amp;r=g 2x" class="avatar avatar-45 photo" height="45" width="45"></div>
+<div class="comment-meta">
+<span class="comment-author"><a href="http://www.goclabs.com/" rel="external nofollow" class="url">Gautam</a></span>
+<time class="comment-time">September 1, 2016</time>
+</div>
+<span class="comment-reply">
+<a rel="nofollow" class="comment-reply-link" href="https://diyhacking.com/arduino-lamp-dimmer/?replytocom=3733#respond" onclick='return addComment.moveForm( "comment-3733", "3733", "respond", "1109" )' aria-label="Reply to Gautam">Reply</a> </span>
+<div class="clearboth"></div>
+<div class="comment-content">
+<p>can we run ceiling fan with this circuit??</p>
+<div class="clearboth"></div>
+</div>
+</div>
+</li> 
+<li class="comment even thread-even depth-1" id="li-comment-3631">
+<div class="mk-single-comment" id="comment-3631">
+<div class="gravatar"><img alt="" src="Arduino%20Lamp%20Dimmer%20%20%20The%20Best%20PWM%20Dimmer%20Tutorial_files/6e35af2ce901a82deccf5fe3941b6412.jpg" srcset="https://secure.gravatar.com/avatar/6e35af2ce901a82deccf5fe3941b6412?s=90&amp;d=mm&amp;r=g 2x" class="avatar avatar-45 photo" height="45" width="45"></div>
+<div class="comment-meta">
+<span class="comment-author">Akshay</span>
+<time class="comment-time">August 16, 2016</time>
+</div>
+<span class="comment-reply">
+<a rel="nofollow" class="comment-reply-link" href="https://diyhacking.com/arduino-lamp-dimmer/?replytocom=3631#respond" onclick='return addComment.moveForm( "comment-3631", "3631", "respond", "1109" )' aria-label="Reply to Akshay">Reply</a> </span>
+<div class="clearboth"></div>
+<div class="comment-content">
+<p>Hi.. Can I use this circuit with raspberry pi?? anybody tried using rasp pi and controlled led light?</p>
+<div class="clearboth"></div>
+</div>
+</div>
+</li> 
+<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-3276">
+<div class="mk-single-comment" id="comment-3276">
+<div class="gravatar"><img alt="" src="Arduino%20Lamp%20Dimmer%20%20%20The%20Best%20PWM%20Dimmer%20Tutorial_files/1b36d84f0b7cc3489ab648bb75c4810f.jpg" srcset="https://secure.gravatar.com/avatar/1b36d84f0b7cc3489ab648bb75c4810f?s=90&amp;d=mm&amp;r=g 2x" class="avatar avatar-45 photo" height="45" width="45"></div>
+<div class="comment-meta">
+<span class="comment-author">nidhi</span>
+<time class="comment-time">June 9, 2016</time>
+</div>
+<span class="comment-reply">
+<a rel="nofollow" class="comment-reply-link" href="https://diyhacking.com/arduino-lamp-dimmer/?replytocom=3276#respond" onclick='return addComment.moveForm( "comment-3276", "3276", "respond", "1109" )' aria-label="Reply to nidhi">Reply</a> </span>
+<div class="clearboth"></div>
+<div class="comment-content">
+<p>how do you power the Arduino ?</p>
+<div class="clearboth"></div>
+</div>
+</div>
+</li> 
+<li class="comment even thread-even depth-1" id="li-comment-3177">
+<div class="mk-single-comment" id="comment-3177">
+<div class="gravatar"><img alt="" src="Arduino%20Lamp%20Dimmer%20%20%20The%20Best%20PWM%20Dimmer%20Tutorial_files/146ee83001d35434902d19c5110251eb.jpg" srcset="https://secure.gravatar.com/avatar/146ee83001d35434902d19c5110251eb?s=90&amp;d=mm&amp;r=g 2x" class="avatar avatar-45 photo" height="45" width="45"></div>
+<div class="comment-meta">
+<span class="comment-author">hugo</span>
+<time class="comment-time">May 24, 2016</time>
+</div>
+<span class="comment-reply">
+<a rel="nofollow" class="comment-reply-link" href="https://diyhacking.com/arduino-lamp-dimmer/?replytocom=3177#respond" onclick='return addComment.moveForm( "comment-3177", "3177", "respond", "1109" )' aria-label="Reply to hugo">Reply</a> </span>
+<div class="clearboth"></div>
+<div class="comment-content">
+<p>what would i do if i don’t have the MOSFET: IRF830A?, what mosfet recommendme?</p>
+<div class="clearboth"></div>
+</div>
+</div>
+</li> 
+<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-2563">
+<div class="mk-single-comment" id="comment-2563">
+<div class="gravatar"><img alt="" src="Arduino%20Lamp%20Dimmer%20%20%20The%20Best%20PWM%20Dimmer%20Tutorial_files/f76800e50113b1223fb22881222bdab1.jpg" srcset="https://secure.gravatar.com/avatar/f76800e50113b1223fb22881222bdab1?s=90&amp;d=mm&amp;r=g 2x" class="avatar avatar-45 photo" height="45" width="45"></div>
+<div class="comment-meta">
+<span class="comment-author">Bill Loney</span>
+<time class="comment-time">February 28, 2016</time>
+</div>
+<span class="comment-reply">
+<a rel="nofollow" class="comment-reply-link" href="https://diyhacking.com/arduino-lamp-dimmer/?replytocom=2563#respond" onclick='return addComment.moveForm( "comment-2563", "2563", "respond", "1109" )' aria-label="Reply to Bill Loney">Reply</a> </span>
+<div class="clearboth"></div>
+<div class="comment-content">
+<p>If I could understand what you’re trying to say that would be okay… 
+I’m a term 5 electrical engineering student and I still don’t 
+understand. I am a white male, 200 lbs, completely lucid. Thank you for 
+your time.</p>
+<div class="clearboth"></div>
+</div>
+</div>
+</li> 
+<li class="comment even thread-even depth-1" id="li-comment-2537">
+<div class="mk-single-comment" id="comment-2537">
+<div class="gravatar"><img alt="" src="Arduino%20Lamp%20Dimmer%20%20%20The%20Best%20PWM%20Dimmer%20Tutorial_files/9660243d01ec7b66f77c503ff283ef9e.jpg" srcset="https://secure.gravatar.com/avatar/9660243d01ec7b66f77c503ff283ef9e?s=90&amp;d=mm&amp;r=g 2x" class="avatar avatar-45 photo" height="45" width="45"></div>
+<div class="comment-meta">
+<span class="comment-author">Rudy</span>
+<time class="comment-time">February 26, 2016</time>
+</div>
+<span class="comment-reply">
+<a rel="nofollow" class="comment-reply-link" href="https://diyhacking.com/arduino-lamp-dimmer/?replytocom=2537#respond" onclick='return addComment.moveForm( "comment-2537", "2537", "respond", "1109" )' aria-label="Reply to Rudy">Reply</a> </span>
+<div class="clearboth"></div>
+<div class="comment-content">
+<p>man, please, can you show us the coding from the video please….</p>
+<div class="clearboth"></div>
+</div>
+</div>
+</li> 
+<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-2461">
+<div class="mk-single-comment" id="comment-2461">
+<div class="gravatar"><img alt="" src="Arduino%20Lamp%20Dimmer%20%20%20The%20Best%20PWM%20Dimmer%20Tutorial_files/6478145074d720fce009cb7258d44ddc.jpg" srcset="https://secure.gravatar.com/avatar/6478145074d720fce009cb7258d44ddc?s=90&amp;d=mm&amp;r=g 2x" class="avatar avatar-45 photo" height="45" width="45"></div>
+<div class="comment-meta">
+<span class="comment-author">anthony</span>
+<time class="comment-time">February 14, 2016</time>
+</div>
+<span class="comment-reply">
+<a rel="nofollow" class="comment-reply-link" href="https://diyhacking.com/arduino-lamp-dimmer/?replytocom=2461#respond" onclick='return addComment.moveForm( "comment-2461", "2461", "respond", "1109" )' aria-label="Reply to anthony">Reply</a> </span>
+<div class="clearboth"></div>
+<div class="comment-content">
+<p>Will this work with 10watt led? if so what modification will I do to dim 4 of them? 4 led will be in-synch</p>
+<div class="clearboth"></div>
+</div>
+</div>
+</li> 
+<li class="comment even thread-even depth-1" id="li-comment-2389">
+<div class="mk-single-comment" id="comment-2389">
+<div class="gravatar"><img alt="" src="Arduino%20Lamp%20Dimmer%20%20%20The%20Best%20PWM%20Dimmer%20Tutorial_files/aba6a32574970c69d926a272df81141c.jpg" srcset="https://secure.gravatar.com/avatar/aba6a32574970c69d926a272df81141c?s=90&amp;d=mm&amp;r=g 2x" class="avatar avatar-45 photo" height="45" width="45"></div>
+<div class="comment-meta">
+<span class="comment-author">kees</span>
+<time class="comment-time">February 5, 2016</time>
+</div>
+<span class="comment-reply">
+<a rel="nofollow" class="comment-reply-link" href="https://diyhacking.com/arduino-lamp-dimmer/?replytocom=2389#respond" onclick='return addComment.moveForm( "comment-2389", "2389", "respond", "1109" )' aria-label="Reply to kees">Reply</a> </span>
+<div class="clearboth"></div>
+<div class="comment-content">
+<p>It is an old Elektor design from Ton Giesberts and has some drawbacks <a href="https://arduinodiy.wordpress.com/2015/07/25/1498/" rel="nofollow">https://arduinodiy.wordpress.com/2015/07/25/1498/</a></p>
+<div class="clearboth"></div>
+</div>
+</div>
+</li> 
+<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-2383">
+<div class="mk-single-comment" id="comment-2383">
+<div class="gravatar"><img alt="" src="Arduino%20Lamp%20Dimmer%20%20%20The%20Best%20PWM%20Dimmer%20Tutorial_files/0fc07d685b4eac48093196ee789e6ed0.jpg" srcset="https://secure.gravatar.com/avatar/0fc07d685b4eac48093196ee789e6ed0?s=90&amp;d=mm&amp;r=g 2x" class="avatar avatar-45 photo" height="45" width="45"></div>
+<div class="comment-meta">
+<span class="comment-author">akekec</span>
+<time class="comment-time">February 4, 2016</time>
+</div>
+<span class="comment-reply">
+<a rel="nofollow" class="comment-reply-link" href="https://diyhacking.com/arduino-lamp-dimmer/?replytocom=2383#respond" onclick='return addComment.moveForm( "comment-2383", "2383", "respond", "1109" )' aria-label="Reply to akekec">Reply</a> </span>
+<div class="clearboth"></div>
+<div class="comment-content">
+<p>LDR is used in the video. But there is no LDR in software.<br>
+Can I be wrong.</p>
+<div class="clearboth"></div>
+</div>
+</div>
+</li> 
+<li class="comment even thread-even depth-1" id="li-comment-2382">
+<div class="mk-single-comment" id="comment-2382">
+<div class="gravatar"><img alt="" src="Arduino%20Lamp%20Dimmer%20%20%20The%20Best%20PWM%20Dimmer%20Tutorial_files/0fc07d685b4eac48093196ee789e6ed0.jpg" srcset="https://secure.gravatar.com/avatar/0fc07d685b4eac48093196ee789e6ed0?s=90&amp;d=mm&amp;r=g 2x" class="avatar avatar-45 photo" height="45" width="45"></div>
+<div class="comment-meta">
+<span class="comment-author">akekec</span>
+<time class="comment-time">February 4, 2016</time>
+</div>
+<span class="comment-reply">
+<a rel="nofollow" class="comment-reply-link" href="https://diyhacking.com/arduino-lamp-dimmer/?replytocom=2382#respond" onclick='return addComment.moveForm( "comment-2382", "2382", "respond", "1109" )' aria-label="Reply to akekec">Reply</a> </span>
+<div class="clearboth"></div>
+<div class="comment-content">
+<p><a href="http://diyhacking.com/arduino-lamp-dimmer/" rel="nofollow">http://diyhacking.com/arduino-lamp-dimmer/</a></p>
+<div class="clearboth"></div>
+</div>
+</div>
+</li> 
+<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-2013">
+<div class="mk-single-comment" id="comment-2013">
+<div class="gravatar"><img alt="" src="Arduino%20Lamp%20Dimmer%20%20%20The%20Best%20PWM%20Dimmer%20Tutorial_files/35f061cfc3ae298d05634df5b4c4360a.jpg" srcset="https://secure.gravatar.com/avatar/35f061cfc3ae298d05634df5b4c4360a?s=90&amp;d=mm&amp;r=g 2x" class="avatar avatar-45 photo" height="45" width="45"></div>
+<div class="comment-meta">
+<span class="comment-author">Paul</span>
+<time class="comment-time">December 18, 2015</time>
+</div>
+<span class="comment-reply">
+<a rel="nofollow" class="comment-reply-link" href="https://diyhacking.com/arduino-lamp-dimmer/?replytocom=2013#respond" onclick='return addComment.moveForm( "comment-2013", "2013", "respond", "1109" )' aria-label="Reply to Paul">Reply</a> </span>
+<div class="clearboth"></div>
+<div class="comment-content">
+<p><a href="http://www.instructables.com/id/safe-and-simple-AC-PWM-Dimmer-for-arduino-Raspberr/" rel="nofollow">http://www.instructables.com/id/safe-and-simple-AC-PWM-Dimmer-for-arduino-Raspberr/</a></p>
+<div class="clearboth"></div>
+</div>
+</div>
+</li> 
+<li class="comment even thread-even depth-1" id="li-comment-1914">
+<div class="mk-single-comment" id="comment-1914">
+<div class="gravatar"><img alt="" src="Arduino%20Lamp%20Dimmer%20%20%20The%20Best%20PWM%20Dimmer%20Tutorial_files/b3cc86c1e33179ed2c5de8dbcf22a669.jpg" srcset="https://secure.gravatar.com/avatar/b3cc86c1e33179ed2c5de8dbcf22a669?s=90&amp;d=mm&amp;r=g 2x" class="avatar avatar-45 photo" height="45" width="45"></div>
+<div class="comment-meta">
+<span class="comment-author">Francesco</span>
+<time class="comment-time">December 6, 2015</time>
+</div>
+<span class="comment-reply">
+<a rel="nofollow" class="comment-reply-link" href="https://diyhacking.com/arduino-lamp-dimmer/?replytocom=1914#respond" onclick='return addComment.moveForm( "comment-1914", "1914", "respond", "1109" )' aria-label="Reply to Francesco">Reply</a> </span>
+<div class="clearboth"></div>
+<div class="comment-content">
+<p>Hi, I’m a newbie, so I’m sorry if I’m not able to debug it by myself.
+ I can’t get the circuit to work, can you please post more detailed 
+photos so I can make sure that I’m doing everything correctly? Thanks a 
+lot!</p>
+<div class="clearboth"></div>
+</div>
+</div>
+<ul class="children">
+<li class="comment odd alt depth-2" id="li-comment-2309">
+<div class="mk-single-comment" id="comment-2309">
+<div class="gravatar"><img alt="" src="Arduino%20Lamp%20Dimmer%20%20%20The%20Best%20PWM%20Dimmer%20Tutorial_files/9660243d01ec7b66f77c503ff283ef9e.jpg" srcset="https://secure.gravatar.com/avatar/9660243d01ec7b66f77c503ff283ef9e?s=90&amp;d=mm&amp;r=g 2x" class="avatar avatar-45 photo" height="45" width="45"></div>
+<div class="comment-meta">
+<span class="comment-author">Rudy</span>
+<time class="comment-time">January 26, 2016</time>
+</div>
+<span class="comment-reply">
+<a rel="nofollow" class="comment-reply-link" href="https://diyhacking.com/arduino-lamp-dimmer/?replytocom=2309#respond" onclick='return addComment.moveForm( "comment-2309", "2309", "respond", "1109" )' aria-label="Reply to Rudy">Reply</a> </span>
+<div class="clearboth"></div>
+<div class="comment-content">
+<p>hi man, do you get the detailed picture yet? would you share it with me? thanks so much man…</p>
+<div class="clearboth"></div>
+</div>
+</div>
+</li> 
+</ul> 
+</li> 
+<li class="comment even thread-odd thread-alt depth-1" id="li-comment-1381">
+<div class="mk-single-comment" id="comment-1381">
+<div class="gravatar"><img alt="" src="Arduino%20Lamp%20Dimmer%20%20%20The%20Best%20PWM%20Dimmer%20Tutorial_files/75560e33e82f925cb9b3a485de4ab6fa.jpg" srcset="https://secure.gravatar.com/avatar/75560e33e82f925cb9b3a485de4ab6fa?s=90&amp;d=mm&amp;r=g 2x" class="avatar avatar-45 photo" height="45" width="45"></div>
+<div class="comment-meta">
+<span class="comment-author">Lucas</span>
+<time class="comment-time">June 26, 2015</time>
+</div>
+<span class="comment-reply">
+<a rel="nofollow" class="comment-reply-link" href="https://diyhacking.com/arduino-lamp-dimmer/?replytocom=1381#respond" onclick='return addComment.moveForm( "comment-1381", "1381", "respond", "1109" )' aria-label="Reply to Lucas">Reply</a> </span>
+<div class="clearboth"></div>
+<div class="comment-content">
+<p>Mine works but flickers once I set the duty cycle. Any advise?</p>
+<div class="clearboth"></div>
+</div>
+</div>
+</li> 
+<li class="comment odd alt thread-even depth-1" id="li-comment-1365">
+<div class="mk-single-comment" id="comment-1365">
+<div class="gravatar"><img alt="" src="Arduino%20Lamp%20Dimmer%20%20%20The%20Best%20PWM%20Dimmer%20Tutorial_files/d44eb87f1f0355a7119078a8d557312d.jpg" srcset="https://secure.gravatar.com/avatar/d44eb87f1f0355a7119078a8d557312d?s=90&amp;d=mm&amp;r=g 2x" class="avatar avatar-45 photo" height="45" width="45"></div>
+<div class="comment-meta">
+<span class="comment-author">js2002</span>
+<time class="comment-time">June 12, 2015</time>
+</div>
+<span class="comment-reply">
+<a rel="nofollow" class="comment-reply-link" href="https://diyhacking.com/arduino-lamp-dimmer/?replytocom=1365#respond" onclick='return addComment.moveForm( "comment-1365", "1365", "respond", "1109" )' aria-label="Reply to js2002">Reply</a> </span>
+<div class="clearboth"></div>
+<div class="comment-content">
+<p>Hi man,</p>
+<p>I suggest to add simple LC or RC filter to reduce RF emitting.</p>
+<p>Best regrads,</p>
+<p>Jiri</p>
+<div class="clearboth"></div>
+</div>
+</div>
+</li> 
+<li class="comment even thread-odd thread-alt depth-1" id="li-comment-1232">
+<div class="mk-single-comment" id="comment-1232">
+<div class="gravatar"><img alt="" src="Arduino%20Lamp%20Dimmer%20%20%20The%20Best%20PWM%20Dimmer%20Tutorial_files/4b378ef688c29451b6be687c226c0eb5.jpg" srcset="https://secure.gravatar.com/avatar/4b378ef688c29451b6be687c226c0eb5?s=90&amp;d=mm&amp;r=g 2x" class="avatar avatar-45 photo" height="45" width="45"></div>
+<div class="comment-meta">
+<span class="comment-author">Bruno</span>
+<time class="comment-time">May 14, 2015</time>
+</div>
+<span class="comment-reply">
+<a rel="nofollow" class="comment-reply-link" href="https://diyhacking.com/arduino-lamp-dimmer/?replytocom=1232#respond" onclick='return addComment.moveForm( "comment-1232", "1232", "respond", "1109" )' aria-label="Reply to Bruno">Reply</a> </span>
+<div class="clearboth"></div>
+<div class="comment-content">
+<p>Hello man, I’m using your circuit with a raspberry pi, and it works 
+great, but I have a problem, when I set the maximum light intensity, the
+ bulb and the IRF830 starts to burn, what can I do?</p>
+<p>Best Regards</p>
+<div class="clearboth"></div>
+</div>
+</div>
+</li> 
+</ul>
+<div id="respond" class="comment-respond">
+<h3 id="reply-title" class="comment-reply-title"><div class="respond-heading">Leave a Comment</div> <small><a rel="nofollow" id="cancel-comment-reply-link" href="https://diyhacking.com/arduino-lamp-dimmer/#respond" style="display:none;">Cancel reply</a></small></h3> <form action="https://diyhacking.com/wp-comments-post.php?wpe-comment-post=diyhacking" method="post" id="commentform" class="comment-form">
+<div class="comment-textarea"><textarea placeholder="LEAVE YOUR COMMENT" class="textarea" name="comment" rows="8" id="comment" tabindex="58"></textarea></div><div class="comment-form-name comment-form-row"><input name="author" class="text_input" id="author" tabindex="54" placeholder="Name (Required)" type="text"></div>
+<div class="comment-form-email comment-form-row"><input name="email" class="text_input" id="email" tabindex="56" placeholder="Email (Required)" type="text"></div>
+<div class="comment-form-website comment-form-row"><input name="url" class="text_input" id="url" tabindex="57" placeholder="Website" type="text"></div>
+<p class="math-captcha-form">
+<label>Math Captcha<br></label>
+<span><input size="2" length="2" id="mc-input" class="mc-input" name="mc-value" aria-required="true" type="text"> + 77 = 82</span>
+</p><p class="form-submit"><input name="submit" id="submit" class="submit" value="POST COMMENT" type="submit"> <input name="comment_post_ID" value="1109" id="comment_post_ID" type="hidden">
+<input name="comment_parent" id="comment_parent" value="0" type="hidden">
+</p><p style="display: none;"><input id="akismet_comment_nonce" name="akismet_comment_nonce" value="fbcf90940f" type="hidden"></p><p style="display: none;"></p> <input id="ak_js" name="ak_js" value="1487980661322" type="hidden"></form>
+</div> 
+</section>
+</article>
+<div class="clearboth"></div>
+</div>
+<div class="clearboth"></div>
+</div>
+</div>
+</div>
+<section id="mk-footer" class="">
+<div class="footer-wrapper mk-grid">
+<div class="mk-padding-wrapper">
+<div class="mk-col-1-3"><section id="social-3" class="widget widget_social_networks"><div class="widgettitle">Follow Us</div><div id="social-58b0c8745ae7b" class="align-left"><a href="https://www.facebook.com/diyhacking" rel="nofollow" class="builtin-icons custom large facebook-hover" target="_blank" alt="Follow Us facebook" title="Follow Us facebook"><i class="mk-jupiter-icon-facebook"></i></a><a href="https://twitter.com/DIYhacking" rel="nofollow" class="builtin-icons custom large twitter-hover" target="_blank" alt="Follow Us twitter" title="Follow Us twitter"><i class="mk-jupiter-icon-twitter"></i></a><a href="https://www.youtube.com/channel/UC6G4RDruQIPufKH-NLbXwAA" rel="nofollow" class="builtin-icons custom large youtube-hover" target="_blank" alt="Follow Us youtube" title="Follow Us youtube"><i class="mk-jupiter-icon-youtube"></i></a>
+<style>#social-58b0c8745ae7b a{opacity:100!important;color:#9f9f9f!important;}#social-58b0c8745ae7b a:hover{color:#fb734c!important;}</style></div></section></div>
+<div class="mk-col-1-3"><section id="recent_posts-3" class="widget widget_posts_lists"><div class="widgettitle">Recent Posts</div>
+<ul>
+<li class="post-list-image">
+<a href="https://diyhacking.com/christmas-light-show-with-arduino/" title="Christmas Light Show with Arduino" class="post-list-thumb">
+<img src="Arduino%20Lamp%20Dimmer%20%20%20The%20Best%20PWM%20Dimmer%20Tutorial_files/cov-150x150-n4g55abg0vk1eh10178yy6cnqlqcff3hcowqb3fo68.jpg" alt="Christmas Light Show with Arduino">
+</a>
+<div class="post-list-info ">
+<a href="https://diyhacking.com/christmas-light-show-with-arduino/" class="post-list-title">Christmas Light Show with Arduino</a>
+<div class="post-list-meta">
+</div>
+</div>
+<div class="clearboth"></div>
+</li>
+<li class="post-list-image">
+<a href="https://diyhacking.com/rendering-light-and-shadow-unity/" title="Rendering Light and Shadow with Unity for Augmented Reality" class="post-list-thumb">
+<img src="Arduino%20Lamp%20Dimmer%20%20%20The%20Best%20PWM%20Dimmer%20Tutorial_files/feat-150x150-n43z16h59aqc48w524df6pnk9mfryxxck0f4eew84g.jpg" alt="Rendering Light and Shadow with Unity for Augmented Reality">
+</a>
+<div class="post-list-info ">
+<a href="https://diyhacking.com/rendering-light-and-shadow-unity/" class="post-list-title">Rendering Light and Shadow with Unity for Augmented Reality</a>
+<div class="post-list-meta">
+</div>
+</div>
+<div class="clearboth"></div>
+</li>
+<li class="post-list-image">
+<a href="https://diyhacking.com/getting-started-with-github/" title="Getting Started with GitHub in 7 Minutes" class="post-list-thumb">
+<img src="Arduino%20Lamp%20Dimmer%20%20%20The%20Best%20PWM%20Dimmer%20Tutorial_files/githubCovv-150x150-n43vbu3dqe6z3okyozdpyv0iito90pk5w0qeialst.jpg" alt="Getting Started with GitHub in 7 Minutes">
+</a>
+<div class="post-list-info ">
+<a href="https://diyhacking.com/getting-started-with-github/" class="post-list-title">Getting Started with GitHub in 7 Minutes</a>
+<div class="post-list-meta">
+</div>
+</div>
+<div class="clearboth"></div>
+</li>
+<li class="post-list-image">
+<a href="https://diyhacking.com/pcb-basics-tutorial/" title="PCB Basics Tutorial: A Must-Read for Beginners" class="post-list-thumb">
+<img src="Arduino%20Lamp%20Dimmer%20%20%20The%20Best%20PWM%20Dimmer%20Tutorial_files/c1-150x150-n3rscg2cilo422pwj4ilpgcbi8t8lkv9l8jxd4xsm8.jpg" alt="PCB Basics Tutorial: A Must-Read for Beginners">
+</a>
+<div class="post-list-info ">
+<a href="https://diyhacking.com/pcb-basics-tutorial/" class="post-list-title">PCB Basics Tutorial: A Must-Read for Beginners</a>
+<div class="post-list-meta">
+</div>
+</div>
+<div class="clearboth"></div>
+</li>
+<li class="post-list-image">
+<a href="https://diyhacking.com/augmented-reality-tutorial-pokemon/" title="Augmented Reality Tutorial for making a Pokemon Game using Vuforia" class="post-list-thumb">
+<img src="Arduino%20Lamp%20Dimmer%20%20%20The%20Best%20PWM%20Dimmer%20Tutorial_files/cover-2-150x150-n3fj792cl7ifd11gjw3rkine5f74toml4mfoee56ow.jpg" alt="Augmented Reality Tutorial for making a Pokemon Game using Vuforia">
+</a>
+<div class="post-list-info ">
+<a href="https://diyhacking.com/augmented-reality-tutorial-pokemon/" class="post-list-title">Augmented Reality Tutorial for making a Pokemon Game using Vuforia</a>
+<div class="post-list-meta">
+</div>
+</div>
+<div class="clearboth"></div>
+</li>
+</ul>
+</section></div>
+<div class="mk-col-1-3"><section id="categories-3" class="widget widget_categories"><div class="widgettitle">Categories</div> <ul>
+<li class="cat-item cat-item-496"><a href="https://diyhacking.com/category/3ddesign/" title="Learn how to 3D design parts and products for your projects and prototype them in the real world using our simple tutorials and projects.">3D Designing</a>
+</li>
+<li class="cat-item cat-item-216"><a href="https://diyhacking.com/category/advanced/" title="This category hosts an advanced set of projects from various Makers around the country.">Advanced</a>
+</li>
+<li class="cat-item cat-item-2"><a href="https://diyhacking.com/category/arduino-projects/" title="Our collection of best Arduino Projects! Follow these simple instructions at DIY hacking to start building cool arduino projects! Click next at the end of the post to view all our best science fair projects and robotics projects.">Arduino projects</a>
+</li>
+<li class="cat-item cat-item-3"><a href="https://diyhacking.com/category/beginners/">Beginners</a>
+</li>
+<li class="cat-item cat-item-235"><a href="https://diyhacking.com/category/blog/">Blog</a>
+</li>
+<li class="cat-item cat-item-494"><a href="https://diyhacking.com/category/cybersecurity/" title="Learn about cybersecurity and ethical hacking using our simple guides and tutorials and learn to protect yourself from attacks.">Cyber Security</a>
+</li>
+<li class="cat-item cat-item-533"><a href="https://diyhacking.com/category/diy-drones/" title="Learn how you can build a UAV (unmanned aerial vehicle) from scratch using these tutorials and guides.">Drones</a>
+</li>
+<li class="cat-item cat-item-218"><a href="https://diyhacking.com/category/ebooks/" title="Our collection of eBooks to help you get started on becoming a Maker!">eBooks</a>
+</li>
+<li class="cat-item cat-item-4"><a href="https://diyhacking.com/category/electronics-hacks/" title="Hacking using simple everyday electronics components. Follow these simple instructions at DIY hacking to start hacking with electronics!  Click next at the end of the post to view other electronics projects.">Electronics hacks</a>
+</li>
+<li class="cat-item cat-item-5"><a href="https://diyhacking.com/category/intel-edison/">Intel Edison</a>
+</li>
+<li class="cat-item cat-item-215"><a href="https://diyhacking.com/category/intermediate/" title="This category has a collection of projects and tutorials for intermediate level Makers.">Intermediate</a>
+</li>
+<li class="cat-item cat-item-6"><a href="https://diyhacking.com/category/raspberrypi-projects/" title="Our collection of the best Raspberry Pi projects. Follow the simple instructions at DIY hacking to build cool raspberry pi 2  projects and robotics projects. And build the best science fair projects!">Raspberry pi projects</a>
+</li>
+<li class="cat-item cat-item-497"><a href="https://diyhacking.com/category/robotics/" title="Enter the world of Robotics and become an expert using our simple guides and project tutorials.">Robotics</a>
+</li>
+<li class="cat-item cat-item-1"><a href="https://diyhacking.com/category/uncategorized/">Uncategorized</a>
+</li>
+<li class="cat-item cat-item-495"><a href="https://diyhacking.com/category/vr-ar/" title="Learn how you can start developing applications on Virtual and Augmented Reality platforms using our simple getting started guides and tutorials.">VR and AR</a>
+</li>
+</ul>
+</section></div>
+<div class="clearboth"></div>
+</div>
+</div>
+<div id="sub-footer">
+<div class=" mk-grid">
+<span class="mk-footer-copyright">© EETech Media, LLC. All rights 
+reserved. Unauthorized use and/or duplication of this material without 
+express and written permission from the author and/or owner is strictly 
+prohibited. Links to this site may be used, provided that full and clear
+ credit is given to DIYHacking.com with appropriate and specific 
+direction to the original content.</span>
+</div>
+<div class="clearboth"></div>
+</div>
+</section>
+</div>
+<script type="text/javascript">
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-55418412-1', 'auto');
+  ga('send', 'pageview');
+
+jQuery(document).ajaxComplete(function() {
+    jQuery('.vc_grid-item.match-height').matchHeight({
+      		byRow: true,
+      		property: 'height',
+      		target: null,
+      		remove: false
+	});
+	jQuery('.home-all-project .vc_grid-item.match-height').matchHeight({
+      		byRow: false,
+      		property: 'height',
+      		target: null,
+      		remove: false
+	});
+});
+
+
+jQuery('.get-ebook-container .submit-btn').on('click', function(e) {
+    if(jQuery('.industry-interest :checkbox:checked').length < 2) {
+        jQuery('.get-ebook-container .industry-interest .help-text').addClass('error-field');        
+        jQuery('.get-ebook-container .industry-interest :input:enabled:visible:first').focus();
+        e.preventDefault();
+    } else {    
+        jQuery('.get-ebook-container .industry-interest .help-text').removeClass('error-field');
+    }
+
+    if(jQuery('.product-interest :checkbox:checked').length < 2) {
+        jQuery('.get-ebook-container .product-interest .help-text').addClass('error-field');
+        jQuery('.get-ebook-container .product-interest :input:enabled:visible:first').focus();
+        e.preventDefault();
+    } else {    
+        jQuery('.get-ebook-container .product-interest .help-text').removeClass('error-field');
+    }
+});
+
+if(jQuery('.mc4wp-response .mc4wp-alert').length) {
+    jQuery('html,body').animate({
+        scrollTop: jQuery('.mc4wp-response').offset().top - 200 },
+    'slow');
+}		</script>
+</div>
+<a href="#" class="mk-go-top on"><i class="mk-icon-chevron-up"></i></a>
+<div class="mk-fullscreen-search-overlay">
+<a href="#" class="mk-fullscreen-close"><i class="mk-moon-close-2"></i></a>
+<div id="mk-fullscreen-search-wrapper">
+<p>Start typing and press Enter to search</p>
+<form method="get" id="mk-fullscreen-searchform" action="https://diyhacking.com">
+<input name="s" id="mk-fullscreen-search-input" type="text">
+<i class="mk-icon-search fullscreen-search-icon"><input value="" type="submit"></i>
+</form>
+</div>
+</div>
+<noscript><img height='1' width='1' style='display: none;' src='https://www.facebook.com/tr?id=779889472158467&ev=PageView&noscript=1&cd[domain]=diyhacking.com' alt='facebook_pixel'></noscript><noscript><img height='1' width='1' style='display: none;' src='https://www.facebook.com/tr?id=779889472158467&ev=GeneralEvent&noscript=1&cd[post_type]=post&cd[content_name]=Arduino+Lamp+Dimmer+%3A+The+Best+PWM+Dimmer+Tutorial&cd[post_id]=1109&cd[content_category]=Arduino+projects%2C+Intermediate&cd[domain]=diyhacking.com' alt='facebook_pixel'></noscript>
+<script type="text/javascript">
+		/* <![CDATA[ */
+		var pys_edd_ajax_events = [];
+		/* ]]> */
+		</script>
+<script type="text/javascript">  
+    php = {
+        hasAdminbar: false,
+        json: (null != null) ? null : "",
+        styles:  '',
+        jsPath: 'https://diyhacking.com/wp-content/themes/jupiter/js'
+      };
+      
+    var styleTag = document.createElement("style"),
+      head = document.getElementsByTagName("head")[0];
+
+    styleTag.type = "text/css";
+    styleTag.innerHTML = php.styles;
+    head.appendChild(styleTag);
+    </script><script type="text/javascript" src="Arduino%20Lamp%20Dimmer%20%20%20The%20Best%20PWM%20Dimmer%20Tutorial_files/form.js"></script>
+<script type="text/javascript" src="Arduino%20Lamp%20Dimmer%20%20%20The%20Best%20PWM%20Dimmer%20Tutorial_files/comment-reply.js"></script>
+<script type="text/javascript" src="Arduino%20Lamp%20Dimmer%20%20%20The%20Best%20PWM%20Dimmer%20Tutorial_files/jquery_002.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var _wpcf7 = {"loaderUrl":"https:\/\/diyhacking.com\/wp-content\/plugins\/contact-form-7\/images\/ajax-loader.gif","recaptchaEmpty":"Please verify that you are not a robot.","sending":"Sending ...","cached":"1"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="Arduino%20Lamp%20Dimmer%20%20%20The%20Best%20PWM%20Dimmer%20Tutorial_files/scripts.js"></script>
+<script type="text/javascript" src="Arduino%20Lamp%20Dimmer%20%20%20The%20Best%20PWM%20Dimmer%20Tutorial_files/core.js"></script>
+<script type="text/javascript" src="Arduino%20Lamp%20Dimmer%20%20%20The%20Best%20PWM%20Dimmer%20Tutorial_files/widget.js"></script>
+<script type="text/javascript" src="Arduino%20Lamp%20Dimmer%20%20%20The%20Best%20PWM%20Dimmer%20Tutorial_files/tabs.js"></script>
+<script type="text/javascript" src="Arduino%20Lamp%20Dimmer%20%20%20The%20Best%20PWM%20Dimmer%20Tutorial_files/jquery.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var ajax_login_object = {"ajaxurl":"https:\/\/diyhacking.com\/wp-admin\/admin-ajax.php","redirecturl":"https:\/\/diyhacking.com\/arduino-lamp-dimmer\/","loadingmessage":"Sending user info, please wait..."};
+/* ]]> */
+</script>
+<script type="text/javascript" src="Arduino%20Lamp%20Dimmer%20%20%20The%20Best%20PWM%20Dimmer%20Tutorial_files/scripts-vendors.js"></script>
+<script type="text/javascript" src="Arduino%20Lamp%20Dimmer%20%20%20The%20Best%20PWM%20Dimmer%20Tutorial_files/wp-embed.js"></script>
+<script type="text/javascript" src="Arduino%20Lamp%20Dimmer%20%20%20The%20Best%20PWM%20Dimmer%20Tutorial_files/jquerytransit.js"></script>
+<script type="text/javascript" src="Arduino%20Lamp%20Dimmer%20%20%20The%20Best%20PWM%20Dimmer%20Tutorial_files/js_composer_front.js"></script>
+<script type="text/javascript">
+		window.$ = jQuery
+
+		var dynamic_styles = '';
+		var dynamic_styles_ids = ([] != null) ? [] : [];
+
+		var styleTag = document.createElement('style'),
+			head = document.getElementsByTagName('head')[0];
+
+			//console.log('jhonny')
+		styleTag.type = 'text/css';
+		styleTag.setAttribute('data-ajax', '');
+		styleTag.innerHTML = dynamic_styles;
+		head.appendChild(styleTag);
+
+		$('.mk-dynamic-styles').each(function() {
+			$(this).remove();
+		});
+
+		function ajaxStylesInjector() {
+			$('.mk-dynamic-styles').each(function() {
+				var $this = $(this),
+					id = $this.attr('id'),
+					commentedStyles = $this.html();
+					styles = commentedStyles
+							 .replace('<!--', '')
+							 .replace('-->', '');
+
+
+				if(dynamic_styles_ids.indexOf(id) === -1) {
+					$('style[data-ajax]').append(styles);
+					$this.remove();
+				}
+
+				dynamic_styles_ids.push(id);
+			});
+		};
+
+		abb.modules.theme_header.init({id: 'mk-header',height: '92',stickyHeight: '50',stickyOffset: 'header',hasToolbar: 'false',}); 
+abb.init();	</script>
+
+
+</body></html>

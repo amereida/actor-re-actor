@@ -1,0 +1,208 @@
+body.gifts div#omni {
+    border: none;
+}
+#footer-featured-channels li {
+    padding: 0 2px !important;
+    width: 105px !important;
+}
+.dl-menuwrapper li.featured-item .adspot-item a {
+  padding: 0;
+}
+.dl-menuwrapper li.featured-item .adspot-item {
+  padding: 15px 20px;
+}
+.dl-menu li.featured-item .ad-image span {
+  display: block;
+}
+.dl-menu li.featured-item .ad-image {
+  float: left;
+}
+#promo-tabs a {
+    color: #999 !important;
+    line-height: 38px;
+    margin: 0 !important; 
+}
+#promo-tabs a:hover {
+    color: #777 !important;
+}
+#promo-tabs .adspot-link > a {
+    margin: 0 12px;
+}
+#promo-tabs .adspot-item {
+    line-height: 38px;
+    height: 38px;
+    margin: 0 12px;  
+    position: relative;
+    color: #999;
+    font-size: 14px;
+}
+#promo-tabs .adspot-item:hover {
+    color: #777; cursor:pointer;
+}
+#promo-tabs .adspot-item > div,
+#promo-tabs .adspot-item > a {
+    float:left;
+}
+.sponsored-hubs {
+    background-position: 0;
+}
+#promo-tabs .promo {
+  vertical-align: middle;
+  display: inline-block;
+}
+#promo-tabs .ad-image {
+    display: block;
+    margin: 0;
+    padding-right: 6px;
+}
+#promo-tabs #intel-promo {
+    width: 26px;
+    height: 20px;
+}
+#intel-promo {
+    width: 28px;
+    height: 20px;
+    background: url(https://www.instructables.com/files/orig/FCJ/ZWD6/I8R6DWCO/FCJZWD6I8R6DWCO.png) no-repeat;
+    background-size: 100%;
+    background-position-y: 50%;
+}
+#promo-tabs #gifts-promo {
+    width: 16px;
+    margin-bottom: 4px;
+}
+#gifts-promo {
+    width: 16px;
+    height: 20px;
+    background: url(https://www.instructables.com/files/orig/FAS/WGC4/IH6JVNZD/FASWGC4IH6JVNZD.png) no-repeat;
+    background-size: 100%;
+    background-position-y: 50%;
+}
+#promo-tabs  #arduino-promo {
+  width: 28px;
+}
+#arduino-promo {
+    width: 28px;
+    height: 20px;
+    background: url(https://www.instructables.com/files/orig/F06/F1A7/IEVUTLZ4/F06F1A7IEVUTLZ4.png) no-repeat;
+    background-size: 100%;
+}
+#promo-tabs  #yarn-promo{
+    width: 18px;
+}
+#yarn-promo {
+    width: 20px;
+    height: 20px;
+    background: url(https://www.instructables.com/files/orig/FZ9/HGB6/IVHQK04O/FZ9HGB6IVHQK04O.png) no-repeat;
+    background-size: 100%;
+}
+
+#promo-tabs #sewing-promo {
+    width: 21px;
+}
+#sewing-promo {
+    width: 21px;
+    height: 20px;
+    background: url(https://www.instructables.com/files/orig/FG1/YYZ3/IHCDW12S/FG1YYZ3IHCDW12S.png) no-repeat;
+    background-size: 100%;
+    background-position-y: 50%;
+}
+#promo-tabs #hydroponics-channel-promo {
+  width: 20px;
+}
+#hydroponics-channel-promo {
+    width: 20px;
+    height: 20px;
+    background: url(https://www.instructables.com/files/orig/FR4/89XK/I6WDPJZV/FR489XKI6WDPJZV.png) no-repeat;
+    background-size: 100%;
+}
+#promo-tabs  #woodworking-channel-promo {
+    width: 19px;
+}
+#woodworking-channel-promo {
+    width: 21px;
+    height: 20px;
+    background: url(https://www.instructables.com/files/orig/FOP/JNXT/I6WDPJZW/FOPJNXTI6WDPJZW.png) no-repeat;
+    background-size: 100%;
+    background-position-y: 50%;
+}
+#promo-tabs  #kitchen-promo {
+    width: 25px;
+}
+#kitchen-promo {
+    width: 25px;
+    height: 20px;
+    background: url(https://www.instructables.com/files/orig/FJ8/XHU0/IQLI4CQV/FJ8XHU0IQLI4CQV.png) no-repeat;
+    background-size: 100%;
+}
+#promo-tabs  #lasercutting-promo{
+  width: 24px;
+}
+#lasercutting-promo {
+    width: 24px;
+    height: 25px;
+    background: url(https://www.instructables.com/files/orig/F3A/MWBW/I6WDPJZL/F3AMWBWI6WDPJZL.png) no-repeat;
+    background-size: 100%;
+}
+#promo-tabs  #paper-promo {
+    width: 18px;
+}
+#paper-promo {
+    width: 18px;
+    height: 20px;
+    background: url(https://www.instructables.com/files/orig/F3L/QJAY/IQLI4CUU/F3LQJAYIQLI4CUU.png) no-repeat;
+    background-size: 100%;
+}
+#promo-tabs  #puzzles-promo {
+    width: 20px;
+}
+#puzzles-promo {
+    width: 20px;
+    height: 20px;
+    background: url(https://www.instructables.com/files/orig/F14/NEK9/IQLI4CVM/F14NEK9IQLI4CVM.png) no-repeat;
+    background-size: 100%;
+}
+#promo-tabs  #space-promo {
+    width: 20px;
+}
+#space-promo {
+    width: 20px;
+    height: 20px;
+    background: url(https://www.instructables.com/files/orig/FMD/IYST/IQLI4CVN/FMDIYSTIQLI4CVN.png) no-repeat;
+    background-size: 100%;
+}
+#promo-tabs  #threed-printing-promo {
+    width: 20px;
+}
+#threed-printing-promo {
+    width: 20px;
+    height: 20px;
+    background: url(https://www.instructables.com/files/orig/FPB/7VMN/IQLI4EY2/FPB7VMNIQLI4EY2.png) no-repeat;
+    background-size: 100%;
+}
+#home-explore .adspot-link {
+    width: 100%;
+    margin-bottom: 10px;
+}
+.sponsored-hubs .featured-item.btn {
+    text-align: center;
+}
+.ad-image div {
+    height: 30px;
+    background-repeat: no-repeat;
+}
+.sponsored-hubs .featured-item.btn .ad-image {
+    display: inline-block;
+    vertical-align: top;
+}
+.sponsored-hubs .featured-item.btn .ad-image span {
+    display: inline-block;
+    margin-right: 5px;
+}
+div#propricing label {vertical-align:top}
+body.home .featured-items li {margin: 0 20px 20px 0}
+#home-advertiser-adslot {line-height:0; font-size:0}
+#contest-content .contest-prizes ul,
+#contest-content .contest-prizes ol,
+#contest-content .contest-description ul,
+#contest-content .contest-description ol {list-style: disc inside none}
+#community-menu .bg-icon.groups {margin-top:0}

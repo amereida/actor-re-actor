@@ -1,0 +1,968 @@
+.call-to-action {
+    z-index:10000000;
+    border: #cccccc solid;
+    border-radius: 4px;
+    padding: 10px;
+    color: #777;
+    display: none;
+}
+.call-to-action.overlay h1,.call-to-action.modal h1  {
+    font-size: 20px;
+}
+.call-to-action.mobile h1 {
+    margin: 0 0 15px;
+    color: #333;
+    position: relative;
+    z-index: 1;
+}
+.call-to-action.mobile h4{
+    color: #333;
+}
+.call-to-action.banner {
+    background-color: #e7f0f4;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 800px;
+    height: 115px;
+}
+.call-to-action.overlay{
+    display: none;
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+    width: 300px;
+    height: 420px;
+    background-color: #FFFFFF;
+	border: 1px solid rgba(0, 0, 0, 0.4);
+    border-radius: 4px 0 0 0;
+    margin-bottom: 0;
+    line-height: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,.3);
+	
+}
+.call-to-action.modal {
+    height: 430px;
+    width: 300px;
+    background-color: #FFFFFF;
+    margin-left: -167px;
+    display: none;
+    top: 10%;
+}
+.call-to-action.mobile {
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+    border-radius: 0px;
+    width: 100%;
+    text-align: center;
+    padding: 15px;
+    /* background: #E7F0F5; */
+}
+.call-to-action.mobile.link {
+    text-align: left;
+}
+.call-to-action.mobile.modal {
+    display: block;
+    background-color: #f6f6f6;
+    width: initial;
+    padding: 0;
+    top: 0;
+    margin-left: initial;
+    height: 105px;
+    border: none;
+}
+.class-premium-prompt.call-to-action.mobile.modal {
+    height: 145px;
+    border-bottom: 1px solid #ddd;
+}
+.call-to-action.mobile.modal.banner-btn {
+    background: #ffffff;
+}
+
+.call-to-action.mobile.modal .message {
+    float: left;
+    display: inline-block;
+}
+
+.call-to-action.mobile.modal .title {
+    float: left;
+    display: inline;
+    margin-top: 10px;
+    margin-left: 10px;
+    font-weight: normal;
+    color: #777;
+    text-align: left;
+    font-size: 18px;
+}
+.category.call-to-action.mobile.modal .title{
+    width:60%;
+    margin-bottom: 0;
+    vertical-align: middle;
+}
+
+.category.call-to-action.mobile.modal.banner-form .title{
+    width: calc(75% - 48px);
+}
+.category.call-to-action.mobile.modal.banner-btn .title{
+    width: calc(64% - 48px);
+}
+
+.category.call-to-action.mobile.modal.banner-btn .title{
+    margin-bottom: 10px;
+}
+
+.category.call-to-action.mobile.modal .message-text {
+    height: auto;
+    float: left;
+    margin: 5px 10px 12px;
+}
+
+.call-to-action.mobile.mobile .modal-dialog {
+    margin: 0px auto;
+}
+.call-to-action.mobile.modal .modal-content {
+    height: 150px;
+    padding: 5px 15px;
+    border: none;
+    border-radius: 0;
+}
+
+.banner div {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 10px;
+    padding: 20px 0;
+    width: 27%;
+}
+.call-to-action.overlay div, .call-to-action.modal div {
+    text-align: center;
+}
+.banner .call-to-action-form {
+    width: 30%;
+}
+.call-to-action.mobile.modal .call-to-action-form {
+    border-radius: 6px;
+    width: 150px;
+    display: inline;
+    float: left;
+    padding: 0;
+}
+.category.call-to-action.mobile.modal .call-to-action-form {
+    width: 100%;
+    display: block;
+    padding: 0;
+    background-color:#E7F0F5;
+    margin-bottom: 10px;
+}
+.call-to-action.overlay .call-to-action-form, .modal .call-to-action-form{
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    box-sizing: border-box;
+    background: white;
+}
+.modal .call-to-action-form{
+    padding: 5px 5px 10px;
+}
+.call-to-action.overlay .call-to-action-form{
+    padding: 10px 20px;
+}
+.modal.mobile .call-to-action-form{
+	position:relative;
+}
+.modal.category .call-to-action-form
+{
+    position: relative;
+}
+
+.call-to-action.overlay .submit-form.btn, .modal .submit-form.btn {
+    padding: 11px 19px;
+    font-size: 18px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    display: block;
+}
+
+.call-to-action-workshop-img,
+.call-to-action-workshop-img.modal.mobile.category{
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-image: url(https://cdn.instructables.com/static/gtm/img/signup-workshop.jpg);
+    height: 470px;
+    width: 330px;
+    margin: 0;
+    padding: 0;
+}
+
+.call-to-action-workshop-robot-img {
+    display: block;
+    background-image: url(https://cdn.instructables.com/static/gtm/img/signup-workshop-robot.png);
+    height: 185px;
+    width: 185px;
+    margin: 7px auto;
+    padding: 0;
+}
+
+.call-to-action-costumes-robot-img {
+    display: block;
+    background-image: url(https://cdn.instructables.com/static/gtm/img/signup-costumes-robot.png);
+    height: 185px;
+    width: 185px;
+    margin: 7px auto;
+    padding: 0;
+}
+
+.call-to-action-outside-robot-img {
+    display: block;
+    background-image: url(https://cdn.instructables.com/static/gtm/img/signup-outside-robot.png);
+    height: 185px;
+    width: 185px;
+    margin: 7px auto;
+    padding: 0;
+}
+.call-to-action-food-robot-img {
+    display: block;
+    background-image: url(https://cdn.instructables.com/static/gtm/img/signup-food-robot.png);
+    height: 185px;
+    width: 185px;
+    margin: 7px auto;
+    padding: 0;
+}
+.call-to-action-home-robot-img {
+    display: block;
+    background-image: url(https://cdn.instructables.com/static/gtm/img/signup-home-robot.png);
+    height: 185px;
+    width: 185px;
+    margin: 7px auto;
+    padding: 0;
+}
+.call-to-action-play-robot-img {
+    display: block;
+    background-image: url(https://cdn.instructables.com/static/gtm/img/signup-play-robot.png);
+    height: 185px;
+    width: 185px;
+    margin: 7px auto;
+    padding: 0;
+}
+.call-to-action-technology-robot-img {
+    display: block;
+    background-image: url(https://cdn.instructables.com/static/gtm/img/signup-technology-robot.png);
+    height: 185px;
+    width: 185px;
+    margin: 7px auto;
+    padding: 0;
+}
+
+.call-to-action-message {
+    margin-top: 35px;
+}
+
+.call-to-action-craft-robot-img {
+    display: block;
+    background-image: url(https://cdn.instructables.com/static/gtm/img/signup-craft-robot.png);
+    height: 185px;
+    width: 185px;
+    margin: 7px auto;
+    padding: 0;
+}
+
+.banner .call-to-action-robot-img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-image: url(https://cdn.instructables.com/static/gtm/img/robot-howtoons.png);
+    height: 136px;
+    width: 290px;
+    margin: 0;
+    padding: 0;
+}
+
+.call-to-action.overlay .call-to-action-robot-img, .modal .call-to-action-robot-img {
+    position: absolute;
+    right: 0;
+    width: 320px;
+    height: 225px;
+    background-image: url(https://cdn.instructables.com/static/gtm/img/robot-overlay.jpg);
+    margin: 0;
+    padding: 0;
+}
+
+.call-to-action.class-cta-woodworking-img {
+    position: fixed;
+    right: 0;
+    background-image: url(https://cdn.instructables.com/static/gtm/img/class-cta-coverimage-woodworking-free.jpg);
+	height: 500px;
+    background-size: 600px;
+    width: 600px;
+    padding: 0;
+    margin-left: -300px;
+}
+.call-to-action.class-cta-robots-img {
+    position: fixed;
+    right: 0;
+    background-image: url(https://cdn.instructables.com/static/gtm/img/class-cta-coverimage-robots.jpg);
+	height: 500px;
+    background-size: 600px;
+    width: 600px;
+    padding: 0;
+    margin-left: -300px;
+}
+.call-to-action.class-cta-3D-printing-img {
+    position: fixed;
+    right: 0;
+    background-image: url(https://cdn.instructables.com/static/gtm/img/class-cta-coverimage-3dprinting-free.jpg);
+	height: 500px;
+    background-size: 600px;
+    width: 600px;
+    padding: 0;
+    margin-left: -300px;
+}
+.call-to-action.class-cta-pasta-making-img {
+    position: fixed;
+    right: 0;
+    background-image: url(https://cdn.instructables.com/static/gtm/img/class-cta-coverimage-pasta-free.jpg);
+	height: 500px;
+    background-size: 600px;
+    width: 600px;
+    padding: 0;
+    margin-left: -300px;
+}
+.call-to-action.class-cta-handsewing-img {
+    position: fixed;
+    right: 0;
+    background-image: url(https://cdn.instructables.com/static/gtm/img/class-cta-coverimage-handsewing.jpg);
+	height: 500px;
+    background-size: 600px;
+    width: 600px;
+    padding: 0;
+    margin-left: -300px;
+}
+.call-to-action.class-cta-arduino-img{
+    position: fixed;
+    right: 0;
+    background-image: url(https://cdn.instructables.com/static/gtm/img/class-cta-coverimage-arduino.jpg);
+	height: 500px;
+    background-size: 600px;
+    width: 600px;
+    padding: 0;
+    margin-left: -300px;
+}
+mobile.link .call-to-action-robot-img {
+    position: absolute;
+    right: -1px;
+    top: 0;
+    width: 134px;
+    height: 100px;
+    background-image: url(https://cdn.instructables.com/static/gtm/img/robot-mobile.png);
+    background-size: 134px;
+}
+
+.mobile.modal .call-to-action-robot-img {
+    width: 298px;
+    height: 196px;
+    background-size: 298px;
+    bottom: 108px;
+}
+
+.mobile.modal .call-to-action-workshop-robot-img {
+    display: inline-block;
+    background-image: url(https://cdn.instructables.com/static/gtm/img/signup-workshop-robot.png);
+    height: 150px;
+    width: 150px;
+    background-size: 150px 150px;
+    margin: 7px auto;
+    padding: 0;
+    float: left;
+}
+.mobile.modal .call-to-action-costumes-robot-img {
+    display: inline-block;
+    background-image: url(https://cdn.instructables.com/static/gtm/img/signup-costumes-robot.png);
+    height: 150px;
+    width: 150px;
+    background-size: 150px 150px;
+    margin: 7px auto;
+    padding: 0;
+    float: left;
+}
+.mobile.modal .call-to-action-outside-robot-img {
+    display: inline-block;
+    background-image: url(https://cdn.instructables.com/static/gtm/img/signup-outside-robot.png);
+    height: 150px;
+    width: 150px;
+    background-size: 150px 150px;
+    margin: 7px auto;
+    padding: 0;
+    float: left;
+}
+.mobile.modal .call-to-action-food-robot-img {
+    display: inline-block;
+    background-image: url(https://cdn.instructables.com/static/gtm/img/signup-food-robot.png);
+    height: 150px;
+    width: 150px;
+    background-size: 150px 150px;
+    margin: 7px auto;
+    padding: 0;
+    float: left;
+}
+.mobile.modal .call-to-action-home-robot-img {
+    display: inline-block;
+    background-image: url(https://cdn.instructables.com/static/gtm/img/signup-home-robot.png);
+    height: 150px;
+    width: 150px;
+    background-size: 150px 150px;
+    margin: 7px auto;
+    padding: 0;
+    float: left;
+}
+.mobile.modal .call-to-action-play-robot-img {
+    display: inline-block;
+    background-image: url(https://cdn.instructables.com/static/gtm/img/signup-play-robot.png);
+    height: 150px;
+    width: 150px;
+    background-size: 150px 150px;
+    margin: 7px auto;
+    padding: 0;
+    float: left;
+}
+.mobile.modal .call-to-action-technology-robot-img {
+    display: inline-block;
+    background-image: url(https://cdn.instructables.com/static/gtm/img/signup-technology-robot.png);
+    height: 150px;
+    width: 150px;
+    background-size: 150px 150px;
+    margin: 7px auto;
+    padding: 0;
+    float: left;
+}
+.mobile.modal .call-to-action-craft-robot-img {
+    display: inline-block;
+    background-image: url(https://cdn.instructables.com/static/gtm/img/signup-craft-robot.png);
+    height: 150px;
+    width: 150px;
+    background-size: 150px 150px;
+    margin: 7px auto;
+    padding: 0;
+    float: left;
+}
+.category.mobile.modal.banner-btn .call-to-action-workshop-robot-img,
+.category.mobile.modal.banner-btn .call-to-action-costumes-robot-img,
+.category.mobile.modal.banner-btn .call-to-action-outside-robot-img,
+.category.mobile.modal.banner-btn .call-to-action-food-robot-img,
+.category.mobile.modal.banner-btn .call-to-action-home-robot-img,
+.category.mobile.modal.banner-btn .call-to-action-play-robot-img,
+.category.mobile.modal.banner-btn .call-to-action-technology-robot-img,
+.category.mobile.modal.banner-btn .call-to-action-craft-robot-img
+{
+    height: 110px;
+    width: 110px;
+    background-size: 110px 110px;
+}
+
+.category.mobile.modal.banner-link .call-to-action-workshop-robot-img,
+.category.mobile.modal.banner-link .call-to-action-costumes-robot-img,
+.category.mobile.modal.banner-link .call-to-action-outside-robot-img,
+.category.mobile.modal.banner-link .call-to-action-food-robot-img,
+.category.mobile.modal.banner-link .call-to-action-home-robot-img,
+.category.mobile.modal.banner-link .call-to-action-play-robot-img,
+.category.mobile.modal.banner-link .call-to-action-technology-robot-img,
+.category.mobile.modal.banner-link .call-to-action-craft-robot-img {
+    margin: 16px 0 10px;
+}
+
+.category.mobile.modal.banner-link .call-to-action-workshop-robot-img,
+.category.mobile.modal.banner-link .call-to-action-costumes-robot-img,
+.category.mobile.modal.banner-link .call-to-action-outside-robot-img,
+.category.mobile.modal.banner-link .call-to-action-food-robot-img,
+.category.mobile.modal.banner-link .call-to-action-home-robot-img,
+.category.mobile.modal.banner-link .call-to-action-play-robot-img,
+.category.mobile.modal.banner-link .call-to-action-technology-robot-img,
+.category.mobile.modal.banner-link .call-to-action-craft-robot-img,
+.category.mobile.modal.banner-form .call-to-action-workshop-robot-img,
+.category.mobile.modal.banner-form .call-to-action-costumes-robot-img,
+.category.mobile.modal.banner-form .call-to-action-outside-robot-img,
+.category.mobile.modal.banner-form .call-to-action-food-robot-img,
+.category.mobile.modal.banner-form .call-to-action-home-robot-img,
+.category.mobile.modal.banner-form .call-to-action-play-robot-img,
+.category.mobile.modal.banner-form .call-to-action-technology-robot-img,
+.category.mobile.modal.banner-form .call-to-action-craft-robot-img
+{
+    height: 75px;
+    width: 75px;
+    background-size: 75px 75px;
+}
+
+.category.mobile.modal .call-to-action-food-robot-img,
+.category.mobile.modal .call-to-action-play-robot-img
+{
+    margin: 13px auto 7px;
+}
+
+.mobile.modal .class-graduation-robot-image {
+    display: inline-block;
+    background-image: url(http://cdn.instructables.com/static/gtm/img/graduation-robot.png);
+    height: 105px;
+    width: 70px;
+    background-size: 70px 105px;
+    padding: 0;
+    margin: 0 20px 0 10px;
+    float: left;
+}
+
+.mobile.modal .threeD-printing-class {
+	background-image: url(https://cdn.instructables.com/static/gtm/img/3dprinting-class-mobile.jpg);
+    height: 167px;
+    width: 298px;
+    background-size: 298px 167px;
+    position: relative;
+    left: -15px;
+    top: -15px;
+}
+.mobile.modal .robots-class {
+    background-image: url(https://cdn.instructables.com/static/gtm/img/robot-class-mobile.jpg);
+    height: 167px;
+    width: 298px;
+    background-size: 298px 167px;
+    position: relative;
+    left: -15px;
+    top: -15px;
+}
+.mobile.modal .handsewing-class {
+    background-image: url(https://cdn.instructables.com/static/gtm/img/handsewing-class-mobile.jpg);
+    height: 167px;
+    width: 298px;
+    background-size: 298px 167px;
+    position: relative;
+    left: -15px;
+    top: -15px;
+}
+.mobile.modal .woodworking-class {
+    background-image: url(https://cdn.instructables.com/static/gtm/img/woodworking-class-mobile.jpg);
+    height: 167px;
+    width: 298px;
+    background-size: 298px 167px;
+    position: relative;
+    left: -15px;
+    top: -15px;
+}
+.mobile.modal .pasta-making-class {
+	background-image:url(https://cdn.instructables.com/static/gtm/img/class-cta-mobile-pastamaking.jpg);
+    height: 167px;
+    width: 298px;
+    background-size: 298px 167px;
+    position: relative;
+    left: -15px;
+    top: -15px;
+}
+.class-premium-prompt .class-premium-prompt-image {
+	background-image:url(https://cdn.instructables.com/static/gtm/img/class-cta-generalbanner.png);
+    background-size: 322px;
+    background-repeat: no-repeat;
+    height: 192px;
+    position: absolute;
+    width: 322px;
+    left: -1px;
+    top: -1px;
+}
+.class-premium-prompt.mobile .class-premium-prompt-image {
+	background-size:300px;
+}
+.class-premium-prompt.call-to-action p {
+    font-size: 16px;
+    margin: 20px 0;
+    font-weight: normal;
+}
+.class-premium-prompt.call-to-action.mobile p{
+	margin:10px 0;
+    text-align: left;
+    width: 88%;
+}
+.class-premium-prompt.call-to-action .call-to-action-message {
+	margin-top:210px;
+}
+
+.call-to-action h1 {
+    font-size: 18px;
+    margin: 5px 0 10px;
+}
+.call-to-action p {
+    font-size: 15px;
+}
+.banner p {
+    width: 80%;
+}
+.mobile  p {
+    display: none;
+}
+.mobile.modal p {
+    display: block;
+}
+.call-to-action .call-to-action-form * {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+.mobile .call-to-action-form .submit-form {
+    width: auto;
+}
+.mobile.modal .call-to-action-form .submit-form{
+    width: 100%;
+}
+.category.mobile.modal .call-to-action-form .submit-form{
+    width: 40%;
+    float: right;
+    border-radius: 0 4px 4px 0;
+    display: inline;
+}
+.mobile .call-to-action-form .signup-prompt-email{
+    width: 100%;
+}
+.category.mobile .call-to-action-form .signup-prompt-email{
+    width: 60%;
+    float: left;
+    border-radius: 4px 0 0 4px;
+}
+.mobile.modal .call-to-action-form .signup-prompt-email {
+    margin-bottom: 0px;
+}
+
+.call-to-action.mobile .call-to-action-message {
+    margin-top: 0;
+}
+
+.call-to-action-form input {
+    height: 48px;
+    font-size: 18px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    display: block;
+    width: 100%;
+}
+.call-to-action .close {
+    float: right;
+    opacity: 1;
+}
+.class-premium-prompt .close {
+	position: absolute;
+    z-index: 1;
+    right: 10px;
+}
+.call-to-action.category .close{
+    line-height: 20px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.close.light {
+    color: #FFF;
+    opacity: 1;
+}
+
+.call-to-action.overlay .close, .call-to-action.modal .close{
+    line-height: 10px;
+}
+.call-to-action.overlay .close span, .call-to-action.modal .close span {
+    line-height: 5px;
+    vertical-align: top;
+    font-size: 30px;
+}
+.call-to-action.mobile .close {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    border-radius: 14px;
+    height: 28px;
+    width: 28px;
+    display: block;
+    background: #CCC;
+    opacity: 1;
+    color: white;
+    z-index: 2;
+}
+
+.call-to-action.mobile.modal.class-cta .close {
+    background: transparent;
+    border: none;
+    top: 5px;
+    right: 5px;
+}
+.call-to-action.mobile.modal.class-cta h1 {
+	font-size:18px;
+	line-height:22px;
+}
+.call-to-action.mobile.modal.class-cta p {
+	font-size:14px;
+}
+.call-to-action.mobile.modal.class-cta .modal-content {
+	height:380px;
+}
+
+.call-to-action.class-cta.desktop .cta-class-link {
+    position: absolute;
+    top: 310px;
+    font-size: 16px;
+    left: 227px;
+}
+.class-cta.mobile {
+	
+}
+.call-to-action.mobile .close span {
+    position: relative;
+    top: -3px;
+}
+.call-to-action.mobile.modal .close span {
+    position: static;
+}
+.call-to-action.mobile.modal .call-to-action-signin p{
+    font-size: 13px;
+}
+
+.overlay-open {
+    display: none;
+}
+.overlay-open.overlay {
+    display: block;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    z-index: 10000;
+    background: white;
+    padding: 10px 15px;
+    font-size: 18px;
+    text-align: center;
+    border-radius: 4px 0px 0 0;
+    border: 1px solid #ccc;
+}
+
+.overlay-open img {
+    -moz-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+
+.call-to-action.premium-prompt {
+    width: 310px;
+    height: 310px;
+    overflow: hidden;
+}
+
+.call-to-action.premium-prompt .call-to-action-form {
+    padding: 10px 20px 20px;
+}
+
+.call-to-action.premium-prompt .call-to-action-form p,
+.call-to-action.premium-prompt .call-to-action-form a {
+    margin-bottom: 10px;
+    font-weight: normal;
+}
+.call-to-action.premium-prompt.mobile.modal .modal-content {
+    height: 320px;
+}
+
+.call-to-action.premium-prompt .alert-close{
+    position: absolute;
+    left: 10px;
+}
+.call-to-action.premium-prompt.mobile .alert-close{
+	left:initial;
+}
+
+.call-to-action.premium-prompt  .call-to-action-header {
+    margin-left: -10px;
+    margin-top: -10px;
+    width: 330px;
+    height: 180px;
+    background-image: url(https://cdn.instructables.com/static/gtm/img/premiumRobot.jpeg);
+}
+.call-to-action.premium-prompt.mobile .call-to-action-header {
+	margin-left: -15px;
+    border-radius: 6px 6px 0 0px;
+    margin-top: -15px;
+    width: 298px;
+    height: 175px;
+    background-size: 298px;
+    background-repeat: no-repeat;
+}
+
+.call-to-action-footer {
+    height: 50px;
+    line-height: 50px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    z-index: 200;
+    background-color: #47A4C2;
+    color: #fff;
+    font-size: 18px;
+    text-align: center;
+    font-weight: 300;
+}
+
+.call-to-action-footer .fixed-wrap {
+    position: relative;
+    margin: 0 auto;
+}
+
+.call-to-action-footer a {
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.call-to-action-footer button.close{
+	font-size: 25px;
+    line-height: 42px;
+    color: #fff;
+    right: 15px;
+    position: relative;
+	float:right;
+}
+
+.call-to-action-footer.corner {
+	height: 50px;
+    line-height: 50px;
+    position: fixed;
+    bottom: 0;
+    z-index: 200;
+    background-color: #3b95bf;
+    color: #fff;
+    font-size: 18px;
+    text-align: center;
+    font-weight: 300;
+	right:0px;
+    padding: 0 20px 0 30px;
+	border-top-left-radius: 5px;
+	width:auto;
+}
+.call-to-action-footer.corner a {
+    color: #fff;
+    text-decoration: none;
+	font-weight:300;
+}
+.call-to-action-footer.corner button.close {
+    font-size: 25px;
+    line-height: 42px;
+    color: #fff;
+    right: 13px;
+    position: relative;
+	float:left;
+	
+}
+.call-to-action-footer.corner.robot {
+	padding:0 0 0 30px;
+}
+.call-to-action-footer.corner.robot span {
+	float:right;
+}
+.call-to-action-footer.corner.robot .footer-robot{
+	position: relative;
+    bottom: 39px;
+    border: 20px #3b95bf solid;
+    border-radius: 45px;
+    background: #3b95bf;
+}
+/* new mobile style*/
+.call-to-action.mobile.banner {
+    top: 0px;
+    bottom: auto;
+    display: block;
+    padding: 5px 15px;
+    height: auto;
+    border: none;
+    border-bottom: 1px #ccc solid;
+}
+
+.call-to-action.mobile.banner.button {
+    background-color: white;
+}
+.call-to-action.mobile.banner.text {
+    background-color: #f6f6f6;
+}
+
+.mobile.banner div {
+    width: auto;
+    padding: 0;
+    margin: 0;
+}
+
+.mobile.banner .class-image {
+    float: left;
+}
+
+.mobile.banner .class-image.class-cta-arduino-img {
+    background-image: url(https://www.instructables.com/files/orig/FMJ/FMG5/IMZ65K95/FMJFMG5IMZ65K95.png);
+    height: 70px;
+    background-size: 70px;
+    width: 70px;
+    z-index: 1;
+    display: inline-block;
+    position: relative;
+}
+.mobile.banner.button .class-image.class-cta-arduino-img{
+    left: 17.5px;
+
+}
+.mobile.banner .title {
+    display: block;
+    color: black;
+    font-weight: 700;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.mobile.banner .message-text {
+    background-color: #f6f6f6;
+    display: inline-block;
+    position: relative;
+    height: 70px;
+    text-align: left;
+    font-size: 16px;
+}
+
+.category.mobile.banner .message-text {
+    beight: auto;
+    text-align: left;
+    float: left;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    color: #000000;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.mobile.banner.button .message-text {
+    left: -17.5px;
+    padding: 12px 35px 12px 50px;
+    border: 1px solid grey;
+    border-radius: 0 35px 35px 0;
+    width: 242px;
+}
+.mobile.banner.text .message-text {
+    width: 150px;
+    margin-left: 20px;
+}
+.call-to-action.mobile.banner .close {
+    border-radius: 14px;
+    background: #d1d1d1;
+}
+
+.mobile.banner div.message {
+    width: 100%;
+}
+
+@media (max-width: 350px) {
+    .mobile.link .call-to-action-robot-img {
+        right: -15px;
+    }
+    .call-to-action.mobile h1 {
+        font-size: 18px;
+        line-height: 25px;
+        margin: 15px 0;
+    }
+}

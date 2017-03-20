@@ -1,0 +1,33 @@
+/*
+
+Your custom css
+
+*/
+.video-container {
+	position: relative;
+	padding-bottom: 56.25%;
+	padding-top: 30px;
+	height: 0;
+	overflow: hidden;
+}
+
+.video-container iframe,  
+.video-container object,  
+.video-container embed {
+	position: absolute;
+	top: 0;
+	left: 0;
+	//width: 100%;
+	height: auto;
+}
+
+.entry-content img, 
+.entry-content iframe, 
+.entry-content object, 
+.entry-content embed {
+        max-width: 100%;
+}
+
+#theme-page h1, #theme-page h3, #theme-page h3  {
+	text-transform: none !important;
+}

@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<!--html5-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class=" js no-touch boxshadow opacity fontface svg inlinesvg svgclippaths no-ie8compat" style="" lang="en"><!--<![endif]--><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script src="Arduino%20Playground%20-%20MaxSonar_files/cbgapi.loaded_1" async=""></script><script src="Arduino%20Playground%20-%20MaxSonar_files/cbgapi.loaded_0" async=""></script><script type="text/javascript" src="Arduino%20Playground%20-%20MaxSonar_files/plusone.js" gapi_processed="true"></script><script type="text/javascript" src="Arduino%20Playground%20-%20MaxSonar_files/widgets.js"></script><script type="text/javascript" src="Arduino%20Playground%20-%20MaxSonar_files/300lo.json"></script><script type="text/javascript" src="Arduino%20Playground%20-%20MaxSonar_files/_ate.config_resp"></script>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+  	<meta charset="utf-8">
+
+	<title>Arduino Playground - MaxSonar </title>
+	<link rel="shortcut icon" type="image/x-icon" href="http://playground.arduino.cc/favicon.ico">
+
+	<link rel="stylesheet" href="Arduino%20Playground%20-%20MaxSonar_files/fonts.css" type="text/css">
+	<link rel="stylesheet" href="Arduino%20Playground%20-%20MaxSonar_files/arduino-icons.css">
+	<link rel="stylesheet" href="Arduino%20Playground%20-%20MaxSonar_files/animation.css"><!--[if IE 7]>
+	<link rel="stylesheet" href="http://arduino.cc/css/arduino-icons-ie7.css"><![endif]-->
+	<!--[if gte IE 9]><!-->
+	<link rel="stylesheet" href="Arduino%20Playground%20-%20MaxSonar_files/foundation2.css" type="text/css">
+	<!--[endif]---->
+	<!--[if IE 8]>
+		<link rel='stylesheet' href='http://arduino.cc/css/foundation_ie8.css' type='text/css' />	
+	<![endif]-->	
+	<link rel="stylesheet" href="Arduino%20Playground%20-%20MaxSonar_files/arduino_code_highlight.css" type="text/css">
+	<link rel="stylesheet" type="text/css" media="screen" href="Arduino%20Playground%20-%20MaxSonar_files/typeplate.css">
+	<link rel="stylesheet" href="Arduino%20Playground%20-%20MaxSonar_files/arduinoWide_SSO.css" type="text/css">
+	<link rel="stylesheet" href="Arduino%20Playground%20-%20MaxSonar_files/common.css" type="text/css">	  
+	<link href="https://plus.google.com/114839908922424087554" rel="publisher">
+	<script type="text/javascript" async="" src="Arduino%20Playground%20-%20MaxSonar_files/ga.js"></script><script src="Arduino%20Playground%20-%20MaxSonar_files/custom.js"></script>
+<style type="text/css">.at-icon{fill:#fff;border:0}.at-icon-wrapper{display:inline-block;overflow:hidden}a .at-icon-wrapper{cursor:pointer}.at-rounded,.at-rounded-element .at-icon-wrapper{border-radius:12%}.at-circular,.at-circular-element .at-icon-wrapper{border-radius:50%}.addthis_32x32_style .at-icon{width:2pc;height:2pc}.addthis_24x24_style .at-icon{width:24px;height:24px}.addthis_20x20_style .at-icon{width:20px;height:20px}.addthis_16x16_style .at-icon{width:1pc;height:1pc}#at16lb{display:none;position:absolute;top:0;left:0;width:100%;height:100%;z-index:1001;background-color:#000;opacity:.001}#at_complete,#at_error,#at_share,#at_success{position:static!important}.at15dn{display:none}#at15s,#at16p,#at16p form input,#at16p label,#at16p textarea,#at_share .at_item{font-family:arial,helvetica,tahoma,verdana,sans-serif!important;font-size:9pt!important;outline-style:none;outline-width:0;line-height:1em}* html #at15s.mmborder{position:absolute!important}#at15s.mmborder{position:fixed!important;width:250px!important}#at15s{background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAABtJREFUeNpiZGBgaGAgAjAxEAlGFVJHIUCAAQDcngCUgqGMqwAAAABJRU5ErkJggg==);float:none;line-height:1em;margin:0;overflow:visible;padding:5px;text-align:left;position:absolute}#at15s a,#at15s span{outline:0;direction:ltr;text-transform:none}#at15s .at-label{margin-left:5px}#at15s .at-icon-wrapper{width:1pc;height:1pc;vertical-align:middle}#at15s .at-icon{width:1pc;height:1pc}.at4-icon{display:inline-block;background-repeat:no-repeat;background-position:top left;margin:0;overflow:hidden;cursor:pointer}.addthis_16x16_style .at4-icon,.addthis_default_style .at4-icon,.at4-icon,.at-16x16{width:1pc;height:1pc;line-height:1pc;background-size:1pc!important}.addthis_32x32_style .at4-icon,.at-32x32{width:2pc;height:2pc;line-height:2pc;background-size:2pc!important}.addthis_24x24_style .at4-icon,.at-24x24{width:24px;height:24px;line-height:24px;background-size:24px!important}.addthis_20x20_style .at4-icon,.at-20x20{width:20px;height:20px;line-height:20px;background-size:20px!important}.at4-icon.circular,.circular .at4-icon,.circular.aticon{border-radius:50%}.at4-icon.rounded,.rounded .at4-icon{border-radius:4px}.at4-icon-left{float:left}#at15s .at4-icon{text-indent:20px;padding:0;overflow:visible;white-space:nowrap;background-size:1pc;width:1pc;height:1pc;background-position:top left;display:inline-block;line-height:1pc}.addthis_vertical_style .at4-icon,.at4-follow-container .at4-icon{margin-right:5px}html>body #at15s{width:250px!important}#at15s.atm{background:none!important;padding:0!important;width:10pc!important}#at15s_inner{background:#fff;border:1px solid #fff;margin:0}#at15s_head{position:relative;background:#f2f2f2;padding:4px;cursor:default;border-bottom:1px solid #e5e5e5}.at15s_head_success{background:#cafd99!important;border-bottom:1px solid #a9d582!important}.at15s_head_success a,.at15s_head_success span{color:#000!important;text-decoration:none}#at15s_brand,#at15sptx,#at16_brand{position:absolute}#at15s_brand{top:4px;right:4px}.at15s_brandx{right:20px!important}a#at15sptx{top:4px;right:4px;text-decoration:none;color:#4c4c4c;font-weight:700}#at15sptx:hover{text-decoration:underline}#at16_brand{top:5px;right:30px;cursor:default}#at_hover{padding:4px}#at_hover .at_item,#at_share .at_item{background:#fff!important;float:left!important;color:#4c4c4c!important}#at_share .at_item .at-icon-wrapper{margin-right:5px}#at_hover .at_bold{font-weight:700;color:#000!important}#at_hover .at_item{width:7pc!important;padding:2px 3px!important;margin:1px;text-decoration:none!important}#at_hover .at_item.athov,#at_hover .at_item:focus,#at_hover .at_item:hover{margin:0!important}#at_hover .at_item.athov,#at_hover .at_item:focus,#at_hover .at_item:hover,#at_share .at_item.athov,#at_share .at_item:hover{background:#f2f2f2!important;border:1px solid #e5e5e5;color:#000!important;text-decoration:none}.ipad #at_hover .at_item:focus{background:#fff!important;border:1px solid #fff}.at15t{display:block!important;height:1pc!important;line-height:1pc!important;padding-left:20px!important;background-position:0 0;text-align:left}.addthis_button,.at15t{cursor:pointer}.addthis_toolbox a.at300b,.addthis_toolbox a.at300m{width:auto}.addthis_toolbox a{margin-bottom:5px;line-height:initial}.addthis_toolbox.addthis_vertical_style{width:200px}.addthis_button_facebook_like .fb_iframe_widget{line-height:100%}.addthis_button_facebook_like iframe.fb_iframe_widget_lift{max-width:none}.addthis_toolbox a.addthis_button_counter,.addthis_toolbox a.addthis_button_facebook_like,.addthis_toolbox a.addthis_button_facebook_send,.addthis_toolbox a.addthis_button_facebook_share,.addthis_toolbox a.addthis_button_foursquare,.addthis_toolbox a.addthis_button_google_plusone,.addthis_toolbox a.addthis_button_linkedin_counter,.addthis_toolbox a.addthis_button_pinterest_pinit,.addthis_toolbox a.addthis_button_stumbleupon_badge,.addthis_toolbox a.addthis_button_tweet{display:inline-block}.at-share-tbx-element .google_plusone_iframe_widget>span>div{vertical-align:top!important}.addthis_toolbox span.addthis_follow_label{display:none}.addthis_toolbox.addthis_vertical_style span.addthis_follow_label{display:block;white-space:nowrap}.addthis_toolbox.addthis_vertical_style a{display:block}.addthis_toolbox.addthis_vertical_style.addthis_32x32_style a{line-height:2pc;height:2pc}.addthis_toolbox.addthis_vertical_style .at300bs{margin-right:4px;float:left}.addthis_toolbox.addthis_20x20_style span{line-height:20px}.addthis_toolbox.addthis_32x32_style span{line-height:2pc}.addthis_toolbox.addthis_pill_combo_style .addthis_button_compact .at15t_compact,.addthis_toolbox.addthis_pill_combo_style a{float:left}.addthis_toolbox.addthis_pill_combo_style a.addthis_button_tweet{margin-top:-2px}.addthis_toolbox.addthis_pill_combo_style .addthis_button_compact .at15t_compact{margin-right:4px}.addthis_default_style .addthis_separator{margin:0 5px;display:inline}div.atclear{clear:both}.addthis_default_style .addthis_separator,.addthis_default_style .at4-icon,.addthis_default_style .at300b,.addthis_default_style .at300bo,.addthis_default_style .at300bs,.addthis_default_style .at300m{float:left}.at300b img,.at300bo img{border:0}a.at300b .at4-icon,a.at300m .at4-icon{display:block}.addthis_default_style .at300b,.addthis_default_style .at300bo,.addthis_default_style .at300m{padding:0 2px}.at300b,.at300bo,.at300bs,.at300m{cursor:pointer}.addthis_button_facebook_like.at300b:hover,.addthis_button_facebook_like.at300bs:hover,.addthis_button_facebook_send.at300b:hover,.addthis_button_facebook_send.at300bs:hover{opacity:1}.addthis_20x20_style .at15t,.addthis_20x20_style .at300bs{overflow:hidden;display:block;height:20px!important;width:20px!important;line-height:20px!important}.addthis_32x32_style .at15t,.addthis_32x32_style .at300bs{overflow:hidden;display:block;height:2pc!important;width:2pc!important;line-height:2pc!important}.at300bs{overflow:hidden;display:block;background-position:0 0;height:1pc;width:1pc;line-height:1pc!important}.addthis_default_style .at15t_compact,.addthis_default_style .at15t_expanded{margin-right:4px}#at_share .at_item{width:123px!important;padding:4px;margin-right:2px;border:1px solid #fff}#at16p{background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAABtJREFUeNpiZGBgaGAgAjAxEAlGFVJHIUCAAQDcngCUgqGMqwAAAABJRU5ErkJggg==);z-index:10000001;position:absolute;top:50%;left:50%;width:300px;padding:10px;margin:0 auto;margin-top:-185px;margin-left:-155px;font-family:arial,helvetica,tahoma,verdana,sans-serif;font-size:9pt;color:#5e5e5e}#at_share{margin:0;padding:0}#at16pt{position:relative;background:#f2f2f2;height:13px;padding:5px 10px}#at16pt a,#at16pt h4{font-weight:700}#at16pt h4{display:inline;margin:0;padding:0;font-size:9pt;color:#4c4c4c;cursor:default}#at16pt a{position:absolute;top:5px;right:10px;color:#4c4c4c;text-decoration:none;padding:2px}#at15sptx:focus,#at16pt a:focus{outline:thin dotted}#at15s #at16pf a{top:1px}#_atssh{width:1px!important;height:1px!important;border:0!important}.atm{width:10pc!important;padding:0;margin:0;line-height:9pt;letter-spacing:normal;font-family:arial,helvetica,tahoma,verdana,sans-serif;font-size:9pt;color:#444;background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAABtJREFUeNpiZGBgaGAgAjAxEAlGFVJHIUCAAQDcngCUgqGMqwAAAABJRU5ErkJggg==);padding:4px}.atm-f{text-align:right;border-top:1px solid #ddd;padding:5px 8px}.atm-i{background:#fff;border:1px solid #d5d6d6;padding:0;margin:0;box-shadow:1px 1px 5px rgba(0,0,0,.15)}.atm-s{margin:0!important;padding:0!important}.atm-s a:focus{border:transparent;outline:0;-webkit-transition:none;transition:none}#at_hover.atm-s a,.atm-s a{display:block;text-decoration:none;padding:4px 10px;color:#235dab!important;font-weight:400;font-style:normal;-webkit-transition:none;transition:none}#at_hover.atm-s .at_bold{color:#235dab!important}#at_hover.atm-s a:hover,.atm-s a:hover{background:#2095f0;text-decoration:none;color:#fff!important}#at_hover.atm-s .at_bold{font-weight:700}#at_hover.atm-s a:hover .at_bold{color:#fff!important}.atm-s a .at-label{vertical-align:middle;margin-left:5px;direction:ltr}.at_PinItButton{display:block;width:40px;height:20px;padding:0;margin:0;background-image:url(//s7.addthis.com/static/t00/pinit00.png);background-repeat:no-repeat}.at_PinItButton:hover{background-position:0 -20px}.addthis_toolbox .addthis_button_pinterest_pinit{position:relative}.at-share-tbx-element .fb_iframe_widget span{vertical-align:baseline!important}#at16pf{height:auto;text-align:right;padding:4px 8px}.at-privacy-info{position:absolute;left:7px;bottom:7px;cursor:pointer;text-decoration:none;font-family:helvetica,arial,sans-serif;font-size:10px;line-height:9pt;letter-spacing:.2px;color:#666}.at-privacy-info:hover{color:#000}.body .wsb-social-share .wsb-social-share-button-vert{padding-top:0;padding-bottom:0}.body .wsb-social-share.addthis_counter_style .addthis_button_tweet.wsb-social-share-button{padding-top:44px}.body .wsb-social-share.addthis_counter_style .addthis_button_google_plusone.wsb-social-share-button{padding-top:4px}@media print{#at4-follow,#at4-share,#at4-thankyou,#at4-whatsnext,#at4m-mobile,#at15s,.at4,.at4-recommended{display:none!important}}@media screen and (max-width:400px){.at4win{width:100%}}@media screen and (max-height:700px) and (max-width:400px){.at4-thankyou-inner .at4-recommended-container{height:122px;overflow:hidden}.at4-thankyou-inner .at4-recommended .at4-recommended-item:first-child{border-bottom:1px solid #c5c5c5}}</style><style type="text/css">.at-branding-logo{font-family:helvetica,arial,sans-serif;text-decoration:none;font-size:10px;display:inline-block;margin:2px 0;letter-spacing:.2px}.at-branding-logo .at-branding-icon{background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAMAAAC67D+PAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAAZQTFRF////+GlNUkcc1QAAAB1JREFUeNpiYIQDBjQmAwMmkwEM0JnY1WIxFyDAABGeAFEudiZsAAAAAElFTkSuQmCC")}.at-branding-logo .at-branding-icon,.at-branding-logo .at-privacy-icon{display:inline-block;height:10px;width:10px;margin-left:4px;margin-right:3px;margin-bottom:-1px;background-repeat:no-repeat}.at-branding-logo .at-privacy-icon{background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAKCAMAAABR24SMAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAABhQTFRF8fr9ot/xXcfn2/P5AKva////////AKTWodjhjAAAAAd0Uk5T////////ABpLA0YAAAA6SURBVHjaJMzBDQAwCAJAQaj7b9xifV0kUKJ9ciWxlzWEWI5gMF65KUTv0VKkjVeTerqE/x7+9BVgAEXbAWI8QDcfAAAAAElFTkSuQmCC")}.at-branding-logo span{text-decoration:none}.at-branding-logo .at-branding-addthis,.at-branding-logo .at-branding-powered-by{color:#666}.at-branding-logo .at-branding-addthis:hover{color:#333}.at-cv-with-image .at-branding-addthis,.at-cv-with-image .at-branding-addthis:hover{color:#fff}a.at-branding-logo:visited{color:initial}.at-branding-info{display:inline-block;padding:0 5px;color:#666;border:1px solid #666;border-radius:50%;font-size:10px;line-height:9pt;opacity:.7;transition:all .3s ease;text-decoration:none}.at-branding-info span{border:0;clip:rect(0 0 0 0);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px}.at-branding-info:before{content:'i';font-family:Times New Roman}.at-branding-info:hover{color:#0780df;border-color:#0780df}</style><script type="text/javascript" charset="utf-8" async="" src="Arduino%20Playground%20-%20MaxSonar_files/button.js"></script><style type="text/css">.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_reposition{overflow:hidden;position:relative}.fb_invisible{display:none}.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:"lucida grande", tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}.fb_link img{border:none}@keyframes fb_transform{from{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}.fb_animate{animation:fb_transform .3s forwards}
+.fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}.fb_reset .fb_dialog_legacy{overflow:visible}.fb_dialog_advanced{padding:10px;-moz-border-radius:8px;-webkit-border-radius:8px;border-radius:8px}.fb_dialog_content{background:#fff;color:#333}.fb_dialog_close_icon{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;_background-image:url(https://static.xx.fbcdn.net/rsrc.php/v3/yL/r/s816eWC-2sl.gif);cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px}.fb_dialog_mobile .fb_dialog_close_icon{top:5px;left:5px;right:auto}.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}.fb_dialog_close_icon:hover{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent;_background-image:url(https://static.xx.fbcdn.net/rsrc.php/v3/yL/r/s816eWC-2sl.gif)}.fb_dialog_close_icon:active{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent;_background-image:url(https://static.xx.fbcdn.net/rsrc.php/v3/yL/r/s816eWC-2sl.gif)}.fb_dialog_loader{background-color:#f6f7f9;border:1px solid #606060;font-size:24px;padding:20px}.fb_dialog_top_left,.fb_dialog_top_right,.fb_dialog_bottom_left,.fb_dialog_bottom_right{height:10px;width:10px;overflow:hidden;position:absolute}.fb_dialog_top_left{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 0;left:-10px;top:-10px}.fb_dialog_top_right{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 -10px;right:-10px;top:-10px}.fb_dialog_bottom_left{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 -20px;bottom:-10px;left:-10px}.fb_dialog_bottom_right{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 -30px;right:-10px;bottom:-10px}.fb_dialog_vert_left,.fb_dialog_vert_right,.fb_dialog_horiz_top,.fb_dialog_horiz_bottom{position:absolute;background:#525252;filter:alpha(opacity=70);opacity:.7}.fb_dialog_vert_left,.fb_dialog_vert_right{width:10px;height:100%}.fb_dialog_vert_left{margin-left:-10px}.fb_dialog_vert_right{right:0;margin-right:-10px}.fb_dialog_horiz_top,.fb_dialog_horiz_bottom{width:100%;height:10px}.fb_dialog_horiz_top{margin-top:-10px}.fb_dialog_horiz_bottom{bottom:0;margin-bottom:-10px}.fb_dialog_iframe{line-height:0}.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #365899;color:#fff;font-size:14px;font-weight:bold;margin:0}.fb_dialog_content .dialog_title>span{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}body.fb_hidden{-webkit-transform:none;height:100%;margin:0;overflow:visible;position:absolute;top:-10000px;left:0;width:100%}.fb_dialog.fb_dialog_mobile.loading{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ya/r/3rhSv5V8j3o.gif) white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}.fb_dialog.fb_dialog_mobile.loading.centered{width:auto;height:auto;min-height:initial;min-width:initial;background:none}.fb_dialog.fb_dialog_mobile.loading.centered #fb_dialog_loader_spinner{width:100%}.fb_dialog.fb_dialog_mobile.loading.centered .fb_dialog_content{background:none}.loading.centered #fb_dialog_loader_close{color:#fff;display:block;padding-top:20px;clear:both;font-size:18px}#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .45);position:absolute;bottom:0;left:0;right:0;top:0;width:100%;min-height:100%;z-index:10000}#fb-root #fb_dialog_ipad_overlay.hidden{display:none}.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}.fb_dialog_content .dialog_header{-webkit-box-shadow:white 0 1px 1px -1px inset;background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#738ABA), to(#2C4987));border-bottom:1px solid;border-color:#1d4088;color:#fff;font:14px Helvetica, sans-serif;font-weight:bold;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}.fb_dialog_content .dialog_header table{-webkit-font-smoothing:subpixel-antialiased;height:43px;width:100%}.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px}.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px}.fb_dialog_content .touchable_button{background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#4966A6), color-stop(.5, #355492), to(#2A4887));border:1px solid #29487d;-webkit-background-clip:padding-box;-webkit-border-radius:3px;-webkit-box-shadow:rgba(0, 0, 0, .117188) 0 1px 1px inset, rgba(255, 255, 255, .167969) 0 1px 0;display:inline-block;margin-top:3px;max-width:85px;line-height:18px;padding:4px 12px;position:relative}.fb_dialog_content .dialog_header .touchable_button input{border:none;background:none;color:#fff;font:12px Helvetica, sans-serif;font-weight:bold;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}.fb_dialog_content .dialog_content{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #555;border-bottom:0;border-top:0;height:150px}.fb_dialog_content .dialog_footer{background:#f6f7f9;border:1px solid #555;border-top-color:#ccc;height:40px}#fb_dialog_loader_close{float:left}.fb_dialog.fb_dialog_mobile .fb_dialog_close_button{text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}#fb_dialog_loader_spinner{animation:rotateSpinner 1.2s linear infinite;background-color:transparent;background-image:url(https://static.xx.fbcdn.net/rsrc.php/v3/yD/r/t-wz8gw1xG1.png);background-repeat:no-repeat;background-position:50% 50%;height:24px;width:24px}@keyframes rotateSpinner{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
+.fb_iframe_widget{display:inline-block;position:relative}.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}.fb_iframe_widget iframe{position:absolute}.fb_iframe_widget_fluid_desktop,.fb_iframe_widget_fluid_desktop span,.fb_iframe_widget_fluid_desktop iframe{max-width:100%}.fb_iframe_widget_fluid_desktop iframe{min-width:220px;position:relative}.fb_iframe_widget_lift{z-index:1}.fb_hide_iframes iframe{position:relative;left:-10000px}.fb_iframe_widget_loader{position:relative;display:inline-block}.fb_iframe_widget_fluid{display:inline}.fb_iframe_widget_fluid span{width:100%}.fb_iframe_widget_loader iframe{min-height:32px;z-index:2;zoom:1}.fb_iframe_widget_loader .FB_Loader{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif) no-repeat;height:32px;width:32px;margin-left:-16px;position:absolute;left:50%;z-index:4}</style></head>
+<body style="padding-top: 0px;">
+	<div id="menuWings" class="fixed" style="display: none;"></div>
+	<div id="page">
+		
+<script>
+	var userAgent = (navigator.userAgent || navigator.vendor || window.opera).toLowerCase();
+	if(userAgent.indexOf('mac')>0){
+		$("head").append('<style type="text/css">@-moz-document url-prefix() {h1 a, h2 a, h3 a, h4 a, h5 a, h1 a:hover, h2 a:hover, th a, th a:hover, h3 a:hover, h4 a:hover, h5 a:hover, #wikitext h2 a:hover, #wikitext h3 a:hover, #wikitext h4 a:hover {padding-bottom: 0.5em!important;} #pageheader .search input{font-family: "TyponineSans Regular 18";} #pagefooter .monospace{margin-top: -4px;} #navWrapper ul.left &gt; li{margin-top: -2px; padding-bottom: 2px;}#navWrapper ul.right &gt; li{margin-top: -5px; padding-bottom: 5px;}#navWrapper ul.right &gt; li ul{margin-top: 4px;} .slider-container .fixed-caption p{padding:8px 0 14px 0}}</style>');
+	}
+</script>
+
+<!--[if IE]>
+<link rel='stylesheet' href='https://id.arduino.cc//css/ie-monospace.css' type='text/css' />
+<![endif]-->
+
+<div id="menuWings" class="fixed"></div>
+
+<!--[if IE 8]>
+<div class="alert-box panel ie8alert">
+  <p><strong>Arduino.cc offers limited compatibility for Internet Explorer 8. Get a modern browser as Chrome, Firefox or Safari.</strong></p>
+  <a href="" class="close">&times;</a>
+</div>
+<![endif]-->
+
+<div id="pageheader">
+	<div class="row">
+		<div class="small-6 large-8 eight columns">
+			<div class="title"><a href="https://arduino.cc/">Arduino</a></div>
+		</div>
+		<div class="small-6 large-4 four columns search">
+			<div class="row collapse">
+				<form method="GET" action="http://www.google.com/search">
+	<div class="small-12 twelve columns">
+		<i class="icon-search-2"></i>
+		<input name="ie" value="UTF-8" type="hidden">
+		<input name="oe" value="UTF-8" type="hidden">
+		<input name="q" size="25" maxlength="255" placeholder="Search the Arduino Playground" type="text">
+		<input name="btnG" value="search" type="submit">
+		<input name="domains" value="http://playground.arduino.cc" type="hidden">
+		<input name="sitesearch" value="http://playground.arduino.cc" type="hidden">
+	</div>
+</form>			</div>
+		</div>
+	</div>
+
+	<!--[if gte IE 9]><!-->
+	<div id="navWrapper" class="sticky">
+	<!--[endif]---->
+	<!--[if IE 8]>
+		<div id="navWrapper">
+	<![endif]-->
+		<nav class="top-bar" data-options="is_hover:true">
+			<ul class="title-area">
+				<li class="name"></li>
+			</ul>
+
+			
+		<section class="top-bar-section">
+				<ul class="left">
+					<li id="navLogo" style="display: none;">
+						<a href="https://arduino.cc/">
+							<img src="Arduino%20Playground%20-%20MaxSonar_files/logo_46.png" alt="userpicture">
+						</a>
+					</li>
+					<li id="navHome" style="display: block;"><a href="https://arduino.cc/">Home</a></li>
+					<li><a href="https://store.arduino.cc/">Buy</a></li>
+					<li><a href="https://arduino.cc/en/Main/Software">Software</a></li>
+					<li class="has-dropdown not-click"><a href="https://arduino.cc/en/Main/Products">Products</a>
+						<ul class="dropdown"><li class="title back js-generated"><h5><a href="#"><span class="backArrow">Back</span></a></h5></li><li><a class="parent-link js-generated" href="https://arduino.cc/en/Main/Products">Products</a></li>
+							<li><a href="https://arduino.cc/en/Main/Products">Arduino</a></li>
+							<li><a href="https://arduino.cc/en/ArduinoAtHeart/Products">AtHeart</a></li>
+							<li><a href="https://arduino.cc/en/ArduinoCertified/Products">Certified</a></li>
+						</ul>
+					</li>
+					<li class="has-dropdown active not-click"><a href="#">Learning</a>
+						<ul class="dropdown"><li class="title back js-generated"><h5><a href="#"><span class="backArrow">Back</span></a></h5></li>
+							<li><a href="https://arduino.cc/en/Guide/HomePage">Getting started</a></li>
+							<li><a href="https://arduino.cc/en/Tutorial/HomePage">Tutorials</a></li>
+							<li><a href="https://arduino.cc/en/Reference/HomePage">Reference</a></li>
+							<li><a href="https://arduino.cc/en/Main/Education">Education</a></li>
+							<li><a href="http://playground.arduino.cc/">Playground</a></li>
+						</ul>
+					</li>
+					<li><a href="https://forum.arduino.cc/">Forum</a></li>
+					<li class="has-dropdown not-click"><a href="#">Support</a>
+						<ul class="dropdown"><li class="title back js-generated"><h5><a href="#"><span class="backArrow">Back</span></a></h5></li>
+							<li><a href="https://arduino.cc/en/Main/FAQ">FAQ</a></li>
+							<li><a href="https://arduino.cc/en/ContactUs">Contact Us</a></li>
+						</ul>
+					</li>
+					<li><a href="https://blog.arduino.cc/">Blog</a></li>
+				</ul>
+
+								<ul class="right">
+					<li><a href="https://id.arduino.cc/auth/login/?returnurl=http%3A%2F%2Fplayground.arduino.cc%2FMain%2FMaxSonar" class="cart">LOG IN</a></li>
+					<li><a href="https://id.arduino.cc/auth/signup" class="cart">SIGN UP</a></li>
+				</ul>
+							</section></nav>
+	</div>
+</div>
+
+
+
+		<br class="clear">
+
+		<!--PageLeftFmt-->
+		<div id="pagenav">
+			<p><em>The <a class="wikilink" href="http://playground.arduino.cc/Main/HomePage">playground</a> is a publicly-editable wiki about <a class="urllink" href="http://www.arduino.cc/" rel="nofollow">Arduino</a>.</em>
+</p>
+<p class="vspace"></p><p class="sidehead"><a class="wikilink" href="http://playground.arduino.cc/Main/ManualsAndCurriculum">Manuals and Curriculum</a>
+</p>
+<p class="vspace"></p><p class="sidehead"><a class="urllink" href="http://arduino.stackexchange.com/" rel="nofollow">Arduino StackExchange</a>
+</p>
+<p class="vspace"></p><p class="sidehead"><a class="wikilink" href="http://playground.arduino.cc/Main/ArduinoCoreHardware">Board Setup and Configuration</a>
+</p>
+<p class="vspace"></p><p class="sidehead"><a class="wikilink" href="http://playground.arduino.cc/Main/DevelopmentTools">Development Tools</a>
+</p>
+<p class="vspace"></p><p class="sidehead"> <a class="wikilink" href="http://playground.arduino.cc/Main/ArduinoOnOtherAtmelChips">Arduino on other Chips</a>
+</p>
+<p class="vspace"></p><p class="sidehead"><a class="wikilink" href="http://playground.arduino.cc/Main/InterfacingWithHardware">Interfacing With Hardware</a>
+</p><ul><li><a class="wikilink" href="http://playground.arduino.cc/Main/InterfacingWithHardware#Output">Output</a>
+</li><li><a class="wikilink" href="http://playground.arduino.cc/Main/InterfacingWithHardware#InputTOC">Input</a>
+</li><li><a class="wikilink" href="http://playground.arduino.cc/Main/InterfacingWithHardware#ui">User Interface</a>
+</li><li><a class="wikilink" href="http://playground.arduino.cc/Main/InterfacingWithHardware#Storage">Storage</a>
+</li><li><a class="wikilink" href="http://playground.arduino.cc/Main/InterfacingWithHardware#Communication">Communication</a> 
+</li><li><a class="wikilink" href="http://playground.arduino.cc/Main/IntWithHW-PwrSup">Power supplies</a> 
+</li><li><a class="wikilink" href="http://playground.arduino.cc/Main/InterfacingWithHardware#General">General</a> 
+</li></ul><p class="vspace"></p><p class="sidehead"><a class="wikilink" href="http://playground.arduino.cc/Main/InterfacingWithSoftware">Interfacing with Software</a>
+</p>
+<p class="vspace"></p><p class="sidehead"><a class="wikilink" href="http://playground.arduino.cc/Main/GeneralCodeLibrary">User Code Library</a>
+</p><ul><li><a class="wikilink" href="http://playground.arduino.cc/Main/SketchList">Snippets and Sketches</a>
+</li><li><a class="wikilink" href="http://playground.arduino.cc/Main/LibraryList">Libraries</a>
+</li><li><a class="wikilink" href="http://playground.arduino.cc/Main/TutorialList">Tutorials</a>
+</li></ul><p class="vspace"></p><p class="sidehead"><a class="urllink" href="https://github.com/arduino/arduino/issues" rel="nofollow">Suggestions &amp; Bugs</a>
+</p>
+<p class="vspace"></p><p class="sidehead"><a class="wikilink" href="http://playground.arduino.cc/Main/ElectroInfoResources">Electronics Technique</a>
+</p>
+<p class="vspace"></p><p class="sidehead"><a class="wikilink" href="http://playground.arduino.cc/Main/Resources">Sources for Electronic Parts</a>
+</p>
+<p class="vspace"></p><p class="sidehead"><a class="wikilink" href="http://playground.arduino.cc/Main/SimilarBoards">Related Hardware and Initiatives</a>
+</p>
+<p class="vspace"></p><p class="sidehead"><a class="urllink" href="http://playground.arduino.cc/Main/People" rel="nofollow">Arduino People/Groups &amp; Sites</a>
+</p>
+<p class="vspace"></p><p class="sidehead"><a class="urllink" href="http://playground.arduino.cc/Projects/ArduinoUsers" rel="nofollow">Exhibition</a>
+</p>
+<p class="vspace"></p><p class="sidehead"><a class="urllink" href="http://playground.arduino.cc/Projects/Ideas" rel="nofollow">Project Ideas</a>
+</p>
+<p class="vspace"></p><p class="sidehead"><a class="wikilink" href="http://playground.arduino.cc/Main/Languages">Languages</a>
+</p>
+<p class="vspace"></p><hr>
+<p class="vspace"></p><p class="sidehead"> <a class="wikilink" href="http://playground.arduino.cc/Main/Participate">Participate</a>
+</p><ul><li><a class="wikilink" href="http://playground.arduino.cc/Main/Participate#contribrules">Formatting guidelines</a>
+</li><li><a class="wikilink" href="http://playground.arduino.cc/Site/AllRecentChanges">All recent changes</a>
+</li><li><a class="wikilink" href="http://playground.arduino.cc/PmWiki/PmWiki">PmWiki</a>
+</li><li><a class="wikilink" href="http://playground.arduino.cc/Main/WikiSandbox">WikiSandBox training</a>
+</li><li><a class="wikilink" href="http://playground.arduino.cc/PmWiki/BasicEditing">Basic Editing</a>
+</li><li><a class="urllink" href="http://www.pmwiki.org/wiki/PmWiki/DocumentationIndex" rel="nofollow">Documentation index</a>
+</li></ul><p class="vspace"></p>
+
+		</div>
+		<!--/PageLeftFmt-->
+
+		
+
+		<div id="pagetext" class="playground">
+				<!--PageText-->
+<div id="wikitext">
+<h1>Distance Detection</h1>
+<h5>with <span class="wikiword">MaxSonar</span> ultrasonic rangefinder</h5>
+<h2>Library</h2>
+<p>A library is available at <a class="urllink" href="https://github.com/Diaoul/arduino-Maxbotix" rel="nofollow">https://github.com/Diaoul/arduino-Maxbotix</a>
+</p>
+<p class="vspace"></p><p>It features:
+</p><ul><li>Inputs: TX, PW and AN
+</li><li>Models: LV, XL and HRLV
+</li><li>Filters: NONE, MEDIAN, HIGHEST_MODE, LOWEST_MODE, SIMPLE, BEST
+</li></ul><p class="vspace"></p><p>I recommend looking at the examples to get started with it.
+</p>
+<p class="vspace"></p><h2>Manually</h2>
+<p>This is a writeup on the <span class="wikiword">MaxSonar</span> 
+ultrasonic range finder. I felt there was a lack of information out 
+there on this product so I thought this might help out people who are 
+learning.
+</p>
+<p class="vspace"></p><p>First of all, I used the LV-<span class="wikiword">MaxSonar</span> <span class="wikiword">EZ1</span> but I imagine the fundamentals will be the same and can be applied to all the <span class="wikiword">MaxSonar</span> products.
+</p>
+<p class="vspace"></p><p><em>Please feel free to update the information here if you find different results for different products.</em>
+</p>
+<p class="vspace"></p><hr>
+<p class="vspace"></p><p>There are 3 ways to interface the the <span class="wikiword">MaxSonar</span>. 
+</p><ol><li>Analog. Very simple, but not as accurate as PW in my experience.
+</li><li>PW - Pulse Width. I found there was not much information out there but it is easy to do.
+</li><li>Serial communication. I will not cover this but someone else is free to contribute :).
+</li></ol><p class="vspace"></p><hr>
+<h3>Analog</h3>
+<pre> 
+
+<div class="sourceblock " id="sourceblock1">
+  <div class="sourceblocktext"><div class="c"><span class="co1">//Feel free to use this code.</span><br>
+<span class="co1">//Please be respectful by acknowledging the author in the code if you use or modify it.</span><br>
+<span class="co1">//Author: Bruce Allen</span><br>
+<span class="co1">//Date: 23/07/09</span><br>
+<br>
+<span class="co1">//Analog pin 1 for reading in the analog voltage from the MaxSonar device.</span><br>
+<span class="co1">//This variable is a constant because the pin will not change throughout execution of this code.</span><br>
+<span class="kw4">const</span> <span class="kw4">int</span> anPin <span class="sy0">=</span> <span class="nu0">1</span><span class="sy0">;</span><br>
+<br>
+<span class="co1">//variables needed to store values</span><br>
+<span class="kw4">long</span> anVolt<span class="sy0">,</span> inches<span class="sy0">,</span> cm<span class="sy0">;</span><br>
+<span class="kw4">int</span> sum <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">;</span> <span class="co1">//Create sum variable so it can be averaged</span><br>
+<span class="kw4">int</span> avgrange <span class="sy0">=</span> <span class="nu0">60</span><span class="sy0">;</span> <span class="co1">//Quantity of values to average (sample size)</span><br>
+<br>
+<span class="kw4">void</span> setup<span class="br0">(</span><span class="br0">)</span><br>
+<span class="br0">{</span><br>
+&nbsp; <span class="co1">//This opens up a serial connection to shoot the results back to the PC console</span><br>
+&nbsp; Serial.<span class="me1">begin</span><span class="br0">(</span><span class="nu0">9600</span><span class="br0">)</span><span class="sy0">;</span><br>
+<span class="br0">}</span><br>
+<br>
+<span class="kw4">void</span> loop<span class="br0">(</span><span class="br0">)</span><br>
+<span class="br0">{</span><br>
+&nbsp; <span class="co1">//MaxSonar Analog reads are known to be very sensitive. See the Arduino forum for more information.</span><br>
+&nbsp; <span class="co1">//A simple fix is to average out a sample of n readings to get a more consistent reading.</span><br>
+&nbsp; <span class="co1">//Even with averaging I still find it to be less accurate than the PW method.</span><br>
+&nbsp; <span class="co1">//This loop gets 60 reads and averages them</span><br>
+<br>
+&nbsp; <span class="kw1">for</span> <span class="br0">(</span><span class="kw4">int</span> i <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">;</span> i <span class="sy0">&lt;</span> avgrange <span class="sy0">;</span> i<span class="sy0">++</span><span class="br0">)</span><br>
+&nbsp; <span class="br0">{</span><br>
+&nbsp; &nbsp; <span class="co1">//Used to read in the analog voltage output that is being sent by the MaxSonar device.</span><br>
+&nbsp; &nbsp; <span class="co1">//Scale factor is (Vcc/512) per inch. A 5V supply yields ~9.8mV/in</span><br>
+&nbsp; &nbsp; <span class="co1">//Arduino analog pin goes from 0 to 1024, so the value has to be divided by 2 to get the actual inches</span><br>
+&nbsp; &nbsp; anVolt <span class="sy0">=</span> analogRead<span class="br0">(</span>anPin<span class="br0">)</span> <span class="sy0">/</span> <span class="nu0">2</span><span class="sy0">;</span><br>
+&nbsp; &nbsp; sum <span class="sy0">+=</span> anVolt<span class="sy0">;</span><br>
+&nbsp; &nbsp; delay<span class="br0">(</span><span class="nu0">10</span><span class="br0">)</span><span class="sy0">;</span><br>
+&nbsp; <span class="br0">}</span><br>
+<br>
+&nbsp; inches <span class="sy0">=</span> sum <span class="sy0">/</span> avgrange<span class="sy0">;</span><br>
+&nbsp; cm <span class="sy0">=</span> inches <span class="sy0">*</span> <span class="nu16">2.54</span><span class="sy0">;</span><br>
+&nbsp; Serial.<span class="me1">print</span><span class="br0">(</span>inches<span class="br0">)</span><span class="sy0">;</span><br>
+&nbsp; Serial.<span class="me1">print</span><span class="br0">(</span><span class="st0">"in, "</span><span class="br0">)</span><span class="sy0">;</span><br>
+&nbsp; Serial.<span class="me1">print</span><span class="br0">(</span>cm<span class="br0">)</span><span class="sy0">;</span><br>
+&nbsp; Serial.<span class="me1">print</span><span class="br0">(</span><span class="st0">"cm"</span><span class="br0">)</span><span class="sy0">;</span><br>
+&nbsp; Serial.<span class="me1">println</span><span class="br0">(</span><span class="br0">)</span><span class="sy0">;</span><br>
+<br>
+&nbsp; <span class="co1">//reset sample total</span><br>
+&nbsp; sum <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">;</span><br>
+<br>
+&nbsp; delay<span class="br0">(</span><span class="nu0">500</span><span class="br0">)</span><span class="sy0">;</span><br>
+<span class="br0">}</span></div></div>
+  <div class="sourceblocklink"><a href="http://playground.arduino.cc/Main/MaxSonar?action=sourceblock&amp;num=1" type="text/plain">[Get Code]</a></div>
+</div>
+ 
+
+</pre><hr>
+<h3>PW </h3>
+<p>I found this to be more accurate than the analog method and just as easy to implement.
+</p><pre> 
+
+<div class="sourceblock " id="sourceblock2">
+  <div class="sourceblocktext"><div class="c"><span class="co1">//Feel free to use this code.</span><br>
+<span class="co1">//Please be respectful by acknowledging the author in the code if you use or modify it.</span><br>
+<span class="co1">//Author: Bruce Allen</span><br>
+<span class="co1">//Date: 23/07/09</span><br>
+<br>
+<span class="co1">//Digital pin 7 for reading in the pulse width from the MaxSonar device.</span><br>
+<span class="co1">//This variable is a constant because the pin will not change throughout execution of this code.</span><br>
+<span class="kw4">const</span> <span class="kw4">int</span> pwPin <span class="sy0">=</span> <span class="nu0">7</span><span class="sy0">;</span><br>
+<br>
+<span class="co1">//variables needed to store values</span><br>
+<span class="kw4">long</span> pulse<span class="sy0">,</span> inches<span class="sy0">,</span> cm<span class="sy0">;</span><br>
+<br>
+<span class="kw4">void</span> setup<span class="br0">(</span><span class="br0">)</span><br>
+<span class="br0">{</span><br>
+&nbsp; <span class="co1">//This opens up a serial connection to shoot the results back to the PC console</span><br>
+&nbsp; Serial.<span class="me1">begin</span><span class="br0">(</span><span class="nu0">9600</span><span class="br0">)</span><span class="sy0">;</span><br>
+<span class="br0">}</span><br>
+<br>
+<span class="kw4">void</span> loop<span class="br0">(</span><span class="br0">)</span><br>
+<span class="br0">{</span><br>
+&nbsp; pinMode<span class="br0">(</span>pwPin<span class="sy0">,</span> INPUT<span class="br0">)</span><span class="sy0">;</span><br>
+<br>
+&nbsp; <span class="co1">//Used to read in the pulse that is being sent by the MaxSonar device.</span><br>
+&nbsp; <span class="co1">//Pulse Width representation with a scale factor of 147 uS per Inch.</span><br>
+<br>
+&nbsp; pulse <span class="sy0">=</span> pulseIn<span class="br0">(</span>pwPin<span class="sy0">,</span> HIGH<span class="br0">)</span><span class="sy0">;</span><br>
+&nbsp; <span class="co1">//147uS per inch</span><br>
+&nbsp; inches <span class="sy0">=</span> pulse <span class="sy0">/</span> <span class="nu0">147</span><span class="sy0">;</span><br>
+&nbsp; <span class="co1">//change inches to centimetres</span><br>
+&nbsp; cm <span class="sy0">=</span> inches <span class="sy0">*</span> <span class="nu16">2.54</span><span class="sy0">;</span><br>
+<br>
+&nbsp; Serial.<span class="me1">print</span><span class="br0">(</span>inches<span class="br0">)</span><span class="sy0">;</span><br>
+&nbsp; Serial.<span class="me1">print</span><span class="br0">(</span><span class="st0">"in, "</span><span class="br0">)</span><span class="sy0">;</span><br>
+&nbsp; Serial.<span class="me1">print</span><span class="br0">(</span>cm<span class="br0">)</span><span class="sy0">;</span><br>
+&nbsp; Serial.<span class="me1">print</span><span class="br0">(</span><span class="st0">"cm"</span><span class="br0">)</span><span class="sy0">;</span><br>
+&nbsp; Serial.<span class="me1">println</span><span class="br0">(</span><span class="br0">)</span><span class="sy0">;</span><br>
+<br>
+&nbsp; delay<span class="br0">(</span><span class="nu0">500</span><span class="br0">)</span><span class="sy0">;</span><br>
+<span class="br0">}</span></div></div>
+  <div class="sourceblocklink"><a href="http://playground.arduino.cc/Main/MaxSonar?action=sourceblock&amp;num=2" type="text/plain">[Get Code]</a></div>
+</div>
+ 
+
+</pre><hr>
+<h4>PW with mode filter</h4>
+<p>Based on the above examples and the median filter provided below, I made a mode filter for too be used with the sonar. I used this in conjunction with pulse width, but I'm sure it would work with the analog readings just as well.
+</p><pre> 
+
+<div class="sourceblock " id="sourceblock3">
+  <div class="sourceblocktext"><div class="c"><span class="coMULTI">/*<br>
+&nbsp; This script is designed to take several readings from the MaxBotix sonar and generate a mode/median.<br>
+&nbsp; Author: Jason Lessels<br>
+&nbsp; Date created: 2011/June/06<br>
+&nbsp; License: GPL (=&gt;2)<br>
+&nbsp; This work has been compiled using many sources mainly posts/wiki posts from;<br>
+&nbsp; Allen, Bruce (2009/July/23) and Gentles, Bill (2010/Nov/12)<br>
+*/</span><br>
+<br>
+<span class="co1">//Set the pin to receive the signal.</span><br>
+<span class="kw4">const</span> <span class="kw4">int</span> pwPin <span class="sy0">=</span> <span class="nu0">7</span><span class="sy0">;</span><br>
+<span class="co1">//variables needed to store values</span><br>
+<span class="kw4">int</span> arraysize <span class="sy0">=</span> <span class="nu0">9</span><span class="sy0">;</span> &nbsp;<span class="co1">//quantity of values to find the median (sample size). Needs to be an odd number</span><br>
+<br>
+<span class="co1">//declare an array to store the samples. not necessary to zero the array values here, it just makes the code clearer</span><br>
+<span class="kw4">int</span> rangevalue<span class="br0">[</span><span class="br0">]</span> <span class="sy0">=</span> <span class="br0">{</span> &nbsp;<span class="nu0">0</span><span class="sy0">,</span> <span class="nu0">0</span><span class="sy0">,</span> <span class="nu0">0</span><span class="sy0">,</span> <span class="nu0">0</span><span class="sy0">,</span> <span class="nu0">0</span><span class="sy0">,</span> <span class="nu0">0</span><span class="sy0">,</span> <span class="nu0">0</span><span class="sy0">,</span> <span class="nu0">0</span><span class="sy0">,</span> <span class="nu0">0</span><span class="br0">}</span><span class="sy0">;</span><br>
+<span class="kw4">long</span> pulse<span class="sy0">;</span><br>
+<span class="kw4">int</span> modE<span class="sy0">;</span><br>
+<br>
+<span class="kw4">void</span> setup<span class="br0">(</span><span class="br0">)</span><br>
+<span class="br0">{</span><br>
+&nbsp; <span class="co1">//Open up a serial connection</span><br>
+&nbsp; Serial.<span class="me1">begin</span><span class="br0">(</span><span class="nu0">9600</span><span class="br0">)</span><span class="sy0">;</span><br>
+&nbsp; <span class="co1">//Wait for the serial connection</span><br>
+&nbsp; delay<span class="br0">(</span><span class="nu0">500</span><span class="br0">)</span><span class="sy0">;</span><br>
+<span class="br0">}</span><br>
+<br>
+<span class="co1">//Main loop where the action takes place</span><br>
+<span class="kw4">void</span> loop<span class="br0">(</span><span class="br0">)</span><br>
+<span class="br0">{</span><br>
+&nbsp; pinMode<span class="br0">(</span>pwPin<span class="sy0">,</span> INPUT<span class="br0">)</span><span class="sy0">;</span><br>
+<br>
+&nbsp; <span class="kw1">for</span> <span class="br0">(</span><span class="kw4">int</span> i <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">;</span> i <span class="sy0">&lt;</span> arraysize<span class="sy0">;</span> i<span class="sy0">++</span><span class="br0">)</span><br>
+&nbsp; <span class="br0">{</span><br>
+<br>
+&nbsp; &nbsp; pulse <span class="sy0">=</span> pulseIn<span class="br0">(</span>pwPin<span class="sy0">,</span> HIGH<span class="br0">)</span><span class="sy0">;</span><br>
+&nbsp; &nbsp; rangevalue<span class="br0">[</span>i<span class="br0">]</span> <span class="sy0">=</span> pulse <span class="sy0">/</span> <span class="nu0">58</span><span class="sy0">;</span><br>
+&nbsp; &nbsp; delay<span class="br0">(</span><span class="nu0">10</span><span class="br0">)</span><span class="sy0">;</span><br>
+&nbsp; <span class="br0">}</span><br>
+<br>
+&nbsp; Serial.<span class="me1">print</span><span class="br0">(</span><span class="st0">"Unsorted: "</span><span class="br0">)</span><span class="sy0">;</span><br>
+&nbsp; printArray<span class="br0">(</span>rangevalue<span class="sy0">,</span> arraysize<span class="br0">)</span><span class="sy0">;</span><br>
+&nbsp; isort<span class="br0">(</span>rangevalue<span class="sy0">,</span> arraysize<span class="br0">)</span><span class="sy0">;</span><br>
+&nbsp; Serial.<span class="me1">print</span><span class="br0">(</span><span class="st0">"Sorted: "</span><span class="br0">)</span><span class="sy0">;</span><br>
+&nbsp; printArray<span class="br0">(</span>rangevalue<span class="sy0">,</span> arraysize<span class="br0">)</span><span class="sy0">;</span><br>
+&nbsp; modE <span class="sy0">=</span> mode<span class="br0">(</span>rangevalue<span class="sy0">,</span> arraysize<span class="br0">)</span><span class="sy0">;</span><br>
+&nbsp; Serial.<span class="me1">print</span><span class="br0">(</span><span class="st0">"The mode/median is: "</span><span class="br0">)</span><span class="sy0">;</span><br>
+&nbsp; Serial.<span class="me1">print</span><span class="br0">(</span>modE<span class="br0">)</span><span class="sy0">;</span><br>
+&nbsp; Serial.<span class="me1">println</span><span class="br0">(</span><span class="br0">)</span><span class="sy0">;</span><br>
+&nbsp; delay<span class="br0">(</span><span class="nu0">1000</span><span class="br0">)</span><span class="sy0">;</span><br>
+<span class="br0">}</span><br>
+<br>
+<br>
+<span class="coMULTI">/*-----------Functions------------*/</span><br>
+<span class="co1">//Function to print the arrays.</span><br>
+<span class="kw4">void</span> printArray<span class="br0">(</span><span class="kw4">int</span> <span class="sy0">*</span>a<span class="sy0">,</span> <span class="kw4">int</span> n<span class="br0">)</span><br>
+<span class="br0">{</span><br>
+&nbsp; <span class="kw1">for</span> <span class="br0">(</span><span class="kw4">int</span> i <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">;</span> i <span class="sy0">&lt;</span> n<span class="sy0">;</span> i<span class="sy0">++</span><span class="br0">)</span><br>
+&nbsp; <span class="br0">{</span><br>
+&nbsp; &nbsp; Serial.<span class="me1">print</span><span class="br0">(</span>a<span class="br0">[</span>i<span class="br0">]</span><span class="sy0">,</span> DEC<span class="br0">)</span><span class="sy0">;</span><br>
+&nbsp; &nbsp; Serial.<span class="me1">print</span><span class="br0">(</span><span class="st0">' '</span><span class="br0">)</span><span class="sy0">;</span><br>
+&nbsp; <span class="br0">}</span><br>
+<br>
+&nbsp; Serial.<span class="me1">println</span><span class="br0">(</span><span class="br0">)</span><span class="sy0">;</span><br>
+<span class="br0">}</span><br>
+<br>
+<span class="co1">//Sorting function</span><br>
+<span class="co1">// sort function (Author: Bill Gentles, Nov. 12, 2010)</span><br>
+<span class="kw4">void</span> isort<span class="br0">(</span><span class="kw4">int</span> <span class="sy0">*</span>a<span class="sy0">,</span> <span class="kw4">int</span> n<span class="br0">)</span> <span class="br0">{</span><br>
+&nbsp; <span class="co1">// &nbsp;*a is an array pointer function</span><br>
+<br>
+&nbsp; <span class="kw1">for</span> <span class="br0">(</span><span class="kw4">int</span> i <span class="sy0">=</span> <span class="nu0">1</span><span class="sy0">;</span> i <span class="sy0">&lt;</span> n<span class="sy0">;</span> <span class="sy0">++</span>i<span class="br0">)</span><br>
+&nbsp; <span class="br0">{</span><br>
+&nbsp; &nbsp; <span class="kw4">int</span> j <span class="sy0">=</span> a<span class="br0">[</span>i<span class="br0">]</span><span class="sy0">;</span><br>
+&nbsp; &nbsp; <span class="kw4">int</span> k<span class="sy0">;</span><br>
+&nbsp; &nbsp; <span class="kw1">for</span> <span class="br0">(</span>k <span class="sy0">=</span> i <span class="sy0">-</span> <span class="nu0">1</span><span class="sy0">;</span> <span class="br0">(</span>k <span class="sy0">&gt;=</span> <span class="nu0">0</span><span class="br0">)</span> <span class="sy0">&amp;&amp;</span> <span class="br0">(</span>j <span class="sy0">&lt;</span> a<span class="br0">[</span>k<span class="br0">]</span><span class="br0">)</span><span class="sy0">;</span> k<span class="sy0">--</span><span class="br0">)</span><br>
+&nbsp; &nbsp; <span class="br0">{</span><br>
+&nbsp; &nbsp; &nbsp; a<span class="br0">[</span>k <span class="sy0">+</span> <span class="nu0">1</span><span class="br0">]</span> <span class="sy0">=</span> a<span class="br0">[</span>k<span class="br0">]</span><span class="sy0">;</span><br>
+&nbsp; &nbsp; <span class="br0">}</span><br>
+&nbsp; &nbsp; a<span class="br0">[</span>k <span class="sy0">+</span> <span class="nu0">1</span><span class="br0">]</span> <span class="sy0">=</span> j<span class="sy0">;</span><br>
+&nbsp; <span class="br0">}</span><br>
+<span class="br0">}</span><br>
+<br>
+<span class="co1">//Mode function, returning the mode or median.</span><br>
+<span class="kw4">int</span> mode<span class="br0">(</span><span class="kw4">int</span> <span class="sy0">*</span>x<span class="sy0">,</span> <span class="kw4">int</span> n<span class="br0">)</span> <span class="br0">{</span><br>
+&nbsp; <span class="kw4">int</span> i <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">;</span><br>
+&nbsp; <span class="kw4">int</span> count <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">;</span><br>
+&nbsp; <span class="kw4">int</span> maxCount <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">;</span><br>
+&nbsp; <span class="kw4">int</span> mode <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">;</span><br>
+&nbsp; <span class="kw4">int</span> bimodal<span class="sy0">;</span><br>
+&nbsp; <span class="kw4">int</span> prevCount <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">;</span><br>
+<br>
+&nbsp; <span class="kw1">while</span> <span class="br0">(</span>i <span class="sy0">&lt;</span> <span class="br0">(</span>n <span class="sy0">-</span> <span class="nu0">1</span><span class="br0">)</span><span class="br0">)</span> <span class="br0">{</span><br>
+&nbsp; &nbsp; prevCount <span class="sy0">=</span> count<span class="sy0">;</span><br>
+&nbsp; &nbsp; count <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">;</span><br>
+<br>
+&nbsp; &nbsp; <span class="kw1">while</span> <span class="br0">(</span>x<span class="br0">[</span>i<span class="br0">]</span> <span class="sy0">==</span> x<span class="br0">[</span>i <span class="sy0">+</span> <span class="nu0">1</span><span class="br0">]</span><span class="br0">)</span> <span class="br0">{</span><br>
+&nbsp; &nbsp; &nbsp; count<span class="sy0">++;</span><br>
+&nbsp; &nbsp; &nbsp; i<span class="sy0">++;</span><br>
+&nbsp; &nbsp; <span class="br0">}</span><br>
+<br>
+&nbsp; &nbsp; <span class="kw1">if</span> <span class="br0">(</span>count <span class="sy0">&gt;</span> prevCount <span class="sy0">&amp;</span> count <span class="sy0">&gt;</span> maxCount<span class="br0">)</span> <span class="br0">{</span><br>
+&nbsp; &nbsp; &nbsp; mode <span class="sy0">=</span> x<span class="br0">[</span>i<span class="br0">]</span><span class="sy0">;</span><br>
+&nbsp; &nbsp; &nbsp; maxCount <span class="sy0">=</span> count<span class="sy0">;</span><br>
+&nbsp; &nbsp; &nbsp; bimodal <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">;</span><br>
+&nbsp; &nbsp; <span class="br0">}</span><br>
+&nbsp; &nbsp; <span class="kw1">if</span> <span class="br0">(</span>count <span class="sy0">==</span> <span class="nu0">0</span><span class="br0">)</span> <span class="br0">{</span><br>
+&nbsp; &nbsp; &nbsp; i<span class="sy0">++;</span><br>
+&nbsp; &nbsp; <span class="br0">}</span><br>
+&nbsp; &nbsp; <span class="kw1">if</span> <span class="br0">(</span>count <span class="sy0">==</span> maxCount<span class="br0">)</span> <span class="br0">{</span> <span class="co1">//If the dataset has 2 or more modes.</span><br>
+&nbsp; &nbsp; &nbsp; bimodal <span class="sy0">=</span> <span class="nu0">1</span><span class="sy0">;</span><br>
+&nbsp; &nbsp; <span class="br0">}</span><br>
+&nbsp; &nbsp; <span class="kw1">if</span> <span class="br0">(</span>mode <span class="sy0">==</span> <span class="nu0">0</span> <span class="sy0">||</span> bimodal <span class="sy0">==</span> <span class="nu0">1</span><span class="br0">)</span> <span class="br0">{</span> <span class="co1">//Return the median if there is no mode.</span><br>
+&nbsp; &nbsp; &nbsp; mode <span class="sy0">=</span> x<span class="br0">[</span><span class="br0">(</span>n <span class="sy0">/</span> <span class="nu0">2</span><span class="br0">)</span><span class="br0">]</span><span class="sy0">;</span><br>
+&nbsp; &nbsp; <span class="br0">}</span><br>
+&nbsp; &nbsp; <span class="kw1">return</span> mode<span class="sy0">;</span><br>
+&nbsp; <span class="br0">}</span><br>
+<span class="br0">}</span></div></div>
+  <div class="sourceblocklink"><a href="http://playground.arduino.cc/Main/MaxSonar?action=sourceblock&amp;num=3" type="text/plain">[Get Code]</a></div>
+</div>
+ 
+
+</pre><hr>
+<p class="vspace"></p><h1>Notice</h1>
+<p>Please check this page before using LV-<span class="wikiword">MaxSonar</span>:
+</p>
+<p class="vspace"></p><p><a class="urllink" href="http://forum.arduino.cc/index.php/topic,20920.html" rel="nofollow">http://forum.arduino.cc/index.php/topic,20920.html</a>
+</p>
+<p class="vspace"></p><p>You can find a very useful post by Scott from <span class="wikiword">MaxBotix</span> Inc.
+</p>
+<p class="vspace"></p><p>Take care with: 
+</p><ul><li>Better use median or mode filter, not <strong>AVERAGE</strong> filter.
+</li><li>The different resolution between analogRead() (4.8 mv / unit) -&gt; 1024vals and LV-<span class="wikiword">MaxSonar</span> (9.8 mv / inch) -&gt; 512vals.
+</li><li>Every sensor-group from <span class="wikiword">MaxBotix</span> is different:
+<ul><li><a class="urllink" href="http://www.maxbotix.com/articles/033.htm" rel="nofollow">http://www.maxbotix.com/articles/033.htm</a>
+</li><li><a class="urllink" href="http://www.maxbotix.com/articles/032.htm" rel="nofollow">http://www.maxbotix.com/articles/032.htm</a>
+</li></ul></li></ul><p class="vspace"></p><p>enjoy!
+</p>
+<p class="vspace"></p><p>karduino:D
+</p>
+</div>
+
+
+				<!-- AddThis Button Style BEGIN -->
+<style>
+  .addthis_toolbox {
+    margin: 2em 0 1em;
+  }
+  .addthis_toolbox img {
+    float: left;
+    height: 25px;
+    margin-right: 10px;
+    width: auto;
+  }
+  .addthis_toolbox .social-container {
+    float: left;
+    height: 27px; 
+    width: auto; 
+  }
+  .addthis_toolbox .social-container .social-content {
+    float: left;
+    margin-top: 2px;
+    max-width: 0;
+    overflow: hidden;
+    -moz-transition: max-width .3s ease-out;
+    -webkit-transition: max-width .3s ease-out;
+    -o-transition: max-width .3s ease-out;
+    transition: max-width .3s ease-out;
+  }
+  .addthis_toolbox .social-container:hover .social-content {
+    max-width: 100px;
+    -moz-transition: max-width .2s ease-in;
+    -webkit-transition: max-width .2s ease-in;
+    -o-transition: max-width .2s ease-in;
+    transition: max-width .2s ease-in;
+  }
+  .addthis_toolbox .social-container .social-content a {
+    float: left;
+    margin-right: 5px;
+  }
+
+  .addthis_toolbox h3 {
+    font-size: 24px;
+    text-align: left;
+  }
+</style>
+<!-- AddThis Button Style END -->
+<!-- AddThis Button BEGIN -->
+<div class="addthis_toolbox addthis_default_style">
+  <h3>Share</h3>
+  <!-- FACEBOOK -->
+  <div class="social-container">
+    <img src="Arduino%20Playground%20-%20MaxSonar_files/facebook.png">
+    <div class="social-content">
+      <a class="addthis_button_facebook_like at300b" fb:like:layout="button_count"><div class="fb-like fb_iframe_widget" style="height: 25px;" data-layout="button_count" data-show_faces="false" data-share="true" data-action="like" data-width="90" data-height="25" data-font="arial" data-href="http://playground.arduino.cc/Main/MaxSonar" data-send="false" fb-xfbml-state="rendered" fb-iframe-plugin-query="action=like&amp;app_id=172525162793917&amp;container_width=0&amp;font=arial&amp;height=25&amp;href=http%3A%2F%2Fplayground.arduino.cc%2FMain%2FMaxSonar&amp;layout=button_count&amp;locale=en_US&amp;sdk=joey&amp;send=false&amp;share=true&amp;show_faces=false&amp;width=90"><span style="vertical-align: bottom; width: 128px; height: 20px;"><iframe name="f3492b51405d21c" allowtransparency="true" allowfullscreen="true" scrolling="no" title="fb:like Facebook Social Plugin" style="border: medium none; visibility: visible; width: 128px; height: 20px;" src="https://web.facebook.com/v2.6/plugins/like.php?action=like&amp;app_id=172525162793917&amp;channel=http%3A%2F%2Fstaticxx.facebook.com%2Fconnect%2Fxd_arbiter%2Fr%2Fao6eUeuGXQq.js%3Fversion%3D42%23cb%3Df131854288f4cec%26domain%3Dplayground.arduino.cc%26origin%3Dhttp%253A%252F%252Fplayground.arduino.cc%252Ffb4a029647c53a%26relation%3Dparent.parent&amp;container_width=0&amp;font=arial&amp;height=25&amp;href=http%3A%2F%2Fplayground.arduino.cc%2FMain%2FMaxSonar&amp;layout=button_count&amp;locale=en_US&amp;sdk=joey&amp;send=false&amp;share=true&amp;show_faces=false&amp;width=90" class="" height="25px" frameborder="0" width="90px"></iframe></span></div></a>
+    </div>
+  </div>
+  <!-- TWITTER -->
+  <div class="social-container">
+    <img src="Arduino%20Playground%20-%20MaxSonar_files/twitter.png">
+    <div class="social-content">
+      <a class="addthis_button_tweet at300b"><div class="tweet_iframe_widget" style="width: 62px; height: 25px;"><span><iframe id="twitter-widget-0" scrolling="no" allowtransparency="true" class="twitter-share-button twitter-share-button-rendered twitter-tweet-button" style="position: static; visibility: visible; width: 61px; height: 20px;" title="Twitter Tweet Button" src="Arduino%20Playground%20-%20MaxSonar_files/tweet_button.htm" data-url="http://playground.arduino.cc/Main/MaxSonar#.WLDN1nhDOG8.twitter" frameborder="0"></iframe></span></div></a>
+    </div>
+  </div>
+  <!-- PINTEREST -->
+  <div class="social-container">
+    <img src="Arduino%20Playground%20-%20MaxSonar_files/pinterest.png">
+    <div class="social-content">
+      <a class="addthis_button_pinterest_pinit at300b" pi:pinit:url="http://www.addthis.com/features/pinterest" pi:pinit:media="http://www.addthis.com/cms-content/images/features/pinterest-lg.png"><div class="pin_it_iframe_widget" style="width: 40px; height: 25px;"><span><iframe title="AddThis | Pinterest" role="presentation" scrolling="no" allowtransparency="true" scrollbars="no" style="width:40px; height:25px;" src="Arduino%20Playground%20-%20MaxSonar_files/pinit.htm" frameborder="0"></iframe></span></div></a>
+    </div>
+  </div>
+  <!-- G+ -->
+  <div class="social-container">
+    <img src="Arduino%20Playground%20-%20MaxSonar_files/gplus.png">
+    <div class="social-content">
+      <a class="addthis_button_google_plusone at300b" g:plusone:size="medium"><div class="google_plusone_iframe_widget" style="width: 90px; height: 25px;"><span><div style="text-indent: 0px; margin: 0px; padding: 0px; background: transparent none repeat scroll 0% 0%; border-style: none; float: none; line-height: normal; font-size: 1px; vertical-align: baseline; display: inline-block; width: 90px; height: 20px;" id="___plusone_0"><iframe ng-non-bindable="" hspace="0" marginheight="0" marginwidth="0" scrolling="no" style="position: static; top: 0px; width: 90px; margin: 0px; border-style: none; left: 0px; visibility: visible; height: 20px;" tabindex="0" vspace="0" id="I0_1487982039529" name="I0_1487982039529" src="Arduino%20Playground%20-%20MaxSonar_files/fastbutton.htm" data-gapiattached="true" title="+1" frameborder="0" width="100%"></iframe></div></span></div></a>
+    </div>
+  </div>
+
+  <script type="text/javascript">var addthis_config = {"data_track_addressbar":false};</script>
+  <script type="text/javascript" src="Arduino%20Playground%20-%20MaxSonar_files/addthis_widget.js"></script>
+<div class="atclear"></div></div>
+<!-- AddThis Button END -->
+
+			</div> <!-- eof pagetext -->
+			
+	</div><div style="visibility: hidden; height: 1px; width: 1px; position: absolute; top: -9999px; z-index: 100000;" id="_atssh"><iframe id="_atssh124" title="AddThis utility frame" style="height: 1px; width: 1px; position: absolute; top: 0px; z-index: 100000; border: 0px none; left: 0px;" src="Arduino%20Playground%20-%20MaxSonar_files/sh.htm"></iframe></div><style id="service-icons-0"></style> <!-- eof page -->
+		
+	<!--PageFooterFmt-->
+	<div id="pagefooter">
+		<div id="pagefooter" class="pagefooter">
+  <div class="row">
+    <div class="large-8 eight columns">
+      <div class="large-4 four columns newsletter-box">
+        <!-- Begin MailChimp Signup Form -->
+        <h6>Newsletter</h6>
+        <form action="http://arduino.us5.list-manage.com/subscribe/post?u=0140d17584d1c002bcd94d0e8&amp;id=69a7d1abe4" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate="">
+          <input name="EMAIL" class="email" id="mce-EMAIL" placeholder="Enter your email to sign up" required="" type="email">
+          <i class="icon-right-small"></i>
+          <input value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="newsletter-button" type="submit">
+        </form>
+        <!--End mc_embed_signup-->
+      </div>
+      <div class="clearfix"></div>
+      <ul class="inline-list">
+        <li class="monospace">©2017 Arduino</li>
+        <li><a href="https://arduino.cc/en/Main/CopyrightNotice">Copyright Notice</a></li>
+        <li><a href="https://arduino.cc/en/Main/ContactUs">Contact us</a></li>
+      </ul>
+    </div>
+    <div class="large-4 four columns">
+      <ul id="arduinoSocialLinks" class="arduino-social-links">
+        <li>
+          <a href="https://twitter.com/arduino">
+            <img src="Arduino%20Playground%20-%20MaxSonar_files/twitter_002.png">
+          </a>
+        </li>
+        <li>
+          <a href="http://www.facebook.com/official.arduino">
+            <img src="Arduino%20Playground%20-%20MaxSonar_files/facebook_002.png">
+          </a>
+        </li>
+        <li>
+          <a href="https://plus.google.com/+Arduino">
+            <img src="Arduino%20Playground%20-%20MaxSonar_files/gplus_002.png">
+          </a>
+        </li>
+        <li>
+          <a href="http://www.flickr.com/photos/arduino_cc">
+            <img src="Arduino%20Playground%20-%20MaxSonar_files/flickr.png">
+          </a>
+        </li>
+        <li>
+          <a href="http://youtube.com/arduinoteam">
+            <img src="Arduino%20Playground%20-%20MaxSonar_files/youtube.png">
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+	</div>
+	<!--/PageFooterFmt-->
+	
+		
+	<script src="Arduino%20Playground%20-%20MaxSonar_files/jquery-1.js"></script>
+	<!--[if gte IE 9]><!-->
+	<script src="Arduino%20Playground%20-%20MaxSonar_files/foundation.js"></script>
+	<script src="Arduino%20Playground%20-%20MaxSonar_files/foundation_002.js"></script>
+	<script>
+	  $(document).foundation();
+	</script>
+	<!--<![endif]-->
+	<!--[if IE 8]>
+	<script src="http://arduino.cc/js/foundation_ie8.min.js"></script>
+	<script src="http://arduino.cc/js/ie8/jquery.foundation.alerts.js"></script>
+	<script src="http://arduino.cc/js/app.js"></script>
+	<![endif]-->
+	
+	<script type="text/javascript">
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-22581631-3']);
+	  _gaq.push(['_setDomainName', 'arduino.cc']);
+	  _gaq.push(['_trackPageview']);
+	
+	    (function() {
+	    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+	</script>
+
+
+
+<div id="fb-root" class=" fb_reset"><script src="Arduino%20Playground%20-%20MaxSonar_files/sdk.js" async=""></script><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div><iframe name="fb_xdm_frame_http" allowtransparency="true" allowfullscreen="true" scrolling="no" id="fb_xdm_frame_http" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tabindex="-1" style="border: medium none;" src="http://staticxx.facebook.com/connect/xd_arbiter/r/ao6eUeuGXQq.js?version=42#channel=fb4a029647c53a&amp;origin=http%3A%2F%2Fplayground.arduino.cc" frameborder="0"></iframe><iframe name="fb_xdm_frame_https" allowtransparency="true" allowfullscreen="true" scrolling="no" id="fb_xdm_frame_https" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tabindex="-1" style="border: medium none;" src="Arduino%20Playground%20-%20MaxSonar_files/ao6eUeuGXQq_002.htm" frameborder="0"></iframe></div></div><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div></div></div></div><iframe name="oauth2relay379038385" id="oauth2relay379038385" src="Arduino%20Playground%20-%20MaxSonar_files/postmessageRelay.htm" style="width: 1px; height: 1px; position: absolute; top: -100px;" tabindex="-1" aria-hidden="true"></iframe><iframe id="rufous-sandbox" scrolling="no" allowtransparency="true" allowfullscreen="true" style="position: absolute; visibility: hidden; display: none; width: 0px; height: 0px; padding: 0px; border: medium none;" title="Twitter analytics iframe" frameborder="0"></iframe></body></html>

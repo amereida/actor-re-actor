@@ -1,0 +1,85 @@
+﻿/* --------------------Styles for Design Cycle Guide Articles-------------------- */
+
+
+
+.DesignGuidePix img {
+	background-color:#FFFFFF;
+}
+
+.DesignGuidePix img:hover {
+	 background-color:#C1C796;
+}
+
+#NavBar button:hover {
+	color: #324000;
+	cursor:pointer;
+}
+
+span.tips {/* --Design Tips Bold, Italic, Different font-- */
+	color:#324000;
+	font: bold italic 14px arial, sans-serif;
+}
+
+blockquote.designtips {/* --Design Tips boxes -- */
+	border: 1px solid #324000;
+	border-bottom: 1px solid #324000;
+	padding: 5px; 
+	background-color: #C1C796;
+	width: 400px; 
+	margin-left: 100px;
+}
+
+
+ol.tips {
+	font: bold italic 14px arial, sans-serif;
+ 	color:#324000;
+	line-height:150%;
+
+}
+
+span.norm {/* --Design Tips Bold, Italic, Different font-- */
+	color:#000000;
+	font: 12px arial, sans-serif;
+	line-height:150%;
+
+}
+
+.apps {
+	text-align:left;
+	padding-right:10px;
+	line-height:150%;
+	-webkit-padding-start: 10px;
+}
+
+td.apps {
+	width:230px;
+	height:220px;
+}
+
+.FloatLeft {/* --image floats left with padding-- */
+	float:left; 
+	padding-right:15px;
+	padding-bottom:20px;
+	 
+}
+
+.FloatRight {/* --image floats right with padding-- */
+	float:right; 
+	padding-left:15px;
+	 
+}
+
+span.SOON {/* --Coming Soon for articles in series-- */
+	padding:10px;
+	color:#008BD1;
+	font: bold italic 14px arial, sans-serif;
+	
+}
+
+div.guideSummary {
+	height:250px; 
+}
+
+span.paraHead {
+	text-decoration: underline;
+}
