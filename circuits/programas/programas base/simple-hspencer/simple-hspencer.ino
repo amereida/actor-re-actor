@@ -35,6 +35,7 @@ void loop() {
   Serial.print(cm);
   Serial.println("cm");
 
+  //   map sensor  min, max to motor min, max
   val = map(cm, 10, 400, 0, 200);
 
   // move a number of steps equal to the change in the
