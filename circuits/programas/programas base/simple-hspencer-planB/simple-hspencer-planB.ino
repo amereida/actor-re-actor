@@ -14,7 +14,7 @@ float val = 0.0;
 
 ////////////////////////// VARIABLES DEL MOTOR ////////////////////////////////
 
-const int stepsPerRevolution = 800;  // pasos por rev
+const int stepsPerRevolution = 200;  // pasos por rev
 AccelStepper stepper(2, 9, 8);   // LIB ACCEL
 
 
@@ -28,9 +28,10 @@ int maxSteps = 1850;
 ///////////// rango máximo de pasos para el motor ////////////////
 //////////////////////////////////////////////////////////////////
 
-boolean test = false;
+boolean test = true;
 
 /* Variables de suavizado */
+
 long soft;
 int b = 200;   // estos 2 numeros deben ser iguales
 int buf[200];  // buffer de suavizado
@@ -41,17 +42,19 @@ void setup() {
   // Stepper
   stepper.setSpeed(30);
   stepper.setMaxSpeed(300);
-  stepper.setAcceleration(50);
-  pinMode(SonarPin, INPUT);
-
+  stepper.setAcceleration(2000);
+  
+/*
   // UltraSound
   pinMode(4, OUTPUT); // VCC pin
   pinMode(7, OUTPUT); // GND ping
   digitalWrite(4, HIGH); // VCC +5V mode
   digitalWrite(7, LOW);  // GND mode
+*/
 
+pinMode(SonarPin, INPUT);
   // if test init serial
-  if (test) Serial.begin(115200);
+  if (test) Serial.begin(9600);
 
   count = 0;
 }

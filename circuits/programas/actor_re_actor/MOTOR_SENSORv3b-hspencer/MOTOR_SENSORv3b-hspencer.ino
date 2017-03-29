@@ -1,15 +1,15 @@
-#include <Stepper.h>
+// #include <Stepper.h>
 #include <AccelStepper.h>
 
 /////////////////////// VARIBLES DE AJUSTE DE MEDIDAS (AJUSTAR) ////////////////////
 
 int MINIMA_DISTANCIAcm=10;   //100minima distancia para medir
-int MAXIMA_DISTANCIAcm=380;  //700maxima distancia para medir
+int MAXIMA_DISTANCIAcm=420;  //700maxima distancia para medir
 int NUM_MAX_PASOS=2000;//23000 <-------------------DEFINIR AL COMIENZO DEL MONTAJE, es el número máximo de pasos entre una posicion inicial y una final
 int x=0;
 //////////////////////VARIABLES FIJAS DE CALCULO/////////////////////////////
 int PPR=400;
-int PASOS_DE_SEGURIDAD=50;  //50 holgura de pasos para la cantidad minima de pasos y la maxima
+int PASOS_DE_SEGURIDAD=20;  //50 holgura de pasos para la cantidad minima de pasos y la maxima
 int MIN_PASOS_SEGUR= PASOS_DE_SEGURIDAD;
 int MAX_PASOS_SEGUR= NUM_MAX_PASOS-PASOS_DE_SEGURIDAD;
 int PASS=0;
@@ -17,8 +17,8 @@ int PASOS=0;  //variable calculada mapeando la distancia con el rango de pasos p
 int DIF_MIN_MEDIDAS=40;     //20variacion minima que debe existir entre dos medidas consecutivas para que actue el motor
 ////////////////////////// VARIABLES DEL MOTOR ////////////////////////////////
 
-const int stepsPerRevolution = 800;  // pasos por rev
-Stepper myStepper(stepsPerRevolution, 8, 9); // initialize the stepper library on pins 8 through 11:
+//const int stepsPerRevolution = 800;  // pasos por rev (manual dice 200!?)
+//Stepper myStepper(stepsPerRevolution, 8, 9); // initialize the stepper library on pins 8 through 11:
 AccelStepper stepper(2, 9, 8);   //LIB ACCEL
 
 ///////////////////VARIABLES SENSOR DE DISTANCIA////////////////////////////////////
@@ -112,9 +112,9 @@ void BOTON_MANUAL()  //interrupcion externa para el boton manual
          
          stepper.setMaxSpeed(1000.0); //pasos por segundo
          stepper.setSpeed(1000.0); //pasos por segundo
-         myStepper.step(100); //control por pasos
+         // myStepper.step(100); //control por pasos
          delayMicroseconds(500);
-         //stepper.runToNewPosition(x+200);//}
+         stepper.runToNewPosition(x+200);//}
          //delay(1000);
         // x=0;
           
@@ -127,9 +127,9 @@ void BOTON_MANUAL()  //interrupcion externa para el boton manual
           //delayMicroseconds(1200);
           stepper.setMaxSpeed(3000.0); //pasos por segundo
           stepper.setSpeed(3000.0); //pasos por segundo
-          myStepper.step(100); //control por pasos
+          // myStepper.step(100); //control por pasos
           delayMicroseconds(500);
-         // stepper.runToNewPosition(x+200);//}
+         stepper.runToNewPosition(x+200);
          // delay(1000);
          // x=0;
           }
@@ -167,8 +167,8 @@ void setup()
   pinMode(SonarPin,INPUT);
   Serial.begin(9600);
   stepper.setMaxSpeed(2000.0);  //LIB ACCEL
-  myStepper.setSpeed(1000); // set the speed at 60 rpm:
-  //stepper.setAcceleration(300.0);  //LIB ACCEL    
+  // myStepper.setSpeed(1000); // set the speed at 60 rpm:
+  stepper.setAcceleration(300.0);  //LIB ACCEL    
   pinMode(reloj,INPUT);
   pinMode(antireloj,INPUT);
   pinMode(manual,INPUT);
@@ -204,7 +204,7 @@ void loop()
           unsigned long tiempo=millis();
           if((unsigned long)(tiempo-CERO)>=10)
            { 
-           myStepper.setSpeed(5000);
+           // myStepper.setSpeed(5000);
            stepper.setAcceleration(5000.0);        
            stepper.runToNewPosition(PASOS);  //ejecuta la cantidad de pasos
            }   
@@ -219,7 +219,7 @@ void loop()
               if((unsigned long)(tiempo-CERO)>=10)
                  {
                  attachInterrupt(0, zero_crosss_int, RISING); 
-                 myStepper.setSpeed(5000);
+                 // myStepper.setSpeed(5000);
                  stepper.setAcceleration(5000.0);        
                  stepper.runToNewPosition(0);  //ejecuta la cantidad de pasos
                  }                    
