@@ -92,17 +92,19 @@ void BOTON_MANUAL(){
     medicion();
     Serial.print(cm);
     Serial.println(" cm ");
+  } else if (AR == 0 && R == 1){
+    x += PASOS_DE_SEGURIDAD * 10;
+  }
+  else if (AR == 1 && R == 0){
+    x -= PASOS_DE_SEGURIDAD * 10;
   }
 
   stepper.setMaxSpeed(1000.0); // pasos por segundo
   stepper.setSpeed(500.0);     // pasos por segundo
   delayMicroseconds(500);
-    
-  else if (AR == 0 && R == 1){
-    stepper.runToNewPosition(x + PASOS_DE_SEGURIDAD * 10);
-  }
-  else if (AR == 1 && R == 0){
-    stepper.runToNewPosition(x - PASOS_DE_SEGURIDAD * 10);
+
+  if ( AR != R){
+    stepper.runToNewPosition(x);
   }
   
   R = digitalRead(reloj); //lectura boton reloj
@@ -111,9 +113,9 @@ void BOTON_MANUAL(){
 }
 
 ///////////////////////////////////////////////////////////////////////////////////
-void RANGO_DIM() //A=full_dim B=empty_dim C=5
-{
-  unsigned long CERO=0;
+// A = full_dim    B = empty_dim     C = 5
+void RANGO_DIM(){
+  unsigned long CERO = 0;
   if     (35<=DIMMER && DIMMER<45){unsigned long tiempo=millis();if((unsigned long)(tiempo-0)>=10){dimtime=2625;}} 
  // else if(40<=DIMMER && DIMMER<45){unsigned long tiempo=millis();if((unsigned long)(tiempo-CERO)>=10){dimtime=3000;}}
   else if(45<=DIMMER && DIMMER<55){unsigned long tiempo=millis();if((unsigned long)(tiempo-CERO)>=10){dimtime=3375;}}
@@ -129,12 +131,10 @@ void RANGO_DIM() //A=full_dim B=empty_dim C=5
   
 }
 ///////////////////////////////////////////////////////////////////////////////////
-void setup() 
-{  
+void setup(){  
   pinMode(SonarPin,INPUT);
   Serial.begin(9600);
   stepper.setMaxSpeed(2000.0);  //LIB ACCEL
-  // myStepper.setSpeed(1000); // set the speed at 60 rpm:
   stepper.setAcceleration(300.0);  //LIB ACCEL    
   pinMode(reloj,INPUT);
   pinMode(antireloj,INPUT);
@@ -147,15 +147,14 @@ void setup()
 ////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////
 
-void loop() 
-{ 
+void loop(){ 
                                      
-  modo=digitalRead(manual);
-  if(modo==0)  //MODO AUTOMATICO
-  { 
+  modo = digitalRead(manual);
+
+  // MODO AUTOMATICO
+  if (modo == 0){ 
    attachInterrupt(0, zero_crosss_int, RISING);                           
    digitalWrite(led,LOW);
-   
    medicion();                  
    if(MINIMA_DISTANCIAcm<=cm && MAXIMA_DISTANCIAcm>=cm)  //mientras el sensor esté dentro de la distancia
     {     
