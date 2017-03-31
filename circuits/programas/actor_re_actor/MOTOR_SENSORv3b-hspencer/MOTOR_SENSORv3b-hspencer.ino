@@ -54,23 +54,23 @@ int dimtime;
 
 ///////////////////////////////////////////////////////////
 
-int VAR=0,DISTANCIA_CUERDA=0;
-int RESULTADO=0;
+int VAR = 0, DISTANCIA_CUERDA = 0;
+int RESULTADO = 0;
 
 ///////////////////////////////////////////////////////////
 
-void medicion(){
-   sensorValue = analogRead(SonarPin);
-   Inch = (sensorValue*0.497);
-   cm = Inch*2.54;
+void medicion() {
+  sensorValue = analogRead(SonarPin);
+  Inch = (sensorValue * 0.497);
+  cm = Inch * 2.54;
 }
 
 ///////////////////////// DIMMER ////////////////////////////////////////
 //function to be fired at the zero crossing to dim the light
-void zero_crosss_int(){ 
-  delayMicroseconds(dimtime);    // Wait till firing the TRIAC    
+void zero_crosss_int() {
+  delayMicroseconds(dimtime);    // Wait till firing the TRIAC
   digitalWrite(AC_LOAD, HIGH);   // Fire the TRIAC
-  delayMicroseconds(10);         // triac On propogation delay 
+  delayMicroseconds(10);         // triac On propogation delay
   // (for 60Hz use 8.33) Some Triacs need a longer period
   digitalWrite(AC_LOAD, LOW);    // No longer trigger the TRIAC (the next zero crossing will swith it off) TRIAC
 }
@@ -78,33 +78,33 @@ void zero_crosss_int(){
 /////////////////////////////////////////////////////////////////////////////////////////////////////////
 //interrupcion externa para el boton manual
 
-void BOTON_MANUAL(){  
+void BOTON_MANUAL() {
   detachInterrupt(0);  //desactiva la interrupcion attach
-  digitalWrite(led,HIGH); //enciende el led para indicar modo manual
+  digitalWrite(led, HIGH); //enciende el led para indicar modo manual
   delayMicroseconds(50);
   R = digitalRead(reloj); //lectura boton reloj
-  AR = digitalRead(antireloj);  //lectura boton antireloj   
+  AR = digitalRead(antireloj);  //lectura boton antireloj
 
- 
-  if (AR == 0 && R == 0){
+
+  if (AR == 0 && R == 0) {
     detachInterrupt(0);
     delay(100);
     medicion();
     Serial.print(cm);
     Serial.println(" cm ");
-  }
-
-  stepper.setMaxSpeed(1000.0); // pasos por segundo
-  stepper.setSpeed(500.0);     // pasos por segundo
-  delayMicroseconds(500);
-    
-  else if (AR == 0 && R == 1){
+  } else if (AR == 0 && R == 1) {
+    stepper.setMaxSpeed(1000.0); // pasos por segundo
+    stepper.setSpeed(500.0);     // pasos por segundo
+    delayMicroseconds(500);
     stepper.runToNewPosition(x + PASOS_DE_SEGURIDAD * 10);
   }
-  else if (AR == 1 && R == 0){
+  else if (AR == 1 && R == 0) {
+    stepper.setMaxSpeed(1000.0); // pasos por segundo
+    stepper.setSpeed(500.0);     // pasos por segundo
+    delayMicroseconds(500);
     stepper.runToNewPosition(x - PASOS_DE_SEGURIDAD * 10);
   }
-  
+
   R = digitalRead(reloj); //lectura boton reloj
   AR = digitalRead(antireloj);  //lectura boton antireloj
   modo = digitalRead(manual);
@@ -113,33 +113,63 @@ void BOTON_MANUAL(){
 ///////////////////////////////////////////////////////////////////////////////////
 void RANGO_DIM() //A=full_dim B=empty_dim C=5
 {
-  unsigned long CERO=0;
-  if     (35<=DIMMER && DIMMER<45){unsigned long tiempo=millis();if((unsigned long)(tiempo-0)>=10){dimtime=2625;}} 
- // else if(40<=DIMMER && DIMMER<45){unsigned long tiempo=millis();if((unsigned long)(tiempo-CERO)>=10){dimtime=3000;}}
-  else if(45<=DIMMER && DIMMER<55){unsigned long tiempo=millis();if((unsigned long)(tiempo-CERO)>=10){dimtime=3375;}}
- // else if(50<=DIMMER && DIMMER<55){unsigned long tiempo=millis();if((unsigned long)(tiempo-CERO)>=10){dimtime=3750;}}
-  else if(55<=DIMMER && DIMMER<65){unsigned long tiempo=millis();if((unsigned long)(tiempo-CERO)>=10){dimtime=4150;}}
- // else if(60<=DIMMER && DIMMER<65){unsigned long tiempo=millis();if((unsigned long)(tiempo-CERO)>=10){dimtime=4500;}}
-  else if(65<=DIMMER && DIMMER<75){unsigned long tiempo=millis();if((unsigned long)(tiempo-CERO)>=10){dimtime=4875;}}
- // else if(70<=DIMMER && DIMMER<75){unsigned long tiempo=millis();if((unsigned long)(tiempo-CERO)>=10){dimtime=5250;}}
-  else if(75<=DIMMER && DIMMER<85){unsigned long tiempo=millis();if((unsigned long)(tiempo-CERO)>=10){dimtime=5625;}}
- // else if(80<=DIMMER && DIMMER<85){unsigned long tiempo=millis();if((unsigned long)(tiempo-CERO)>=10){dimtime=6000;}}
-  else if(85<=DIMMER && DIMMER<95){unsigned long tiempo=millis();if((unsigned long)(tiempo-CERO)>=10){dimtime=6375;}}
- // else if(90<=DIMMER && DIMMER<95){unsigned long tiempo=millis();if((unsigned long)(tiempo-CERO)>=10){dimtime=6750;}}
-  
+  unsigned long CERO = 0;
+  if     (35 <= DIMMER && DIMMER < 45) {
+    unsigned long tiempo = millis();
+    if ((unsigned long)(tiempo - 0) >= 10) {
+      dimtime = 2625;
+    }
+  }
+  // else if(40<=DIMMER && DIMMER<45){unsigned long tiempo=millis();if((unsigned long)(tiempo-CERO)>=10){dimtime=3000;}}
+  else if (45 <= DIMMER && DIMMER < 55) {
+    unsigned long tiempo = millis();
+    if ((unsigned long)(tiempo - CERO) >= 10) {
+      dimtime = 3375;
+    }
+  }
+  // else if(50<=DIMMER && DIMMER<55){unsigned long tiempo=millis();if((unsigned long)(tiempo-CERO)>=10){dimtime=3750;}}
+  else if (55 <= DIMMER && DIMMER < 65) {
+    unsigned long tiempo = millis();
+    if ((unsigned long)(tiempo - CERO) >= 10) {
+      dimtime = 4150;
+    }
+  }
+  // else if(60<=DIMMER && DIMMER<65){unsigned long tiempo=millis();if((unsigned long)(tiempo-CERO)>=10){dimtime=4500;}}
+  else if (65 <= DIMMER && DIMMER < 75) {
+    unsigned long tiempo = millis();
+    if ((unsigned long)(tiempo - CERO) >= 10) {
+      dimtime = 4875;
+    }
+  }
+  // else if(70<=DIMMER && DIMMER<75){unsigned long tiempo=millis();if((unsigned long)(tiempo-CERO)>=10){dimtime=5250;}}
+  else if (75 <= DIMMER && DIMMER < 85) {
+    unsigned long tiempo = millis();
+    if ((unsigned long)(tiempo - CERO) >= 10) {
+      dimtime = 5625;
+    }
+  }
+  // else if(80<=DIMMER && DIMMER<85){unsigned long tiempo=millis();if((unsigned long)(tiempo-CERO)>=10){dimtime=6000;}}
+  else if (85 <= DIMMER && DIMMER < 95) {
+    unsigned long tiempo = millis();
+    if ((unsigned long)(tiempo - CERO) >= 10) {
+      dimtime = 6375;
+    }
+  }
+  // else if(90<=DIMMER && DIMMER<95){unsigned long tiempo=millis();if((unsigned long)(tiempo-CERO)>=10){dimtime=6750;}}
+
 }
 ///////////////////////////////////////////////////////////////////////////////////
-void setup() 
-{  
-  pinMode(SonarPin,INPUT);
+void setup()
+{
+  pinMode(SonarPin, INPUT);
   Serial.begin(9600);
   stepper.setMaxSpeed(2000.0);  //LIB ACCEL
   // myStepper.setSpeed(1000); // set the speed at 60 rpm:
-  stepper.setAcceleration(300.0);  //LIB ACCEL    
-  pinMode(reloj,INPUT);
-  pinMode(antireloj,INPUT);
-  pinMode(manual,INPUT);
-  pinMode(led,OUTPUT);
+  stepper.setAcceleration(300.0);  //LIB ACCEL
+  pinMode(reloj, INPUT);
+  pinMode(antireloj, INPUT);
+  pinMode(manual, INPUT);
+  pinMode(led, OUTPUT);
   pinMode(AC_LOAD, OUTPUT);// Set AC Load pin as output
 }
 
@@ -147,56 +177,56 @@ void setup()
 ////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////
 
-void loop() 
-{ 
-                                     
-  modo=digitalRead(manual);
-  if(modo==0)  //MODO AUTOMATICO
-  { 
-   attachInterrupt(0, zero_crosss_int, RISING);                           
-   digitalWrite(led,LOW);
-   
-   medicion();                  
-   if(MINIMA_DISTANCIAcm<=cm && MAXIMA_DISTANCIAcm>=cm)  //mientras el sensor esté dentro de la distancia
-    {     
-     if(abs(cm_anterior-cm)>=DIF_MIN_MEDIDAS) //si la diferencia entre los ultimas 2 lecturas es mayor a DIF_MIN_MEDIDAS mostrarra cambio en motor y luz
-        { 
-          unsigned long CERO=0; 
-          DIMMER=map(cm,MINIMA_DISTANCIAcm,MAXIMA_DISTANCIAcm,full_dim,empty_dim); 
-          RANGO_DIM(); 
-          PASOS=map(cm,MINIMA_DISTANCIAcm,MAXIMA_DISTANCIAcm,MAX_PASOS_SEGUR,MIN_PASOS_SEGUR);  //extrapola distancia con pasos
-          unsigned long tiempo=millis();
-          if((unsigned long)(tiempo-CERO)>=10)
-           { 
-           // myStepper.setSpeed(5000);
-           stepper.setAcceleration(5000.0);        
-           stepper.runToNewPosition(PASOS);  //ejecuta la cantidad de pasos
-           }   
-                        
+void loop()
+{
+
+  modo = digitalRead(manual);
+  if (modo == 0) //MODO AUTOMATICO
+  {
+    attachInterrupt(0, zero_crosss_int, RISING);
+    digitalWrite(led, LOW);
+
+    medicion();
+    if (MINIMA_DISTANCIAcm <= cm && MAXIMA_DISTANCIAcm >= cm) //mientras el sensor esté dentro de la distancia
+    {
+      if (abs(cm_anterior - cm) >= DIF_MIN_MEDIDAS) //si la diferencia entre los ultimas 2 lecturas es mayor a DIF_MIN_MEDIDAS mostrarra cambio en motor y luz
+      {
+        unsigned long CERO = 0;
+        DIMMER = map(cm, MINIMA_DISTANCIAcm, MAXIMA_DISTANCIAcm, full_dim, empty_dim);
+        RANGO_DIM();
+        PASOS = map(cm, MINIMA_DISTANCIAcm, MAXIMA_DISTANCIAcm, MAX_PASOS_SEGUR, MIN_PASOS_SEGUR); //extrapola distancia con pasos
+        unsigned long tiempo = millis();
+        if ((unsigned long)(tiempo - CERO) >= 10)
+        {
+          // myStepper.setSpeed(5000);
+          stepper.setAcceleration(5000.0);
+          stepper.runToNewPosition(PASOS);  //ejecuta la cantidad de pasos
         }
-    
-     else if(MAXIMA_DISTANCIAcm+20 >= cm && cm >= MAXIMA_DISTANCIAcm-20 || MAXIMA_DISTANCIAcm+20 >= cm && cm >= MAXIMA_DISTANCIAcm-20)
-            {
-              unsigned long CERO=0; 
-              dimtime=6750;
-              unsigned long tiempo=millis();
-              if((unsigned long)(tiempo-CERO)>=10)
-                 {
-                 attachInterrupt(0, zero_crosss_int, RISING); 
-                 // myStepper.setSpeed(5000);
-                 stepper.setAcceleration(5000.0);        
-                 stepper.runToNewPosition(0);  //ejecuta la cantidad de pasos
-                 }                    
-            }  
+
+      }
+
+      else if (MAXIMA_DISTANCIAcm + 20 >= cm && cm >= MAXIMA_DISTANCIAcm - 20 || MAXIMA_DISTANCIAcm + 20 >= cm && cm >= MAXIMA_DISTANCIAcm - 20)
+      {
+        unsigned long CERO = 0;
+        dimtime = 6750;
+        unsigned long tiempo = millis();
+        if ((unsigned long)(tiempo - CERO) >= 10)
+        {
+          attachInterrupt(0, zero_crosss_int, RISING);
+          // myStepper.setSpeed(5000);
+          stepper.setAcceleration(5000.0);
+          stepper.runToNewPosition(0);  //ejecuta la cantidad de pasos
         }
-       cm_anterior=cm;     
-      // Serial.println(cm_anterior);
-       
-  } else if(modo==1) {
-     BOTON_MANUAL(); 
-     modo=digitalRead(manual); 
-    }                
-  modo=digitalRead(manual);
+      }
+    }
+    cm_anterior = cm;
+    // Serial.println(cm_anterior);
+
+  } else if (modo == 1) {
+    BOTON_MANUAL();
+    modo = digitalRead(manual);
+  }
+  modo = digitalRead(manual);
 }
 
 
