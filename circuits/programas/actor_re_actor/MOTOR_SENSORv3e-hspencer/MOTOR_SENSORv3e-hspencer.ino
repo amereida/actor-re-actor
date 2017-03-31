@@ -35,14 +35,14 @@ AccelStepper stepper(2, 9, 8);   // LIB ACCEL
 
 float Inch        = 0.00;
 int   cm          = 0;
-int   cmPrev = 0;
+int   cmPrev      = 0;
 int   sonarPin    = A0;
 int   sensorValue;
 
 ////////////////// BOTONES MANUALES ////////////////////
 
-int cw       = 11;   // pin boton para accionar en sentido cw
-int ccw   = 12;   // pin boton para accionar en sentido ccw
+int cw          = 11;   // pin boton para accionar en sentido cw
+int ccw         = 12;   // pin boton para accionar en sentido ccw
 int manual      = 3;    // pin boton manual
 int led         = 13;   // led de modo manual o automatico
 int R;                  // variable de almacenamiento del boton cw
@@ -72,7 +72,7 @@ int count;     // contador auxiliar
 
 ///////////////////////////////////////////////////////////
 
-void medicion(){
+void readSonar(){
   sensorValue = analogRead(sonarPin);
   Inch = (sensorValue * 0.497);
   cm = Inch * 2.54;
@@ -104,16 +104,16 @@ void zero_crosss_int(){
 // interrupción externa para el boton manual
 
 void BOTON_MANUAL(){  
-  detachInterrupt(0);     // desactiva la interrupcion attach
+  // detachInterrupt(0);     // desactiva la interrupcion attach
   digitalWrite(led,HIGH); // enciende el led para indicar modo manual
   delayMicroseconds(50);
-  R = digitalRead(cw); // lectura boton cw
-  AR = digitalRead(ccw);  //lectura boton ccw   
+  R = digitalRead(cw);    // lectura boton cw
+  AR = digitalRead(ccw);  // lectura boton ccw   
 
   if (AR == 0 && R == 0){
     detachInterrupt(0);
     delayMicroseconds(50);
-    medicion();
+    readSonar();
     Serial.print(cm);
     Serial.println(" cm ");
   } else if (AR == 0 && R == 1){
@@ -125,13 +125,13 @@ void BOTON_MANUAL(){
 
   delayMicroseconds(10);
 
-  if ( AR != R){
+  if (AR != R){
     stepper.runToNewPosition(currentStep);
     soft = currentStep; // para que no salte al volver a modo automático
   }
   
-  R = digitalRead(cw); //lectura boton cw
-  AR = digitalRead(ccw);  //lectura boton ccw
+  R = digitalRead(cw); // button reading for cw (clockwise)
+  AR = digitalRead(ccw);  // button reading for ccw (counter clockwise)
   modo = digitalRead(manual);
 }
 
@@ -168,6 +168,10 @@ void setup(){
 
   // counter used for soft value
   count = 0;
+
+  // softened value is the sonar's first reading
+  readSonar();
+  soft = cm;
 }
 
 ////////////////////////////////////////////////////////////////////////////////////
@@ -178,16 +182,12 @@ void loop(){
   modo = digitalRead(manual);
 
   // MODO AUTOMATICO
-  if (modo == 0){ 
-   
-   // dimmer
-   // attachInterrupt(0, zero_crosss_int, RISING);                         
- 
+  if (modo == 0){                    
    digitalWrite(led,LOW);
-   medicion();                  
+   readSonar();                  
    
-   //mientras el sensor esté dentro de la distancia
-   if(soft >= minDist && soft <= maxDist){   
+   // mientras el sensor esté dentro de la distancia
+   if(cm >= minDist && cm <= maxDist){   
      
      //si la diferencia entre los ultimas 2 lecturas es mayor a sonarMinDifference mostrarra cambio en motor y luz
      if(abs(cmPrev - soft) >= sonarMinDifference){
@@ -201,23 +201,13 @@ void loop(){
           currentStep = map(soft, minDist, maxDist, maxSecuritySteps, minSecuritySteps); 
           unsigned long tiempo = millis();
           
-          stepper.runToNewPosition(currentStep);
-               
-        }else if(soft <= maxDist + 20 && soft >= maxDist - 20 || soft <= maxDist + 20 && soft >= maxDist - 20){
-              // dimtime = 6750;
-              unsigned long CERO = 0; 
-              unsigned long tiempo = millis();
-              
-              if((unsigned long)(tiempo - CERO) >= 10){
-                 // attachInterrupt(0, zero_crosss_int, RISING);    
-                 stepper.runToNewPosition(0);  //ejecuta la cantidad de pasos
-                 }
-            }
-        }
-       cmPrev = cm;     
-       Serial.print(cm);
-       Serial.print("\t");
-       Serial.println(soft);
+          stepper.runToNewPosition(currentStep);    
+       }
+    }
+    cmPrev = cm;     
+    Serial.print(cm);
+    Serial.print("\t");
+    Serial.println(soft);
        
   } else if(modo == 1) {
      BOTON_MANUAL(); 
