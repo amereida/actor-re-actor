@@ -17,8 +17,8 @@
 
 int minDist = 100;   // minima distancia para medir en centímetros
 int maxDist = 500;  // máxima distancia para medir en centímetros
-int maxSteps = 1500; // <---- DEFINIR AL COMIENZO DEL MONTAJE, es el número máximo de pasos entre una posicion inicial y una final
-int x = 0; // manual target
+int maxSteps = 2500; // <---- DEFINIR AL COMIENZO DEL MONTAJE, es el número máximo de pasos entre una posicion inicial y una final
+// int x = 0; // manual target
 
 ////////////////////// VARIABLES FIJAS DE CALCULO /////////////////////////////
 int securitySteps = 20;  // holgura de pasos para la cantidad minima de pasos y la maxima
@@ -117,16 +117,17 @@ void BOTON_MANUAL(){
     Serial.print(cm);
     Serial.println(" cm ");
   } else if (AR == 0 && R == 1){
-    x += securitySteps; // * 40 es una vuelta entera
+    currentStep += securitySteps; // * 40 es una vuelta entera
   }
   else if (AR == 1 && R == 0){
-    x -= securitySteps;
+    currentStep -= securitySteps;
   }
 
   delayMicroseconds(10);
 
   if ( AR != R){
-    stepper.runToNewPosition(x);
+    stepper.runToNewPosition(currentStep);
+    soft = currentStep; // para que no salte al volver a modo automático
   }
   
   R = digitalRead(cw); //lectura boton cw
@@ -201,7 +202,7 @@ void loop(){
           unsigned long tiempo = millis();
           
           stepper.runToNewPosition(currentStep);
-          x = currentStep; // igualo esta variable para el modo manual      
+               
         }else if(soft <= maxDist + 20 && soft >= maxDist - 20 || soft <= maxDist + 20 && soft >= maxDist - 20){
               // dimtime = 6750;
               unsigned long CERO = 0; 
