@@ -6,9 +6,6 @@ void readSonar() {
   Inch = (sensorValue * 0.497);
   cm = Inch * 2.54;
 
-  // keep it within safe margins
-  cm = constrain(cm, minDist, maxDist);
-
   // add cm value to the buffer array
   buf[count] = cm;
 
@@ -29,7 +26,7 @@ long getSoft(boolean realtime) {
 }
 
 boolean delta() {
-  if (abs(stepper.currentPosition() - soft) > sonarMinDifference) {
+  if (abs(stepper.currentPosition() - targetStep) > 1) {
     return true;
   } else {
     return false;
@@ -37,7 +34,9 @@ boolean delta() {
 }
 
 void calcTargetStep() {
-  targetStep = map(soft, minDist, maxDist, minSecuritySteps, maxSecuritySteps);
+  if (cm > minDist && cm < maxDist) {
+    targetStep = map(cm, minDist, maxDist, 0, maxSteps);
+  }
 }
 
 void roll(int newPosition) {
@@ -56,32 +55,35 @@ void buttons() {
   AR = digitalRead(ccw);
 
   if (AR == 0 && R == 0) {
-    readSonar();
+    getSoft(true);
   } else if (AR == 0 && R == 1) {
     targetStep += securitySteps; // * 40 is a whole turn
   } else if (AR == 1 && R == 0) {
     targetStep -= securitySteps;
   }
-
   if (AR != R) { /* if buttons are differently pressed */
+    targetStep = constrain(targetStep, 0, maxSteps);
     roll(targetStep);
     printValues();
   }
-
   R = digitalRead(cw); // button reading for cw (clockwise)
   AR = digitalRead(ccw);  // button reading for ccw (counter clockwise)
   mode = digitalRead(manual);
 }
 
-
 void printValues() {
+  Serial.print("d = ");
   Serial.print(cm);
   Serial.print("\t");
+  Serial.print("s = ");
   Serial.print(soft);
   Serial.print("\t");
+  Serial.print("c = ");
   Serial.print(stepper.currentPosition());
   Serial.print("\t");
+  Serial.print("t = ");
   Serial.print(targetStep);
   Serial.print("\t");
+  Serial.print("d = ");
   Serial.println(delta());
 }

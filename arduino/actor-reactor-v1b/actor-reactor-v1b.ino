@@ -15,9 +15,9 @@
 
 /////////////////////// MEASUREMENTS ////////////////////
 
-int minDist = 50;   // (cm) minimum sensitivity
+int minDist = 000;   // (cm) minimum sensitivity
 int maxDist = 600;   // (cm) max sensitivity - sensor max is 640
-int maxSteps = 2500; // **ADJUST** stepper maximum range
+int maxSteps = 800; // **ADJUST** stepper maximum range
 
 
 ////////////////////// CALCULATIONS /////////////////////////////
@@ -25,9 +25,7 @@ int maxSteps = 2500; // **ADJUST** stepper maximum range
 int securitySteps = 20;  // minimum security steps
 int minSecuritySteps = securitySteps;
 int maxSecuritySteps = maxSteps - securitySteps;
-int currentStep = 0;
 int targetStep = 0;
-int sonarMinDifference = 30; // minimal sensing variation to act.
 boolean flag; // manual flag
 
 
@@ -102,13 +100,11 @@ void loop() {
 
   // automatic mode: moving from sonar input
   if (mode == 0) {
-    
     if (flag) {
-      
       // we need to make the soft value equal to what we manually define, so it doesn't jump
       Serial.println("equilizing values...........");
       long val = 0;
-      float adjustedReading = map(stepper.currentPosition(), minSecuritySteps, maxSecuritySteps, minDist, maxDist);
+      float adjustedReading = map(stepper.currentPosition(), 0, maxSteps, minDist, maxDist);
       for (int i = 0; i < b; i++) {
         buf[i] = adjustedReading;
       }
@@ -116,21 +112,22 @@ void loop() {
       soft = adjustedReading;
       delayMicroseconds(10);
 
+      targetStep = stepper.currentPosition();
+      
       // also we need to reset the motor position
-      stepper.setCurrentPosition(0);
+      // stepper.setCurrentPosition(0);
     }
     digitalWrite(led, LOW);
 
     getSoft(true);
-    
     calcTargetStep();
-    if (abs(stepper.currentPosition() - soft) > sonarMinDifference) {
-      roll(targetStep);
-    }else{
-      Serial.println("---------------------------");
-    }
     
-    printValues();
+    if (delta()) {
+      roll(targetStep);
+      printValues();
+    }else{
+      Serial.println("-------------------------------------------");
+    }
   } else if (mode == 1) {
     // manual mode, setting up mottor with buttons
     buttons();
