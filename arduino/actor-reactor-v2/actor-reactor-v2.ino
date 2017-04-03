@@ -16,13 +16,13 @@
 /////////////////////// MEASUREMENTS ////////////////////
 
 int minDist = 000;   // (cm) minimum sensitivity
-int maxDist = 600;   // (cm) max sensitivity - sensor max is 640
-int maxSteps = 1600; // **ADJUST** stepper maximum range
+int maxDist = 400;   // (cm) max sensitivity - sensor max is 640
+int maxSteps = 3200; // **ADJUST** stepper maximum range
 
 
 ////////////////////// CALCULATIONS /////////////////////////////
 
-int securitySteps = 20;  // minimum security steps
+int securitySteps = 800;  // minimum security steps
 int minSecuritySteps = securitySteps;
 int maxSecuritySteps = maxSteps - securitySteps;
 int targetStep = 0;
@@ -68,9 +68,9 @@ void setup() {
   pinMode(led, OUTPUT);
   // pinMode(AC_LOAD, OUTPUT); // Set AC Load pin as output
 
-  stepper.setMaxSpeed(6000.0);
-  stepper.setSpeed(3000.0);
-  stepper.setAcceleration(5000.0);
+  stepper.setMaxSpeed(2000.0);
+  stepper.setSpeed(200.0);
+  stepper.setAcceleration(1000.0);
 
   // counter used for soft value
   count = 0;
@@ -122,7 +122,7 @@ void loop() {
       targetStep = stepper.currentPosition();
       
       // also we need to reset the motor position
-      // stepper.setCurrentPosition(0); // ???? do this?
+      stepper.setCurrentPosition(0); // ???? do this?
     }
     digitalWrite(led, LOW);
 
