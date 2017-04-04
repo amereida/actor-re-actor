@@ -18,11 +18,14 @@
 int minDist = 10;    // (cm) minimum sensitivity
 int maxDist = 300;   // (cm) max sensitivity - sensor max is 640
 int minSteps = 20;
-int maxSteps = 3200; // **ADJUST** stepper maximum range
+int maxSteps = 3200; // **ADJUST** stepper maximum range (1mt = 5092)
 int variation = 40;  // minimal distance variation for activating the motor
-boolean inverted = false;
 
-////////////////////// CALCULATIONS /////////////////////////////
+
+// inverted = more distance, less pull
+boolean inverted = true;
+
+////////////////////////// CALCULATIONS /////////////////////////////////
 
 int securitySteps = 800;  // minimum security steps
 int minSecuritySteps = securitySteps;
@@ -35,7 +38,7 @@ boolean flag; // manual flag
 
 AccelStepper stepper(2, 9, 8);   // LIB ACCEL
 
-/////////////////// DINSTANCE ////////////////////////////////////
+/////////////////// DINSTANCE ///////////////////////////////////////////
 
 float Inch        = 0.00;
 int   cm          = 0;
@@ -43,7 +46,7 @@ int   cmPrev      = 0;
 int   sonarPin    = A0;
 int   sensorValue;
 
-////////////////// BUTTONS ////////////////////
+////////////////// BUTTONS //////////////////////////////////////////////
 
 int cw          = 11;   // pin boton para accionar en sentido cw
 int ccw         = 12;   // pin boton para accionar en sentido ccw
@@ -54,13 +57,6 @@ int AR;                 // variable de almacenamiento del boton ccw
 boolean mode;
 boolean moving;
 
-////////////////// SOFTENED VALUES ////////////////////////////
-/*
-  long soft;     // valor suavizado del sensor
-  int b = 100;   // estos 2 numeros deben ser iguales
-  int buf[100];  // buffer de suavizado (100)
-  int count;     // contador auxiliar
-*/
 
 void setup() {
   pinMode(sonarPin, INPUT);
@@ -70,17 +66,17 @@ void setup() {
   pinMode(manual, INPUT);
   pinMode(led, OUTPUT);
 
-///////////////////////////////////////////////////////////////////
-///////////////////////  MOTOR SETUP  /////////////////////////////
-///////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////
+//////////////////////////  MOTOR SETUP  ///////////////////////////////
+////////////////////////////////////////////////////////////////////////
 
-  stepper.setMaxSpeed(5000.0);
-  stepper.setSpeed(400.0);
-  stepper.setAcceleration(3000.0);
+  stepper.setMaxSpeed(8000.0);
+  stepper.setSpeed(800.0);
+  stepper.setAcceleration(6000.0);
 
-///////////////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////
 
   readSonar();
   flag = false; // for returning to automatic mode and equilizing values
@@ -98,29 +94,36 @@ void loop() {
 
     digitalWrite(led, LOW); // turn off led light
 
-    /*
-        if its returning from manual we need to
-        make the target step value equal to current step
-        so it doesn't jump
-    */
-
     if (flag) {
-
-      ptarget = target;
-
-      Serial.println("equalizing values................");
+      // when returning to auto mode recalibrate distances
+      Serial.println("Recalibrating limits ................");
       float adjusted;
       if (inverted) {
         adjusted = map(stepper.currentPosition(), 0, maxSteps, maxDist, minDist);
         } else {
         adjusted = map(stepper.currentPosition(), 0, maxSteps, minDist, maxDist);
       }
+      
       flag = false; // remove this flag so only do it once
-      delayMicroseconds(10);
+      
+      // recalibrate program
+      minSteps = stepper.currentPosition();
+      maxSteps += minSteps;
+
+      maxDist = cm;
+
+      // define targets
+      ptarget = target;
       target = stepper.currentPosition();
 
-      // also we need to reset the motor position
-      stepper.setCurrentPosition(0); // ???? do this?
+      Serial.print(minSteps);
+      Serial.print("\t");
+      Serial.println(minSteps);
+
+      Serial.print(minDist);
+      Serial.print("\t");
+      Serial.println(maxDist);
+
     }
 
     readSonar();
@@ -147,7 +150,4 @@ void loop() {
     buttons();
     printManual();
   }
-  
 }
-
-

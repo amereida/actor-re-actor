@@ -23,7 +23,6 @@ void calcTargetStep() {
 }
 
 void roll(int newPosition) {
-  delayMicroseconds(10);
   stepper.runToNewPosition(newPosition);
 }
 
