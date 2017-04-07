@@ -17,7 +17,7 @@
 
 int minDist = 10;   // (cm) minimum sensitivity
 int maxDist = 120;   // (cm) max sensitivity - sensor max is 640
-int maxSteps = 3200; // **ADJUST** stepper maximum range
+int maxSteps = -2000; // **ADJUST** stepper maximum range
 
 
 ////////////////////// CALCULATIONS /////////////////////////////

@@ -24,6 +24,7 @@ void calcTargetStep() {
 }
 
 void roll(int newPosition) {
+  Serial.println("going to "+newPosition);
   stepper.runToNewPosition(newPosition);
 }
 

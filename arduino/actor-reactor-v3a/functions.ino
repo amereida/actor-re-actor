@@ -58,8 +58,6 @@ void printAuto() {
   Serial.print("cm = ");
   Serial.print(cm);
   Serial.print("\t\t");
-  Serial.print(ptarget);
-  Serial.print(" - ");
   Serial.print(target);
   Serial.print("\t");
   Serial.print("? = ");

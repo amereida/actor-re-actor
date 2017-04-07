@@ -13,33 +13,31 @@
 
 #include <AccelStepper.h>
 
-////////////////////////////////////////////////////////////////////////
-//////////////////////////  MOTOR SETUP  ///////////////////////////////
-////////////////////////////////////////////////////////////////////////
-
-AccelStepper stepper(2, 9, 8);   // LIB ACCEL
-
 /////////////////////// MEASUREMENTS ////////////////////
 
-int minDist = 100;    // (cm) minimum sensitivity
-int maxDist = 640;   // (cm) max sensitivity - sensor max is 640
-int minSteps = 0;
-int maxSteps = -2300; // **ADJUST** stepper maximum range (1mt = 5092)
-int variation = 40;  // minimal distance variation for activating the motor
-
+int minDist = 100;      // (cm) minimum sensitivity
+int maxDist = 640;      // (cm) max sensitivity - sensor max is 640
+int minSteps = 20;      // minimal run
+int maxSteps = 6400;    // **ADJUST** stepper maximum range (1mt = 5092)
+int variation = 40;     // minimal distance variation for activating the motor
+int waitingTime = 1000; // loop count for returning to zero
 
 // inverted = more distance, less pull
 boolean inverted = true;
 
 ////////////////////////// CALCULATIONS /////////////////////////////////
 
-int securitySteps = 200;  // minimum security steps
+int securitySteps = 100;                  // minimum security steps
 int minSecuritySteps = securitySteps;
 int maxSecuritySteps = maxSteps - securitySteps;
-int target  = 0;
-int ptarget = 0;
-boolean flag; // manual flag
-int count;    // counter
+int target  = 0;                          // current target
+int ptarget = 0;                          // previous target
+boolean flag;                             // manual flag
+int count;                                // counter
+
+////////////////////////// STEPPER MOTOR ////////////////////////////////
+
+AccelStepper stepper(2, 9, 8);   // LIB ACCEL
 
 /////////////////// DINSTANCE ///////////////////////////////////////////
 
@@ -69,12 +67,16 @@ void setup() {
   pinMode(manual, INPUT);
   pinMode(led, OUTPUT);
 
-  ///////////////////////////////////////////////////////////////////////
+  ////////////////////////////////////////////////////////////////////////
+  //////////////////////////  MOTOR SETUP  ///////////////////////////////
+  ////////////////////////////////////////////////////////////////////////
 
   stepper.setMaxSpeed(200.0);
   stepper.setSpeed(10.0);
   stepper.setAcceleration(5600.0);
 
+  ///////////////////////////////////////////////////////////////////////
+  ///////////////////////////////////////////////////////////////////////
   ///////////////////////////////////////////////////////////////////////
 
   readSonar();
@@ -130,7 +132,7 @@ void loop() {
 
     if (!moving) {
       count++;
-      if (count > 1000) {
+      if (count > waitingTime) {
         count = 0;
         Serial.println("returning to zero");
         stepper.runToNewPosition(0);
@@ -148,7 +150,7 @@ void loop() {
     } else {
       if (!stepper.run()) {
         moving = false;
-      }
+        ptarget = target; // if moving, the previous target gets updated      }
     }
     printAuto();
   }

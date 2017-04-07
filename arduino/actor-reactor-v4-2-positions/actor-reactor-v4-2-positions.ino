@@ -22,7 +22,7 @@
 int minDist = 200;   // (cm) minimum sensitivity
 int maxDist = 640;   // (cm) max sensitivity - sensor max is 640
 int minSteps = 0;
-int maxSteps = 3000; // **ADJUST** stepper maximum range (1mt = 5092)
+int maxSteps = -2000; // **ADJUST** stepper maximum range (1mt = 5092)
 int variation = 50;  // minimal distance variation for activating the motor
 
 int prev;            // previous distance measurement
@@ -82,8 +82,8 @@ void setup() {
 //////////////////////////  MOTOR SETUP  ///////////////////////////////
 ////////////////////////////////////////////////////////////////////////
 
-  stepper.setMaxSpeed(2000.0);
-  stepper.setSpeed(1000.0);
+  stepper.setMaxSpeed(200.0);
+  stepper.setSpeed(30.0);
   stepper.setAcceleration(5600.0);
 
 ///////////////////////////////////////////////////////////////////////

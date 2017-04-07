@@ -15,13 +15,13 @@
 
 /////////////////////// VARIBLES DE AJUSTE DE MEDIDAS (AJUSTAR) ////////////////////
 
-int minDist = 100;   // minima distancia para medir en centímetros
-int maxDist = 500;  // máxima distancia para medir en centímetros
-int maxSteps = 2500; // <---- DEFINIR AL COMIENZO DEL MONTAJE, es el número máximo de pasos entre una posicion inicial y una final
+int minDist = 50;   // minima distancia para medir en centímetros
+int maxDist = 295;  // máxima distancia para medir en centímetros
+int maxSteps = -2500; // <---- DEFINIR AL COMIENZO DEL MONTAJE, es el número máximo de pasos entre una posicion inicial y una final
 // int x = 0; // manual target
 
 ////////////////////// VARIABLES FIJAS DE CALCULO /////////////////////////////
-int securitySteps = 20;  // holgura de pasos para la cantidad minima de pasos y la maxima
+int securitySteps = 100;  // holgura de pasos para la cantidad minima de pasos y la maxima
 int minSecuritySteps = securitySteps;
 int maxSecuritySteps = maxSteps - securitySteps;
 int currentStep = 0;  //variable calculada mapeando la distancia con el rango de pasos permitidos
@@ -175,8 +175,8 @@ void setup(){
   pinMode(led,OUTPUT);
   // pinMode(AC_LOAD, OUTPUT); // Set AC Load pin as output
 
-  stepper.setMaxSpeed(6000.0);
-  stepper.setSpeed(5000.0);
+  stepper.setMaxSpeed(1000.0);
+  stepper.setSpeed(200.0);
   stepper.setAcceleration(5000.0);
 
   // counter used for soft value
