@@ -7,7 +7,6 @@
     america
 
     documenta14 ~ 2017
-    no dimmer
 */
 
 /* manual swith is wrong */
