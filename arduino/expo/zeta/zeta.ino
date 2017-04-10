@@ -15,10 +15,10 @@
 
 /////////////////////// MEASUREMENTS TO ADJUST ////////////////////
 
-int minDist = 150;      // (cm) minimum sensitivity
-int maxDist = 220;      // (cm) max sensitivity - sensor max is 640
+int minDist = 100;      // (cm) minimum sensitivity
+int maxDist = 400;      // (cm) max sensitivity - sensor max is 640
 int minSteps = 0;       // minimal run
-int maxSteps = -1000;    // **ADJUST** stepper maximum range (1mt = 5092)
+int maxSteps = -900;    // **ADJUST** stepper maximum range (1mt = 5092)
 int variation = 50;     // minimal distance variation for activating the motor
 int waitingTime = 1500; // loop count for returning to zero
 
@@ -94,13 +94,13 @@ void loop() {
 
   // automatic mode: moving from sonar input
 
-  // if (mode == 0) {
+  if (mode == 0) {
   modeAutomatic();
-  // }
+  }
 
-  //else if (mode == 1) {
+  else if (mode == 1) {
   // manual mode, setting up mottor with buttons
-  // modeManual();
-  //}
+  modeManual();
+  }
 }
 
